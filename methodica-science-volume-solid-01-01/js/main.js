@@ -713,16 +713,16 @@ const COMIC_DATA = {
     slide: 12, kind: 'panels',
     panels: [{
       src: 'assets/img/comic/12.jpg',
-      alt: 'ארכימדס במעבדה עתיקה. מימין הוא עומד ליד תיבת מתכת על השולחן ופונה אל הלומדים, משמאל הוא מודד את התיבה בעזרת סרגל.',
+      alt: 'أرخميدس في مختبر قديم. على اليمين يقف بجانب صندوق معدني على الطاولة ويتوجه إلى المتعلمين، وعلى اليسار يقيس الصندوق بمساعدة مسطرة.',
       bubbles: [
-        { type: 'caption', text: 'ארכימדס הגיע עד לימינו כדי ללמד אותנו על השיטות לחישוב נפח שהוא המציא.' },
+        { type: 'caption', text: 'وصل أرخميدس إلى أيامنا ليعلّمنا عن الطرق لحساب الحجم التي اخترعها.' },
         /* 12.jpg is 2:1 but every comic frame is now the same 16:9 box (QA 2026-10-08), so its
            art is cropped ~53px each side: these r/w were rescaled to keep each bubble on the
            same spot of the art at the same pixel width. */
         { type: 'speech', tail: 'left', r: -9.6, t: 5, w: 23.6,
-          text: 'בואו נתחיל בתזכורת! איך מודדים גוף בעל צורה הנדסית מוגדרת כמו גליל או תיבה?' },
+          text: 'هيا نراجع! كيف نقيس حجم جسم له شكل هندسي محدد مثل الأسطوانة أو صندوق؟' },
         { type: 'speech', tail: 'left', r: 51.2, t: 38, w: 28.1,
-          text: 'למדידת נפח של תיבה משתמשים בסרגל: מודדים את צלעות התיבה (אורך, רוחב, גובה) ומכפילים.' }
+          text: 'لقياس حجم صندوق نستخدم المسطرة: نقيس أضلاع الصندوق (الطول، العرض، الارتفاع) ونضربها ببعضها.' }
       ]
     }]
   },
@@ -737,7 +737,7 @@ const COMIC_DATA = {
     slide: 14, kind: 'panels',
     panels: [{
       src: 'assets/img/comic/14.jpg',
-      alt: 'מימין ארכימדס מודד תיבה בעזרת סרגל ומחשב את נפחה, משמאל מונחים על השולחן מפתח, בלוט וגולה.',
+      alt: 'على اليمين، يقيس أرخميدس صندوقًا بمساعدة مسطرة ويحسب حجمه، وعلى اليسار نضع على الطاولة مفتاح, بلّوطة وكرة',
       bubbles: [
         /* Side beak, not down-left: the bubble sits at the panel's right edge and Archimedes'
            head is to its LEFT, so trailing circles downward pointed them away from the thinker
@@ -752,12 +752,12 @@ const COMIC_DATA = {
            rise FROM his head to its lower-left edge — they used to leave the bubble's top and
            trail upward, away from him. ty places the lead circle on the bubble's left edge. */
         { type: 'thought', tail: 'left', r: -22, t: -19, w: 35, ty: 120,
-          text: 'יש לנו קובייה שכל צלע\nשלה = 10\u00A0ס"מ.\n\u206610 · 10 · 10 = 1,000\u2069\nנפח הקובייה\u00A0=\n1,000\u00A0סמ"ק!' },
+          text: 'لدينا مكعب طول كل ضلع\nفيه = 10 سم.\n\u206610 · 10 · 10 = 1,000\u2069\nحجم المكعب =\n1,000 سم³!' },
         /* Restored per slide 14 (QA 2026-10-09): the right scene's own narration, top of that half
            and left of his head, clear of the thought bubble above the frame and its trail. */
-        { type: 'narration', r: 29, t: 4, w: 19, text: 'ככה מודדים נפח של גוף הנדסי' },
+        { type: 'narration', r: 29, t: 4, w: 19, text: 'هكذا نقيس حجم جسم هندسي' },
         { type: 'narration', r: 56, t: 6, w: 30,
-          text: 'אבל מה לגבי גוף שאינו הנדסי, כמו מפתח, בלוט, או גולה?' }
+          text: 'لكن ماذا بالنسبة لجسم غير هندسي، مثل مفتاح، بلّوطة، أو كرة زجاجية؟' }
       ]
     }]
   },
@@ -767,26 +767,26 @@ const COMIC_DATA = {
     slide: 15, kind: 'panels',
     panels: [
       { src: 'assets/img/comic/15a.jpg',
-        alt: 'ארכימדס מחזיק משורה מלאה במים וגולה; עיגול הגדלה מראה שמפלס המים עומד על 50 מ"ל.',
+        alt: 'أرخميدس يمسك بأسطوانة مدرجة مملوءة بالماء وبكرة؛ تُظهر دائرة التكبير أن مستوى الماء عند 50 ملل.',
         bubbles: [
-          { type: 'caption', text: 'ארכימדס ממלא את המשורה במים ומתעד עד לאן המים מגיעים: 50\u00A0מ"ל.' },
+          { type: 'caption', text: 'أرخميدس يملأ الأسطوانة المدرجة بالماء ويسجّل إلى أين يصل الماء: 50 ملل.' },
           /* Left of him, beak on its right edge at mid-height pointing back at him; break after
              the dash; kept above the magnifier (QA 2026-10-08). */
           { type: 'speech', tail: 'right', r: 47, t: 6, w: 30, ty: '50%',
-            text: 'אם נכניס את הגולה למשורה\n– מפלס המים יעלה!' }
+            text: 'إذا أدخلنا الكرة في الأسطوانة المدرجة\n– سيرتفع مستوى الماء!' }
         ] },
       { src: 'assets/img/comic/15b.jpg',
-        alt: 'ארכימדס מסתכל אל המשורה וחושב.',
+        alt: 'أرخميدس ينظر إلى الأسطوانة المدرجة ويفكّر.',
         bubbles: [
-          { type: 'caption', text: 'אחרי שארכימדס הכניס את הגולה למשורה עם המים, מפלס המים עלה ל-62\u00A0מ"ל.' },
+          { type: 'caption', text: 'بعد أن أدخل أرخميدس الكرة إلى الأسطوانة المدرجة مع الماء، ارتفع مستوى الماء إلى 62 ملل.' },
           /* Bubble sits below his head with the circles on its top edge, rising up-left to
              his head — the thought comes down from him into the bubble (QA 2026-10-08). */
           /* Explicit breaks: "מה" moved down to open the last line (QA 2026-10-08). */
           { type: 'thought', tail: 'up-right', r: 8, t: 32, w: 33, tx: 150,
-            text: 'רגע... אז הנפח של הגולה\nהוא 62? אולי 50?\nמה צריך לחשב פה?' }
+            text: 'لحظة... إذن حجم الكرة\nهو 62؟ ربما 50؟\nماذا يجب أن نحسب هنا؟' }
         ] },
       { src: 'assets/img/comic/15c.jpg',
-        alt: 'ארכימדס מרים אצבע למעלה בסימן "הבנתי!".',
+        alt: 'أرخميدس يرفع إصبعه للأعلى بإشارة "فهمت!".',
         bubbles: [
           /* Dropped from t:5 and flipped to a top beak: at the top of the frame the bubble sat
              across his face, and a down-beak pointed away from him. Sitting lower with the beak
@@ -795,24 +795,24 @@ const COMIC_DATA = {
           /* Explicit break: left to wrap, "הגולה!" fell alone onto a third line (QA 2026-10-08). */
           /* Left of him (clear of the raised finger), beak on its right edge at mid-height (QA 2026-10-08). */
           { type: 'speech', tail: 'right', r: 48, t: 4, w: 35, ty: '50%',
-            text: 'אה! כמות המים **החדשה** פחות\nכמות המים **המקורית** = נפח הגולה!' }   // emphasis per slide 15
+            text: 'آه! كمية الماء الجديدة ناقص\nكمية الماء الأصلية = حجم الكرة!\n\nI need to reconsider - the source doesn\'t contain placeholders, it uses ** for bold. Let me retranslate:\n\nآه! كمية الماء **الجديدة** ناقص\nكمية الماء **الأصلية** = حجم الكرة!' }   // emphasis per slide 15
         ] },
       { src: 'assets/img/comic/15d.jpg',
-        alt: 'זום על המשורה: הגולה בתוך המים ומפלס המים מגיע ל-62 מ"ל.',
+        alt: 'تكبير على الأسطوانة المدرجة: الكرة داخل الماء ومستوى الماء يصل إلى 62 ملل.',
         bubbles: [
-          { type: 'caption', text: 'מה קרה כאן?' },
+          { type: 'caption', text: 'ماذا حدث هنا؟' },
           /* Explicit break: "בדיוק." sat alone on a third line; moved up to close line 2 (QA 2026-10-08). */
           { type: 'speech', tail: 'left', r: 2, t: 15, w: 37, ty: '50%',   // side beak at the 62 ml water line (QA 2026-10-08); 35 -> 37 so bold "בדיוק" keeps line 2 whole (QA 2026-10-09)
-            text: 'כשמכניסים גוף מוצק למים, מפלס\nהמים שעולה שווה לנפח הגוף **בדיוק**.' }   // emphasis per slide 15
+            text: 'عندما نُدخل جسمًا صلبًا في الماء، فإن مستوى\nالماء الذي يرتفع يساوي حجم الجسم **بالضبط**.' }   // emphasis per slide 15
         ] },
       { src: 'assets/img/comic/15e.jpg',
-        alt: 'ארכימדס מסתכל אל המצלמה.',
+        alt: 'أرخميدس ينظر إلى الكاميرا.',
         bubbles: [
-          { type: 'banner', t: 78, fit: true, text: 'זוהי שיטת דחיקת המים!' },   // pill hugs the text (QA 2026-10-08)
+          { type: 'banner', t: 78, fit: true, text: 'هذه هي طريقة إزاحة الماء!' },   // pill hugs the text (QA 2026-10-08)
           /* Raised and moved to his left, beak on its right edge at mid-height pointing at him;
              explicit breaks after "במים," and before "דקה" (QA 2026-10-08). */
           { type: 'speech', tail: 'right', r: 49, t: 2, w: 33, ty: '50%',
-            text: 'אם רוצים למדוד נפח של גוף\nשעלול להיפגע במים,\nאפשר לעטוף אותו בשכבת מגן\nדקה ואטומה למים.' }
+            text: 'إذا أردنا قياس حجم جسم\nقد يتضرر بالماء،\nيمكن لفّه بطبقة حماية\nرقيقة ومانعة للماء.' }
         ] }
     ]
   },
@@ -825,65 +825,65 @@ const COMIC_DATA = {
     slide: 17, kind: 'panels',
     panels: [
       { src: 'assets/img/comic/17a.jpg',
-        alt: 'ארכימדס מחזיק אבטיח.',
+        alt: 'يحمل ارخميدس بطيخة',
         bubbles: [
           /* s13 rule: every bubble sits to the character's LEFT, beak on its right edge pointing
              back at him (QA 2026-10-08). */
           { type: 'speech', tail: 'right', r: 44, t: 10, w: 31, ty: 50,
-            text: 'או! אני שמח ששאלתם מה לגבי\nגופים שלא נכנסים במשורה.' }
+            text: 'أوه! أنا سعيد لأنكم سألتم عن\nأجسام لا تدخل في الأسطوانة المدرجة.' }
         ] },
       { src: 'assets/img/comic/17b.jpg',
-        alt: 'ארכימדס מכניס את האבטיח לקערה מלאה במים; מתחת לקערה מגש עמוק שאליו נשפכים המים.',
+        alt: 'أرخميدس يُدخل البطيخة في وعاء مملوء بالماء؛ تحت الوعاء صينية عميقة ينسكب إليها الماء.',
         bubbles: [
-          { type: 'caption', text: 'ארכימדס מכין קערה גדולה עם מים מלאים ממש עד לקצה. מתחתיה יש כלי עמוק נוסף.' },
+          { type: 'caption', text: 'أرخميدس يُحضّر وعاءً كبيرًا مملوءًا بالماء حتى الحافة تمامًا. وتحته يوجد وعاء عميق آخر.' },
           /* Left of him, beak toward his mouth; explicit break so "נכון?" no longer sits alone (QA 2026-10-08). */
           { type: 'speech', tail: 'right', r: 46, t: 14, w: 32, ty: 45,
-            text: 'אם אני אניח את האבטיח בתוך\nקערת המים, המים ישפכו, נכון?' }
+            text: 'إذا وضعت البطيخة داخل\nوعاء الماء، سينسكب الماء، صحيح؟' }
         ] },
       { src: 'assets/img/comic/17c.jpg',
-        alt: 'ארכימדס מסתכל על הקערה וחושב.',
+        alt: 'أرخميدس ينظر إلى الوعاء ويفكّر.',
         bubbles: [
           /* Left of him and above the trail: the circles leave the bubble's bottom edge near its
              right end and step down-right to his head, so the cloud sits over the small circles
              (QA 2026-10-08). tail-down-left is the mirrored trail (small circle down-RIGHT);
              tx slides it along to the right end of the bottom edge. */
           { type: 'thought', tail: 'down-left', r: 46, t: -4, w: 29, tx: 190,
-            text: 'אוקי... המים נשפכו.\nמה עכשיו?' }
+            text: 'حسنًا... الماء انسكب.\nماذا الآن؟' }
         ] },
       { src: 'assets/img/comic/17d.jpg',
-        alt: 'ארכימדס מחזיק כלי מדידה גדול ומראה אותו לצופים.',
+        alt: 'أرخميدس يحمل أداة قياس كبيرة ويعرضها للمشاهدين.',
         bubbles: [
           /* Left of him, beak toward his head; "גם" up a line (QA 2026-10-08). */
           { type: 'speech', tail: 'right', r: 59, t: 6, w: 21, ty: 40,   // clear of the measuring cylinder's top
-            text: 'רגע! יש לנו פה גם\nכלי מדידה!' }
+            text: 'لحظة! لدينا هنا أيضًا\nأداة قياس!' }
         ] },
       { src: 'assets/img/comic/17e.jpg',
-        alt: 'ארכימדס שופך את המים מהכלי העמוק לתוך כלי המדידה.',
+        alt: 'أرخميدس يسكب الماء من الوعاء العميق إلى وعاء القياس.',
         bubbles: [
-          { type: 'caption', text: 'ארכימדס שופך את המים מהכלי העמוק לתוך כלי המדידה.' },
+          { type: 'caption', text: 'أرخميدس يسكب الماء من الوعاء العميق إلى وعاء القياس.' },
           /* Left of him, beak toward him; kept left of the raised tray so it never covers the pour (QA 2026-10-08). */
           { type: 'speech', tail: 'right', r: 56, t: 6, w: 30, ty: 45,
-            text: 'רואים? המים שנשפכו החוצה\nמגיעים בדיוק ל 6.4\u00A0ליטר' }
+            text: 'أرأيتم؟ الماء الذي انسكب إلى الخارج\nيصل بالضبط إلى 6.4 لتر' }
         ] },
       { src: 'assets/img/comic/17f.jpg',
-        alt: 'זום על כלי המדידה: המים מגיעים ל-6.4 ליטר.',
+        alt: 'تكبير على أداة القياس: الماء يصل إلى 6.4 لتر.',
         bubbles: [
-          { type: 'caption', text: 'מה קרה כאן?' },
+          { type: 'caption', text: 'ماذا حدث هنا؟' },
           { type: 'speech', tail: 'left', r: 4, t: 5, w: 33,   // side beak, toward the vessel (QA 2026-10-08, as s11 15d); wider for 20px text
-            text: 'כשמכניסים גוף מוצק לקערת מים, המים שנשפכים החוצה שווים לנפח הגוף במדויק!' },
+            text: 'عندما نضع جسمًا صلبًا في وعاء ماء، فإن الماء الذي ينسكب للخارج يساوي حجم الجسم بالضبط!' },
           { type: 'note', r: 64, t: 42, w: 32,   // moved to the left of the frame (QA 2026-10-08)
-            text: 'זה נכון רק אם הכלי מלא במים\nממש עד הסוף.' }
+            text: 'هذا صحيح فقط إذا كان الوعاء مملوءًا بالماء\nتمامًا حتى النهاية.' }
         ] },
       { src: 'assets/img/comic/17g.jpg',
-        alt: 'ארכימדס מחזיק משקולת קטנה.',
+        alt: 'أرخميدس يحمل ثقلًا صغيرًا.',
         bubbles: [
-          { type: 'banner', t: 80, fit: true, text: 'זוהי שיטת ההצפה!' },   // pill hugs the text (QA 2026-10-08)
+          { type: 'banner', t: 80, fit: true, text: 'هذه هي طريقة الإفاضة!' },   // pill hugs the text (QA 2026-10-08)
           /* Explicit break so "שישקע." no longer sits alone (QA 2026-10-08). Moved to his left (the
              frame's left side), beak on the right edge pointing back to his mouth (QA 2026-10-08). */
           { type: 'speech', tail: 'right', r: 53, t: 14, w: 34, ty: 55,
-            text: 'אם הגוף שמודדים צף במים,\nאפשר לחבר לו משקולת שישקע.' },   // break after the comma (QA 2026-10-08)
+            text: 'إذا كان الجسم المراد قياسه يطفو على الماء،\nيمكن ربط ثقل به ليغوص.' },   // break after the comma (QA 2026-10-08)
           { type: 'note', r: 66, t: 42, w: 30,   // moved to the left of the frame (QA 2026-10-08)
-            text: 'כמובן שצריך להחסיר את נפח המשקולת מהתוצאה הסופית' }
+            text: 'بالطبع يجب طرح حجم الثقل من النتيجة النهائية' }
         ] }
     ]
   },
@@ -893,31 +893,31 @@ const COMIC_DATA = {
     slide: 18, kind: 'panels',
     panels: [
       { src: 'assets/img/comic/18a.jpg',
-        alt: 'ארכימדס עומד ליד שולחן המעבדה ומפנה את ראשו הצידה כדי להקשיב לשאלה.',
+        alt: 'يقف أرخميدس بجانب طاولة المختبر ويدير رأسه إلى الجانب ليستمع إلى السؤال.',
         bubbles: [
           // Off-panel voice (storyboard: "הדיבור הזה מגיע כאילו מחוץ לקומיקס") —
           // shown as the blue narration strip with white text (QA 2026-10-08).
-          { type: 'caption', text: 'ארכימדס! מה לגבי מוצק שמתנהג כמו נוזל?' },
+          { type: 'caption', text: 'أرخميدس! ماذا عن مادة صلبة تتصرف كالسائل؟' },
           /* Speech bubble left of him, beak on its right edge pointing to his mouth (QA 2026-10-08). */
           { type: 'speech', tail: 'right', r: 50, t: 6, w: 22, ty: 60,
-            text: 'או! חיכיתי\nלשאלה הזאת!' }
+            text: 'أوه! كنت أنتظر\nهذا السؤال!' }
         ] },
       { src: 'assets/img/comic/18b.jpg',
-        alt: 'ארכימדס שופך אורז לתוך כלי מדידה ריק.',
+        alt: 'أرخميدس يسكب الأرز في وعاء قياس فارغ.',
         bubbles: [
-          { type: 'caption', text: 'ארכימדס שופך אורז לתוך כלי מדידה' },
+          { type: 'caption', text: 'أرخميدس يسكب الأرز في أداة قياس' },
           /* Off his hair, side beak toward his head; explicit breaks so "נוזלים." no longer sits
              alone (QA 2026-10-08). */
           { type: 'speech', tail: 'left', r: -8, t: 4, w: 37, ty: 60,   // 34 -> 37: line 1 wrapped into 4 ragged lines (QA 2026-10-09)
-            text: 'מוצק בצורת גרגרים או אבקה מתנהג\nכמו נוזל! לכן ניתן למדוד את הנפח\nשלו בכלי למדידת נוזלים.' }
+            text: 'مادة صلبة على شكل حبيبات أو مسحوق تتصرف\nكالسائل! لذلك يمكن قياس الحجم\nالخاص بها بأداة لقياس السوائل.' }
         ] },
       { src: 'assets/img/s6-archimedes-bath.jpg?v=2',   // same bath art as S6 (QA 2026-10-08)
-        alt: 'ארכימדס באמבטיה מרים כתר וקורא "אאוריקה", המים גולשים מהאמבט החוצה.',
+        alt: 'أرخميدس في حوض الاستحمام يرفع تاجًا ويصرخ "يوريكا"، والماء يفيض من الحوض إلى الخارج.',
         bubbles: [
           /* Trail leaves the bubble's bottom edge, big circle against the cloud and the small ones
              stepping down-left to his head (QA 2026-10-08); tx slides it toward the left end. */
           { type: 'thought', tail: 'down-right', r: 6, t: 10, w: 36, tx: 185,
-            text: 'וכל זה בזכות האמבטיה\nשעשיתי לפני אלפי שנים...\nלא רע!' }
+            text: 'وكل هذا بفضل الحمام\nالذي أخذته قبل آلاف السنين...\nليس سيئًا!' }
         ] }
     ]
   }
@@ -1008,9 +1008,9 @@ function comicBuild(screenId) {
   track.innerHTML = cfg.panels.map(function (p, k) {
     const media = p.src
       ? '<img class="comic-panel-img" src="' + p.src + '" alt="' + esc(p.alt || '') + '" draggable="false" decoding="async">'
-      : '<div class="comic-panel-ph">' + esc(p.placeholder || 'איור להפקה') + '</div>';
+      : '<div class="comic-panel-ph">' + esc(p.placeholder || 'رسم توضيحي للإنتاج') + '</div>';
     return '<div class="comic-panel" id="' + screenId + '-panel-' + k + '" style="--i:' + k + '"'
-         +      ' role="group" aria-roledescription="פאנל" aria-label="פאנל ' + (k + 1) + ' מתוך ' + n + '">'
+         +      'role="group" aria-roledescription="لوحة" aria-label="لوحة' + (k + 1) + 'من' + n + '">'
          +   media
          + '</div>';
   }).join('');
@@ -1032,7 +1032,7 @@ function comicBuild(screenId) {
   if (dots) {
     dots.innerHTML = n < 2 ? '' : cfg.panels.map(function (p, k) {
       return '<button class="comic-dot" type="button" role="tab" aria-selected="false"'
-           +        ' aria-label="פאנל ' + (k + 1) + '"'
+           +        'aria-label="لوحة' + (k + 1) + '"'
            +        ' onclick="comicSliderGo(\'' + screenId + '\', ' + k + ')"></button>';
     }).join('');
   }
@@ -1051,7 +1051,7 @@ function comicBuild(screenId) {
     zb.type = 'button';
     zb.className = 'img-zoom-btn comic-zoom-btn';
     zb.id = screenId + '-zoom';
-    zb.setAttribute('aria-label', 'הגדלת הקומיקס');
+    zb.setAttribute('aria-label', 'تكبير القصة المصوّرة');
     zb.setAttribute('aria-pressed', 'false');
     zb.innerHTML = COMIC_ZOOM_ICON_OPEN;
     zb.addEventListener('click', function () { comicZoomToggle(screenId); });
@@ -1230,7 +1230,7 @@ function comicZoomOpen(screenId) {
   frame.classList.add('is-zoomed');
   screen.classList.add('comic-zoom-open');
   const zb = document.getElementById(screenId + '-zoom');
-  if (zb) { zb.innerHTML = COMIC_ZOOM_ICON_CLOSE; zb.setAttribute('aria-label', 'סגירת ההגדלה'); zb.setAttribute('aria-pressed', 'true'); }
+  if (zb) { zb.innerHTML = COMIC_ZOOM_ICON_CLOSE; zb.setAttribute('aria-label', 'إغلاق التكبير'); zb.setAttribute('aria-pressed', 'true'); }
   comicZoomApply(screenId);
 }
 function comicZoomApply(screenId) {
@@ -1265,7 +1265,7 @@ function comicZoomClose() {
   const screen = frame && frame.closest('.screen');
   if (screen) screen.classList.remove('comic-zoom-open');
   const zb = document.getElementById(screenId + '-zoom');
-  if (zb) { zb.innerHTML = COMIC_ZOOM_ICON_OPEN; zb.setAttribute('aria-label', 'הגדלת הקומיקס'); zb.setAttribute('aria-pressed', 'false'); }
+  if (zb) { zb.innerHTML = COMIC_ZOOM_ICON_OPEN; zb.setAttribute('aria-label', 'تكبير القصة المصوّرة'); zb.setAttribute('aria-pressed', 'false'); }
 }
 window.addEventListener('resize', function () { if (comicZoomedId) comicZoomApply(comicZoomedId); });
 
@@ -1357,9 +1357,9 @@ function dispDrop() {
      it. The hint keeps its box and only stops being drawn. */
   document.getElementById('disp-drag-hint').classList.add('is-hidden');
   document.getElementById('disp-cylinder').classList.add('risen');
-  document.getElementById('disp-badge').textContent = '62 מ"ל';
+  document.getElementById('disp-badge').textContent = '62 ملل';
   const inst = document.getElementById('disp-instruction');
-  if (inst) inst.textContent = 'הגולה שקעה והמים עלו — בואו נבין למה.';
+  if (inst) inst.textContent = 'غاصت الكرة وارتفع الماء — هيا نفهم لماذا.';
   /* The 900ms wait is the water animation, not a dramatic pause: revealing the reset and the
      continue while the level is still climbing invites a click mid-transition. What it used to
      reveal as well — slide 26's explanation and the mascot's caveat — is s18 now. */
@@ -1374,8 +1374,8 @@ function dispReset() {
   marble.classList.remove('placed'); marble.style.transform = '';
   document.getElementById('disp-drag-hint').classList.remove('is-hidden');
   document.getElementById('disp-cylinder').classList.remove('risen');
-  document.getElementById('disp-badge').textContent = '50 מ"ל';
-  document.getElementById('disp-instruction').textContent = 'הכניסו את הגולה אל תוך המשורה.';
+  document.getElementById('disp-badge').textContent = '50 ملل';
+  document.getElementById('disp-instruction').textContent = 'أدخلوا الكرة إلى داخل الأسطوانة المدرجة.';
   document.getElementById('disp-reset').classList.add('is-hidden');
   document.getElementById('s17-continue').disabled = true;
 }
@@ -1387,7 +1387,7 @@ function dispEnter() {
     document.getElementById('disp-marble').classList.add('placed');
     document.getElementById('disp-drag-hint').classList.add('is-hidden');
     document.getElementById('disp-cylinder').classList.add('risen');
-    document.getElementById('disp-badge').textContent = '62 מ"ל';
+    document.getElementById('disp-badge').textContent = '62 ملل';
     document.getElementById('disp-reset').classList.remove('is-hidden');
     document.getElementById('s17-continue').disabled = false;
   } else {
@@ -1489,7 +1489,7 @@ function scqFinish(screen, isCorrect) {
   const s = SCQ_REG[screen];
   s.answered = true; s.done = true;
   scqOpts(screen).forEach(o => { o.disabled = true; });
-  const chk = document.getElementById(screen + '-scq-check'); if (chk) { chk.textContent = 'שנמשיך?'; chk.disabled = false; }
+  const chk = document.getElementById(screen + '-scq-check'); if (chk) { chk.textContent = 'متابعة'; chk.disabled = false; }
   scqSyncHint(screen);
   if (s.cfg.onFinish) s.cfg.onFinish(isCorrect);
 }
@@ -1537,7 +1537,7 @@ function scqEnter(screen) {
   scqClosePopup(screen);
   if (s.done) {
     scqOpts(screen).forEach(o => { o.disabled = true; });   // marks already painted persist
-    const chk = document.getElementById(screen + '-scq-check'); if (chk) { chk.textContent = 'שנמשיך?'; chk.disabled = false; }
+    const chk = document.getElementById(screen + '-scq-check'); if (chk) { chk.textContent = 'متابعة'; chk.disabled = false; }
     scqSyncHint(screen);
   } else {
     scqReset(screen);
@@ -1551,7 +1551,7 @@ function scqReset(screen) {
     o.setAttribute('aria-checked', 'false');
     o.disabled = !!s.locked;
   });
-  const chk = document.getElementById(screen + '-scq-check'); if (chk) { chk.textContent = 'צדקתי?'; chk.disabled = true; }
+  const chk = document.getElementById(screen + '-scq-check'); if (chk) { chk.textContent = 'هل إجابتي صحيحة؟'; chk.disabled = true; }
   const hint = document.getElementById(screen + '-scq-hint'); if (hint) hint.disabled = false;
   scqSyncHint(screen);
 }
@@ -1628,8 +1628,8 @@ function aqEnter() {
        earlier revision; the question asks about a crystal, so the subject follows the question.
      - deck expressions are wrapped in .section-result-expr: digits and operators are
        bidi-neutral and reorder inside an RTL paragraph without it. */
-const FB_RETRY  = { title: 'התשובה אינה נכונה.', body: ['שננסה שוב?'] };
-const FB_WRONG2 = 'התשובה אינה נכונה.<br />התשובה הנכונה מסומנת.';
+const FB_RETRY  = { title: 'الإجابة غير صحيحة.', body: ['هل نحاول مجدداً؟'] };
+const FB_WRONG2 = 'الإجابة غير صحيحة.<br />الإجابة الصحيحة تم تحديدها.';
 /* `wrong2Extra`: a line the deck adds to the wrong-final popup only (used by Part 02's Q1). */
 const fbPopups = (correctTitle, explanation, wrong2Extra) => ({
   retry:   FB_RETRY,
@@ -1643,9 +1643,9 @@ scqRegister({
   correctId: 'd',
   startLocked: true,
   item: '02',
-  popups: fbPopups('נכון מאוד!', [   /* sb20/22/23 */
-    'למדידת נפח של תיבה משתמשים בסרגל: מודדים את אחת מצלעות הקובייה ומכפילים אותו בעצמו שלוש פעמים - פעם אחת לאורך, פעם אחת לרוחב ופעם אחת לגובה.',
-    'אורך הצלע במקרה זה הוא 10\u00A0ס"מ וכיוון שכל הצלעות בקובייה זהות:',
+  popups: fbPopups('! صحيح جدًا', [   /* sb20/22/23 */
+    'لقياس حجم صندوق نستخدم المسطرة: نقيس أحد أضلاع المكعب ونضربه في نفسه ثلاث مرات - مرة للطول، ومرة للعرض، ومرة للارتفاع.',
+    'طول الضلع في هذه الحالة هو 10 سم وبما أن جميع الأضلاع في المكعب متساوية:',
     '<span class="section-result-expr">10 · 10 · 10 = 1,000</span>']),
   /* ⚠️ goTo(16), NOT goTo(17). This screen advances through its own check button rather than
      advanceScreen(), so the flow edge lives here. Skipping to 17 once made s16 (sb24, the guess
@@ -1678,7 +1678,7 @@ function floodDrop() {
   document.getElementById('flood-hint').textContent = '';
   document.getElementById('flood-bowl').classList.add('flooded');
   const inst = document.getElementById('flood-instruction');
-  if (inst) inst.textContent = 'האבן שקעה והמים גלשו לכלי האיסוף — בואו נבין למה.';
+  if (inst) inst.textContent = 'غرق الحجر وفاض الماء إلى وعاء التجميع — هيا نفهم لماذا.';
   /* Staged overflow (lesson css, "#s20 overflow animation"): rock falls 0–550ms, water bulges over
      the rim from 450ms, streams run from 700ms, tray fills 1000–2600ms. Marking the scene drained at
      2600 stops the streams and settles the bowl back to the brim, because by then every drop that
@@ -1696,10 +1696,10 @@ function floodReset() {
   clearTimeout(floodTimer);
   const rock = document.getElementById('flood-rock');
   rock.classList.remove('placed'); rock.style.transform = '';
-  document.getElementById('flood-hint').textContent = 'גררו את האבן לקערה';
+  document.getElementById('flood-hint').textContent = 'اسحبوا الحجر إلى الوعاء';
   document.getElementById('flood-bowl').classList.remove('flooded');
   document.querySelector('#s20 .flood-scene')?.classList.remove('drained');
-  document.getElementById('flood-instruction').innerHTML = 'הכניסו את האבן לתוך הקערה הגדולה המלאה במים <strong>עד הקצה</strong>.';
+  document.getElementById('flood-instruction').innerHTML = 'أدخلوا الحجر في الوعاء الكبير الممتلئ بالماء <strong>حتى الحافة</strong>.';
   document.getElementById('flood-reset').hidden = true;
   document.getElementById('s20-continue').disabled = true;
 }
@@ -1950,7 +1950,7 @@ function ddqCheck(screen) {
   }
   ddqRender(screen);
   ddqShowPopup(screen, allCorrect ? 'correct' : 'incorrect');
-  const btn = document.getElementById(screen + '-ddq-check'); if (btn) { btn.textContent = 'שנמשיך?'; btn.disabled = false; }
+  const btn = document.getElementById(screen + '-ddq-check'); if (btn) { btn.textContent = 'متابعة'; btn.disabled = false; }
   ddqSyncHint(screen);
   if (cfg.onFinish) cfg.onFinish(allCorrect);
 
@@ -2004,8 +2004,8 @@ function ddqIsPartial(screen, board) {
   if (!lp) return false;
   return Object.keys(s.cfg.correctMap).some(t => lp[s.cfg.correctMap[t]] === t);
 }
-const DDQ_PARTIAL_TITLE = 'התשובה אינה נכונה במלואה.';
-const DDQ_ANSWER_VIEW_LINE = 'אפשר לצפות שוב בפתרון הנכון.';
+const DDQ_PARTIAL_TITLE = 'الإجابة ليست صحيحة تماما';
+const DDQ_ANSWER_VIEW_LINE = 'يمكنك مشاهدة الحل الصحيح مرة أخرى.';
 function ddqWrongTitle(screen) {
   const s = DDQ_REG[screen];
   const first = ddqIsPartial(screen) ? DDQ_PARTIAL_TITLE : s.cfg.popups.incorrect.title;
@@ -2028,7 +2028,7 @@ function ddqSyncAnswerToggle(screen) {
   const s = DDQ_REG[screen];
   const b = document.getElementById(screen + '-ddq-answer-toggle');
   if (!s || !b) return;
-  b.textContent = (s.answerView === 'correct') ? 'התשובה שלי' : 'תשובה נכונה';
+  b.textContent = (s.answerView === 'correct') ? 'إجابتي' : 'إجابة صحيحة';
   const t = document.getElementById(screen + '-ddq-popup-title');
   if (t) t.innerHTML = ddqWrongTitle(screen);
 }
@@ -2039,14 +2039,14 @@ function ddqEnter(screen) {
   if (!s.done) {
     s.checked = false; s.attempts = 0; s.phase = null; s.lastWrong = null;
     s.cfg.items.forEach(it => { s.cfg.placement[it.id] = 'source'; });
-    const btn = document.getElementById(screen + '-ddq-check'); if (btn) { btn.textContent = 'בדיקה'; btn.disabled = true; }
+    const btn = document.getElementById(screen + '-ddq-check'); if (btn) { btn.textContent = 'تحقّق'; btn.disabled = true; }
   }
   /* The "revisited wrong answer opens on the model board" rule used to live here. It cannot: this
      runs BEFORE applyResumeVars() restores the two board snapshots, so on a reload there is nothing
      yet to open onto — and the restore that follows would overwrite whatever it decided. It is now
      ddqRestoreUI()'s, which runs LAST. */
   ddqRender(screen);
-  if (s.done) { const btn = document.getElementById(screen + '-ddq-check'); if (btn) { btn.textContent = 'שנמשיך?'; btn.disabled = false; } }
+  if (s.done) { const btn = document.getElementById(screen + '-ddq-check'); if (btn) { btn.textContent = 'متابعة'; btn.disabled = false; } }
   // An answered question keeps its hint hidden on return, as the SCQ screens do.
   ddqSyncHint(screen);
 }
@@ -2067,32 +2067,32 @@ ddqRegister({
        matching could be done by position without reading anything. The order asked for is melon
        first, cube second-to-last, cup last; the other two fill the middle. Checked against
        correctMap: no pill now sits at the index of its own target. */
-    { id: 'wu-melon', label: 'מה המסה של\u00a0האבטיח?',                  img: 'assets/img/s28-task-watermelon.jpg', w: 64 },
-    { id: 'wu-doll',  label: 'מהו הנפח של בובת הפלסטיק הגדולה?',    img: 'assets/img/s28-task-doll.jpg',       w: 90 },
-    { id: 'wu-shell', label: 'מהו הנפח של הצדף הקטן?',              img: 'assets/img/s28-task-shell.png',      w: 68 },
-    { id: 'wu-cube',  label: 'מה אורך הצלע של הקובייה?',            img: 'assets/img/s28-task-rubik.jpg',      w: 66 },
-    { id: 'wu-cup',   label: 'כמה מים יש\u00a0בכוס?',                    img: 'assets/img/s28-task-water-cup.jpg',  w: 72 }
+    { id: 'wu-melon', label: 'ما كتلة البطيخة؟',                  img: 'assets/img/s28-task-watermelon.jpg', w: 64 },
+    { id: 'wu-doll',  label: 'ما هو حجم دمية البلاستيك الكبيرة؟',    img: 'assets/img/s28-task-doll.jpg',       w: 90 },
+    { id: 'wu-shell', label: 'ما هو حجم الصدفة الصغيرة؟',              img: 'assets/img/s28-task-shell.png',      w: 68 },
+    { id: 'wu-cube',  label: 'ما طول ضلع المكعب؟',            img: 'assets/img/s28-task-rubik.jpg',      w: 66 },
+    { id: 'wu-cup',   label: 'كم من الماء يوجد في الكأس؟',                    img: 'assets/img/s28-task-water-cup.jpg',  w: 72 }
   ],
   targets: [
-    { id: 'wt-pour',     label: 'מזיגה למשורה' },
-    { id: 'wt-ruler',    label: 'מדידה בסרגל' },
-    { id: 'wt-scale',    label: 'מדידה במאזניים דיגיטליים' },
-    { id: 'wt-displace', label: 'שיטת דחיקת מים' },
-    { id: 'wt-flood',    label: 'שיטת ההצפה' }
+    { id: 'wt-pour',     label: 'سكب في اسطوانة مدرجة' },
+    { id: 'wt-ruler',    label: 'القياس بالمسطرة' },
+    { id: 'wt-scale',    label: 'القياس بميزان رقمي' },
+    { id: 'wt-displace', label: 'طريقة إزاحة الماء' },
+    { id: 'wt-flood',    label: 'طريقة الإغمار' }
   ],
   correctMap: { 'wt-pour': 'wu-cup', 'wt-ruler': 'wu-cube', 'wt-scale': 'wu-melon', 'wt-displace': 'wu-shell', 'wt-flood': 'wu-doll' },
   /* Copy from storyboard slides 45 (correct) and 44 (wrong), each popup in its own slide's words
      (QA 2026-10-11): 45 'כל כלי ושיטת מדידה מתאימים', 44 'כל כלי ושיטת מדידה מתאימה'. The two
      agreements are the deck's, not unified — choosing one is a language call left to QA. Both slides
      end the second line with '..'; one period is kept (docs-and-tools/TEXT-FIDELITY.md, deck defects). */
-  answerNote: 'ההתאמה הנכונה מוצגת.',
+  answerNote: 'التطابق الصحيح معروض.',
   /* Two attempts, like Part 02's s4: the first wrong check opens the retry popup and keeps the board
      live; the second resolves to the model board. The hint stays available from the start. */
   maxAttempts: 2,
   popups: {
     retry:     FB_RETRY,
-    correct:   { title: 'התאמה מושלמת!', body: ['כל כלי ושיטת מדידה מתאימים למשימה אחרת.', 'כדי לבחור נכון, חשוב לזהות מה רוצים למדוד והאם מדובר בנוזל, בגוף בעל צורה הנדסית או בגוף בעל צורה מורכבת.'] },
-    incorrect: { title: 'התשובה אינה נכונה.', body: ['כל כלי ושיטת מדידה מתאימה למשימה אחרת.', 'כדי לבחור נכון, חשוב לזהות מה רוצים למדוד והאם מדובר בנוזל, בגוף בעל צורה הנדסית או בגוף בעל צורה מורכבת.'] }
+    correct:   { title: 'تطابق مثالي!', body: ['كل أداة وطريقة قياس تناسب مهمة مختلفة.', 'لكي نختار بشكل صحيح، من المهم تحديد ما نريد قياسه وما إذا كان الأمر يتعلق بسائل، أو جسم ذي شكل هندسي، أو جسم ذي شكل معقّد.'] },
+    incorrect: { title: 'الإجابة غير صحيحة.', body: ['كل أداة وطريقة قياس تناسب مهمة مختلفة.', 'لاختيار الطريقة الصحيحة، من المهم تحديد ما نريد قياسه وما إذا كان سائلاً، أو جسمًا ذا شكل هندسي، أو جسمًا ذا شكل معقّد.'] }
   },
   onFinish: function (ok) { warmupFinish(0, 's28', ok); },
   onContinue: function () { goTo(29); }
@@ -2103,9 +2103,9 @@ scqRegister({
   screen: 's29',
   correctId: 'a',
   item: '04',
-  popups: fbPopups('נכון מאוד!', [   /* sb48/49 */
-    'כשמכניסים גוף מוצק למים, הגוף תופס מקום בתוך המשורה ולכן מפלס המים עולה.',
-    'ההפרש בין קריאת הנפח לפני הכנסת הגוף ולאחריה שווה לנפח הגוף.']),
+  popups: fbPopups('صحيح جدًا!', [   /* sb48/49 */
+    'عندما نضع جسمًا صلبًا في الماء، يشغل الجسم حيزًا داخل الاسطوانة المدرجة ولذلك يرتفع مستوى الماء.',
+    'الفرق بين قراءة الحجم قبل إدخال الجسم وبعده يساوي حجم الجسم.']),
   onFinish: function (ok) {   // reflect result on the dropdown trigger, and on the warm-up bar
     dqSyncView('s29');
     warmupFinish(1, 's29', ok);
@@ -2144,9 +2144,9 @@ function dqSyncView(screen) {
   trig.classList.add(showCorrect ? 'correct' : 'wrong');
   const b = document.getElementById(screen + '-dq-answer-toggle');
   if (!b) return;
-  b.textContent = showCorrect ? 'התשובה שלי' : 'תשובה נכונה';
+  b.textContent = showCorrect ? 'إجابتي' : 'إجابة صحيحة';
   const t = document.getElementById(screen + '-scq-popup-title');
-  if (t) t.innerHTML = showCorrect ? s.cfg.popups.wrong2.title : 'התשובה אינה נכונה.<br />' + DDQ_ANSWER_VIEW_LINE;
+  if (t) t.innerHTML = showCorrect ? s.cfg.popups.wrong2.title : 'الإجابة غير صحيحة.<br />' + DDQ_ANSWER_VIEW_LINE;
 }
 function dqToggleAnswer(screen) {
   const s = SCQ_REG[screen]; if (!s) return;
@@ -2175,7 +2175,7 @@ function dqEnter(screen) {
   if (trigger && s && !s.done) {
     trigger.classList.remove('correct', 'wrong');
     const tr = trigger.querySelector('.dropdown-trigger-text');
-    if (tr) tr.textContent = 'בחרו מילה';
+    if (tr) tr.textContent = 'اختاروا كلمة';
     trigger.classList.add('is-placeholder');
   }
   list?.classList.add('hidden');
@@ -2300,28 +2300,28 @@ function guessEnter(screen) {
    Numeric inputs have no feedback (any value proceeds).
    ═══════════════════════════════════════════════════════════ */
 const MEAS = {
-  1: { screen: 23, obj: true, objImg: 's23-chess-king.svg', objLabel: 'כלי שח-מט', correct: 'cyl',
-       instruction: 'שלב 1: גררו את כלי השח-מט אל כלי המדידה המתאים.' },
-  2: { screen: 23, input: true, instruction: 'שלב 2: מדדו את מפלס המים במשורה כעת והקלידו את נפחו של כלי השח-מט.',
-       inputLabel: 'נפח כלי השח-מט (מ"ל):',
+  1: { screen: 23, obj: true, objImg: 's23-chess-king.svg', objLabel: 'قطعة شطرنج', correct: 'cyl',
+       instruction: 'المرحلة 1: اسحبوا قطع الشطرنج إلى أداة القياس المناسبة.' },
+  2: { screen: 23, input: true, instruction: 'المرحلة 2: قيسوا مستوى الماء في الاسطوانة المدرجة الآن وأدخلوا حجم قطعة الشطرنج.',
+       inputLabel: 'حجم قطعة الشطرنج (ملل):',
        /* The formula is an LRI…PDI isolate with no-break spaces — the same one-line LTR unit as
           .section-result-expr, which textContent cannot carry (QA 2026-10-12). */
-       reveal: 'נפח כלי השח-מט הוא 15\u00A0מ"ל. מפלס המים המקורי במשורה היה 50\u00A0מ"ל והוא עלה ל-65\u00A0מ"ל, ולכן: \u206665\u00A0−\u00A050\u00A0=\u00A015\u2069.' },
+       reveal: 'حجم قطعة الشطرنج هو 15 ملل. مستوى الماء الأصلي في الاسطوانة المدرجة كان 50 ملل وارتفع إلى 65 ملل، ولذلك: \u206665 − 50 = 15\u2069.' },
   /* Deck slide 36 states the instruction without explaining WHY the cylinder is wrong — naming
      "too big for the cylinder" here would hand over the judgement this step exists to test. */
   3: { screen: 24, obj: true, /* ?v=2 — the file was re-exported under the same name (upright -> lying down), and this
         path is written from JS, so it needs the buster the markup copies carry. */
-       objImg: 's23-hammer.png', objClass: 'meas-obj-img--hammer', objLabel: 'פטיש', correct: 'bowl',
+       objImg: 's23-hammer.png', objClass: 'meas-obj-img--hammer', objLabel: 'مطرقة', correct: 'bowl',
        /* Two lines (QA 2026-10-11): the question naming both methods, then the action in bold. */
-       instructionHtml: 'איך נמדוד נפח של פטיש – בדחיקת מים (במשורה) או בהצפת מים (בקערת הצפה)?<br><strong>גררו את הפטיש אל כלי המדידה המתאים.</strong>' },
+       instructionHtml: 'كيف نقيس حجم المطرقة – بإزاحة الماء (في الاسطوانة المدرجة) أم بإفاضة الماء (في وعاء الإفاضة)؟<br><strong>اسحبوا المطرقة إلى أداة القياس المناسبة.</strong>' },
   /* `pour` gates the input behind a real action: slide 37 says the level reaches 250 מ"ל "לאחר
      שהלומד שופך את המים לתוך כלי המדידה" — after the LEARNER pours. The target is the graduated
      MEASURING VESSEL (`mv`), not the משורה: slide 36 is explicit that the משורה still reads 65,
      and slide 38 puts the 250 in "כלי המדידה". Those are two different vessels. */
   4: { screen: 24, input: true, last: true, pour: true, correct: 'mv',
-       instruction: 'שלב 4: שפכו את המים מכלי האיסוף אל תוך כלי המדידה והקלידו את נפח הפטיש.',
-       inputLabel: 'נפח הפטיש (מ"ל):',
-       reveal: 'המים שנשפכו היו בנפח 250\u00A0מ"ל — כלומר נפח הפטיש הוא 250\u00A0מ"ל, כי הוא הציף החוצה כמות מים השווה לנפחו!' }
+       instruction: 'المرحلة 4: اسكبوا الماء من وعاء التجميع إلى وعاء القياس واكتبوا حجم المطرقة.',
+       inputLabel: 'حجم المطرقة (ملل):',
+       reveal: 'الماء الذي انسكب كان بحجم 250 ملل — أي أن حجم المطرقة هو 250 ملل، لأنها أزاحت للخارج كمية من الماء تساوي حجمها!' }
 };
 let measStep = 1, measDone = false, measRevealed = false, measPoured = false;
 const measDnd = {};

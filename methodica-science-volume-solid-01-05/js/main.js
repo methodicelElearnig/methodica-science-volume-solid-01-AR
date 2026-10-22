@@ -39,7 +39,7 @@ function buildProgressNav() {
   document.querySelectorAll('.progress-question[data-count]').forEach(function (nav) {
     const count = parseInt(nav.dataset.count, 10) || 0; let h = '';
     for (let i = 1; i <= count; i++) {
-      h += '<div class="progress-question__item" data-question="' + i + '"><div class="progress-question__icon"></div><span class="progress-question__label">שאלה ' + i + '</span></div>';
+      h += '<div class="progress-question__item" data-question="' + i + '"><div class="progress-question__icon"></div><span class="progress-question__label">سؤال' + i + '</span></div>';
       if (i < count) h += '<div class="progress-question__connector" data-connector="' + i + '"></div>';
     }
     nav.innerHTML = h;
@@ -252,7 +252,7 @@ function scqCheck(screen) {
      otherwise rest entirely on the page-leave handlers, which Chrome may drop. */
   try { flushResumeSave(); } catch (e) {}
 }
-function scqLabel(cfg, done) { return done ? 'שנמשיך?' : 'צדקתי?'; }
+function scqLabel(cfg, done) { return done ? 'متابعة' : 'هل إجابتي صحيحة؟'; }
 function scqMark(screen, id, cls) { const o = document.querySelector('#' + screen + ' .scq-opt[data-id="' + id + '"]'); if (o) { o.classList.remove('selected'); o.classList.add(cls); } }
 function scqFinish(screen, ok) {
   const s = SCQ_REG[screen]; s.answered = true; s.done = true;
@@ -366,27 +366,27 @@ function registerPractice(idx, cfg) { cfg.screen = 's' + practiceProgress.questi
    Slides 128 and 134 write `התשובה הנכונה מוצגת.` where 118/123/139 write `מסומנת.`;
    the unit marks the correct option, so FB_WRONG2 keeps `מסומנת` everywhere
    (docs-and-tools/TEXT-FIDELITY.md §Deck defects). */
-const FB_RETRY  = { title: 'התשובה אינה נכונה.', body: ['שננסה שוב?'] };
-const FB_WRONG2 = 'התשובה אינה נכונה.<br />התשובה הנכונה מסומנת.';
+const FB_RETRY  = { title: 'الإجابة غير صحيحة.', body: ['هل نحاول مجدداً؟'] };
+const FB_WRONG2 = 'الإجابة غير صحيحة.<br />الإجابة الصحيحة تم تحديدها.';
 const fbPopups = explanation => ({
   retry:   FB_RETRY,
-  correct: { title: 'נכון מאוד!', body: explanation },
+  correct: { title: 'صحيح جدًا!', body: explanation },
   wrong2:  { title: FB_WRONG2,    body: explanation }
 });
 
 registerPractice(0, { correctId: 'a', item: '01', qKey: 'q1', hintAfterWrong: true, popups: fbPopups([   /* sb117/118 */
-  'הטבעת העלתה את מפלס המים במשורה.',
-  'העלייה בגובה המים היא הרמז שאפשר למדוד באמצעותו את נפח הטבעת, משום שנפח המים שנדחקו שווה לנפח החלק השקוע של הטבעת.']) });
+  'رفع الخاتم مستوى الماء في الاسطوانة المدرجة.',
+  'الارتفاع في مستوى الماء هو الدليل الذي يمكن من خلاله قياس حجم الخاتم، لأنّ حجم الماء الذي تمّ إزاحته يساوي حجم الجزء المغمور من الخاتم.']) });
 registerPractice(1, { correctId: 'b', item: '02', qKey: 'q1', hintAfterWrong: true, popups: fbPopups([   /* sb122/123 */
-  'עדשים הם מוצק גרגרי וניתן למדוד את נפחם<br />באמצעות כוס מדידה:',
-  'ממלאים את הכוס בעדשים וקוראים את הנפח לפי השנתות שעליה.']) });
+  'العدس مادة صلبة حبيبية ويمكن قياس حجمه<br />باستخدام كوب قياس:',
+  'نملأ الكوب بالعدس ونقرأ الحجم وفقًا للتدريجات المرسومة عليه.']) });
 registerPractice(2, { correctId: 'a', item: '03', qKey: 'q1', hintAfterWrong: true, popups: fbPopups([   /* sb127/128 */
-  'המדידות מהימנות משום שהתוצאות החוזרות קרובות מאוד זו לזו.']) });
+  'القياسات موثوقة لأن النتائج المتكررة قريبة جدًا من بعضها البعض.']) });
 registerPractice(3, { correctId: 'b', item: '04', qKey: 'q1', hintAfterWrong: true, popups: fbPopups([   /* sb133/134 */
-  'אם ליאן תעטוף משקולת קטנה בסליים ותכניס למשורה – הסליים ישקע והיא תוכל למדוד את הנפח שלו.']) });
+  'إذا لفّت ليان ثقلًا صغيرًا بالسلايم وأدخلته في الاسطوانة المدرجة – فإن السلايم سيغرق وستتمكن من قياس حجمه.']) });
 registerPractice(4, { correctId: 'd', item: '04', qKey: 'q2', hintAfterWrong: true, popups: fbPopups([   /* sb138/139 */
-  '<span class="fb-equation">נפח המים הסופי במשורה = נפח מים התחלתי + נפח משקולת + נפח סליים.</span>',
-  'צריך להוריד מהנפח שהתקבל את הנפח ההתחלתי ואת נפח המשקולת כדי לקבל את נפח הסליים.']) });
+  '<span class="fb-equation">الحجم النهائي للماء في الاسطوانة المدرجة = حجم الماء الابتدائي + حجم الثقل + حجم السلايم.</span>',
+  'يجب طرح الحجم الابتدائي وحجم الثقل من الحجم الذي تم الحصول عليه للحصول على حجم السلايم.']) });
 
 /* סעיפים א-ג of the marbles question (s6–s8): per-סעיף feedback, 2 attempts, no hints (slide 141).
    The explanations are the deck's combined answer slide (144/145), one row per סעיף.
@@ -395,14 +395,14 @@ registerPractice(4, { correctId: 'd', item: '04', qKey: 'q2', hintAfterWrong: tr
      - the division is wrapped in .section-result-expr; its colon and equals sign are
        bidi-neutral and would otherwise be reordered inside this RTL paragraph */
 registerPractice(5, { correctId: 'a', item: '05', qKey: 'q1', popups: fbPopups([   /* sb141 / sb144 א */
-  'גילי צודק רק אם כל הגולות זהות.',
-  'אם הגולות זהות אז הנפח הכולל שלהן חלקי מספר הגולות שווה לנפח של גולה אחת.']) });
+  'جمال على حق فقط إذا كانت جميع الكرات متطابقة.',
+  'إذا كانت الكرات متطابقة فإن حجمها الكلي مقسومًا على عدد الكرات يساوي حجم كرة واحدة.']) });
 registerPractice(6, { correctId: 'a', item: '05', qKey: 'q2', popups: fbPopups([   /* sb142 / sb144 ב */
-  'כל הגולות זהות ולכן ניתן לחלק את הנפח הכולל ב-5',
+  'جميع الكرات متطابقة ولذلك يمكن قسمة الحجم الكلي على 5',
   '<span class="section-result-expr">50 : 5 = 10</span>']) });
 registerPractice(7, { correctId: 'b', item: '05', qKey: 'q3', popups: fbPopups([   /* sb143 / sb144 ג */
-  'עבור גולות בגדלים שונים <b>השיטה של גילי לא תעבוד</b>.',
-  'אם הגולות שונות, נדע את הנפח הכולל אבל לא נפח של גולה ספציפית.']) });
+  'لن تعمل <b>طريقة جمال</b> للكرات ذات الأحجام المختلفة.',
+  'إذا كانت الكرات مختلفة، سنعرف الحجم الإجمالي لكن لن نعرف حجم كرة محددة.']) });
 
 /* ═══════════════════════════════════════════════════════════
    xAPI (720) — per-part seams

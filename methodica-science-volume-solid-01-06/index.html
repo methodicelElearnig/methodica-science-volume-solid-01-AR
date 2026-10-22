@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>לומדה — מדידת נפח מוצק · שאלת שיא</title>
+  <title>وحدة تعليمية — قياس حجم جسم صلب · سؤال التحدي</title>
   <link rel="stylesheet" href="../unit-css/style.css?v=20261020">
   <link rel="stylesheet" href="css/style.css?v=20261020">
 </head>
@@ -30,10 +30,7 @@
 
 <div id="app">
 
-  <button class="flag-btn" id="flag-btn" type="button" aria-label="מצאתם בעיה?">
-    <span class="flag-btn-icon"></span>
-    <span class="flag-btn-label">מצאתם בעיה?</span>
-  </button>
+  <button class="flag-btn" id="flag-btn" type="button" aria-label="هل وجدتم مشكلة؟"><span class="flag-btn-icon"></span> <span class="flag-btn-label">هل وجدتم مشكلة؟</span></button>
 
   <!-- ═══ S0 — Peak intro ═══ -->
   <section class="screen active" data-screen="0" id="s0">
@@ -43,16 +40,16 @@
          (156 גרם, 50→110 מ"ל) are already stated on s1, סעיף א. -->
     <div class="peak-transition">
       <div class="peak-transition-text">
-        <p class="peak-transition-sub">כל הכבוד! הסתיים שלב התרגול.</p>
-        <h1 class="peak-transition-title">עכשיו מגיעה שאלת השיא</h1>
-        <p class="peak-transition-body">יש בה 4 סעיפים. עליכם להצליח ב-3 לפחות.</p>
+        <p class="peak-transition-sub">أحسنتم! انتهت مرحلة التمرين.</p>
+        <h1 class="peak-transition-title">الآن تأتي السؤال الأهم</h1>
+        <p class="peak-transition-body">تتكوّن من 4 بنود. عليكم النجاح في 3 على الأقل.</p>
       </div>
       <!-- The sprite is injected here by CHARACTER_SLOTS so it follows the learner's chosen
            colour; a hard-coded <video> would show orange to a learner who picked turquoise. -->
       <div class="peak-transition-video" id="s0-video"></div>
     </div>
-    <div class="nav-bar"><button class="btn-back" id="back-to-prev-part" onclick="goBackToPreviousPart('methodica-science-volume-solid-01-05')" hidden style="display:none" aria-hidden="true">חזרה</button>
-      <button class="btn-continue" id="s0-continue" onclick="peakStart()">שנמשיך?</button></div>
+    <div class="nav-bar"><button class="btn-back" id="back-to-prev-part" onclick="goBackToPreviousPart('methodica-science-volume-solid-01-05')" hidden style="display:none" aria-hidden="true">رجوع</button>
+      <button class="btn-continue" id="s0-continue" onclick="peakStart()">متابعة</button></div>
   </section>
 
   <!-- S1–S4 sub-parts: single-select, feedback popup after each סעיף (2 attempts) -->
@@ -70,14 +67,12 @@
            the hint first appears (the deck's deferred-feedback line was dropped 2026-10-14). The sprite is injected into this
            group by CHARACTER_SLOTS so it follows the learner's chosen colour. -->
       <div class="peak-side">
-        <p class="scq-qtext scq-qtext--mixed">
-          <b class="scq-qtext-part">סעיף א:</b><br />
-          <b>מה נפח הפסלון?</b></p>
-        <div class="scq-answers peak-options" id="s1-opts" role="radiogroup" aria-label="נפח הפסלון">
-          <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="a" onclick="peakSelect(1,'a')"><span class="scq-opt-text">50 סמ"ק</span><span class="scq-radio" aria-hidden="true"></span></button>
-          <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="b" onclick="peakSelect(1,'b')"><span class="scq-opt-text">60 סמ"ק</span><span class="scq-radio" aria-hidden="true"></span></button>
-          <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="c" onclick="peakSelect(1,'c')"><span class="scq-opt-text">110 סמ"ק</span><span class="scq-radio" aria-hidden="true"></span></button>
-          <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="d" onclick="peakSelect(1,'d')"><span class="scq-opt-text">160 סמ"ק</span><span class="scq-radio" aria-hidden="true"></span></button>
+        <p class="scq-qtext scq-qtext--mixed"><b class="scq-qtext-part">الفقرة أ:</b><br/> <b>ما هو الحجم الكلي للكوب؟</b></p>
+        <div class="scq-answers peak-options" id="s1-opts" role="radiogroup" aria-label="حجم التمثال">
+          <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="a" onclick="peakSelect(1,'a')"><span class="scq-opt-text">50 سم³</span><span aria-hidden="true" class="scq-radio"></span></button>
+          <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="b" onclick="peakSelect(1,'b')"><span class="scq-opt-text">60 سم³</span><span aria-hidden="true" class="scq-radio"></span></button>
+          <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="c" onclick="peakSelect(1,'c')"><span class="scq-opt-text">110 سم³</span><span aria-hidden="true" class="scq-radio"></span></button>
+          <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="d" onclick="peakSelect(1,'d')"><span class="scq-opt-text">160 سم³</span><span aria-hidden="true" class="scq-radio"></span></button>
         </div>
       </div>
     </div>
@@ -85,79 +80,68 @@
          learner can answer without going back to the scenario screen. It stands in the free left
          column, above the companion (#s1-say); positioned in css/style.css. -->
     <div class="peak-data-box">
-      <p>בבדיקת הפסלון במעבדה התקבלו הנתונים הבאים:</p>
+      <p>عند فحص التمثال الصغير في المختبر تم الحصول على البيانات التالية:</p>
       <ul class="peak-scenario-list">
-        <li>המסה במאזניים: 156&nbsp;גרם.</li>
-        <li>מדידה במשורה לפני הכנסת הפסלון: 50&nbsp;מ"ל מים.</li>
-        <li>מדידה במשורה אחרי הכנסת הפסל: 110&nbsp;מ"ל.</li>
+        <li>الكتلة في الميزان: 156 غرام.</li>
+        <li>قياس في الاسطوانة المدرجة قبل إدخال التمثال الصغير: 50 ملل ماء.</li>
+        <li>القياس في الاسطوانة المدرجة بعد إدخال التمثال: 110 ملل.</li>
       </ul>
     </div>
     <!-- 2026-10-12 (producer): the companion and his line moved out of the question row to the
          bottom-left corner — sprite on the left, bubble to his right (--left: beak on the bubble's
          left edge). Positioned in css/style.css (#s1-say). -->
     <div class="companion-say companion-say--left" id="s1-say">
-      <p class="companion-bubble" style="--bubble-w: 220px;">הפעם יש רמז...</p>
+      <p class="companion-bubble" style="--bubble-w: 220px;">هذه المرّة هناك تلميح...</p>
     </div>
-    <div class="nav-bar"><button class="scq-hint peak-hint" id="s1-hint" type="button" onclick="peakHint(1)"><span>אפשר רמז?</span><img class="scq-hint-ico" src="../unit-assets/img/icon-idea-blue.svg" alt=""></button><button class="btn-continue" id="s1-continue" disabled onclick="peakCheck(1)">צדקתי?</button><button class="btn-back" onclick="goBack()">חזרה</button></div>
+    <div class="nav-bar"><button class="scq-hint peak-hint" id="s1-hint" type="button" onclick="peakHint(1)"><span>هل يمكنني الحصول على تلميح؟</span><img class="scq-hint-ico" src="../unit-assets/img/icon-idea-blue.svg" alt=""></button><button class="btn-continue" id="s1-continue" disabled onclick="peakCheck(1)">هل إجابتي صحيحة؟</button><button class="btn-back" onclick="goBack()">رجوع</button></div>
   </section>
   <div class="scq-popup hidden" id="s1-scq-popup" role="status" aria-live="polite"><div class="scq-popup-header"><p class="scq-popup-title" id="s1-scq-popup-title"></p></div><div class="scq-popup-body" id="s1-scq-popup-body"></div></div>
-  <div class="scq-hint-overlay hidden" id="s1-hint-overlay" onclick="if(event.target===this)peakCloseHint(1)"><div class="scq-hint-popup" role="dialog" aria-modal="true" aria-label="רמז"><div class="scq-hint-content"><div class="scq-hint-text"><h2 class="scq-hint-title">חישבו:</h2><div class="scq-hint-body"><p><strong>נפח גוף מוצק</strong></p><p>נפח הגוף = ההפרש בין נפח המים הסופי<br />לנפח המים ההתחלתי.</p></div></div></div><button class="scq-hint-close" type="button" onclick="peakCloseHint(1)">חזרה לשאלה</button></div></div>
+  <div class="scq-hint-overlay hidden" id="s1-hint-overlay" onclick="if(event.target===this)peakCloseHint(1)"><div class="scq-hint-popup" role="dialog" aria-modal="true" aria-label="تلميح"><div class="scq-hint-content"><div class="scq-hint-text"><h2 class="scq-hint-title">احسبوا:</h2><div class="scq-hint-body"><p><strong>حجم الجسم الصلب</strong></p><p>حجم الجسم = الفرق بين حجم الماء النهائي<br/>وحجم الماء الابتدائي.</p></div></div></div><button class="scq-hint-close" type="button" onclick="peakCloseHint(1)">العودة للسؤال</button></div></div>
 
   <section class="screen" data-screen="2" id="s2">
     <div class="peak-question">
-      <p class="scq-qtext scq-qtext--mixed">
-        <b class="scq-qtext-part">סעיף ב:</b><br />
-        עובדות ועובדי המעבדה חזרו על מדידת נפח הפסלון שלוש פעמים, אלו התוצאות:<br />
-        60&nbsp;סמ"ק, 59&nbsp;סמ"ק, 61&nbsp;סמ"ק.<br />
-        <b>למה נדרשו 3 מדידות ועל איזה ערך כדאי שידווחו?</b></p>
-      <div class="scq-answers peak-options" id="s2-opts" role="radiogroup" aria-label="דיווח על נפח">
-        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="a" onclick="peakSelect(2,'a')"><span class="scq-opt-text">כדי לצמצם טעויות מקריות ולקבל קריאה מהימנה. כדאי לדווח על הממוצע = <span class="nobr">60 סמ"ק</span></span><span class="scq-radio" aria-hidden="true"></span></button>
-        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="b" onclick="peakSelect(2,'b')"><span class="scq-opt-text">אסור למדוד רק פעם אחת. כדאי לדווח על התוצאה הגבוהה ביותר = <span class="nobr">61 סמ"ק</span></span><span class="scq-radio" aria-hidden="true"></span></button>
-        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="c" onclick="peakSelect(2,'c')"><span class="scq-opt-text">כדי לוודא שהצורה של הפסל לא השתנתה. כדאי לדווח את הקריאה הראשונה = <span class="nobr">60 סמ"ק</span></span><span class="scq-radio" aria-hidden="true"></span></button>
-        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="d" onclick="peakSelect(2,'d')"><span class="scq-opt-text">אין צורך בשלוש מדידות – מדידה אחת היא מדויקת ומספיקה</span><span class="scq-radio" aria-hidden="true"></span></button>
+      <p class="scq-qtext scq-qtext--mixed"><b class="scq-qtext-part">البند ب:</b><br/> عاد عمّال وعاملات المختبر وقاسوا حجم التمثال ثلاث مرّات، وهذه هي النتائج:<br/> 60 سم³، 59 سم³، 61 سم³.<br/> <b>لماذا كانت هناك حاجة إلى 3 قياسات وعن أيّ قيمة يُفضَّل أن يُبلَّغ؟</b></p>
+      <div class="scq-answers peak-options" id="s2-opts" role="radiogroup" aria-label="الإبلاغ عن الحجم">
+        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="a" onclick="peakSelect(2,'a')"><span class="scq-opt-text">لتقليل الأخطاء العشوائية والحصول على قراءة موثوقة. يُفضّل الإبلاغ عن المتوسط = <span class="nobr">60 سم³</span></span><span aria-hidden="true" class="scq-radio"></span></button>
+        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="b" onclick="peakSelect(2,'b')"><span class="scq-opt-text">لا يجوز القياس مرة واحدة فقط. يُفضّل الإبلاغ عن النتيجة الأعلى = <span class="nobr">61 سم³</span></span><span aria-hidden="true" class="scq-radio"></span></button>
+        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="c" onclick="peakSelect(2,'c')"><span class="scq-opt-text">للتأكد من أن شكل التمثال لم يتغيّر. يُفضّل الإبلاغ عن القراءة الأولى = <span class="nobr">60 سم³</span></span><span aria-hidden="true" class="scq-radio"></span></button>
+        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="d" onclick="peakSelect(2,'d')"><span class="scq-opt-text">لا حاجة لثلاث قياسات – قياس واحد دقيق وكافٍ</span><span aria-hidden="true" class="scq-radio"></span></button>
       </div>
     </div>
-    <div class="nav-bar"><button class="scq-hint peak-hint" id="s2-hint" type="button" onclick="peakHint(2)"><span>אפשר רמז?</span><img class="scq-hint-ico" src="../unit-assets/img/icon-idea-blue.svg" alt=""></button><button class="btn-continue" id="s2-continue" disabled onclick="peakCheck(2)">צדקתי?</button><button class="btn-back" onclick="goBack()">חזרה</button></div>
+    <div class="nav-bar"><button class="scq-hint peak-hint" id="s2-hint" type="button" onclick="peakHint(2)"><span>هل يمكنني الحصول على تلميح؟</span><img class="scq-hint-ico" src="../unit-assets/img/icon-idea-blue.svg" alt=""></button><button class="btn-continue" id="s2-continue" disabled onclick="peakCheck(2)">هل إجابتي صحيحة؟</button><button class="btn-back" onclick="goBack()">رجوع</button></div>
   </section>
   <div class="scq-popup hidden" id="s2-scq-popup" role="status" aria-live="polite"><div class="scq-popup-header"><p class="scq-popup-title" id="s2-scq-popup-title"></p></div><div class="scq-popup-body" id="s2-scq-popup-body"></div></div>
-  <div class="scq-hint-overlay hidden" id="s2-hint-overlay" onclick="if(event.target===this)peakCloseHint(2)"><div class="scq-hint-popup" role="dialog" aria-modal="true" aria-label="רמז"><div class="scq-hint-content"><div class="scq-hint-text"><h2 class="scq-hint-title">זכרו!</h2><div class="scq-hint-body"><p><strong>נוהל שלוש החזרות</strong></p><p>למה חוזרים על מדידה? מה הערך שהתקבל מייצג?</p></div></div></div><button class="scq-hint-close" type="button" onclick="peakCloseHint(2)">חזרה לשאלה</button></div></div>
+  <div class="scq-hint-overlay hidden" id="s2-hint-overlay" onclick="if(event.target===this)peakCloseHint(2)"><div class="scq-hint-popup" role="dialog" aria-modal="true" aria-label="تلميح"><div class="scq-hint-content"><div class="scq-hint-text"><h2 class="scq-hint-title">تذكّروا!</h2><div class="scq-hint-body"><p><strong>إجراء التكرارات الثلاثة</strong></p><p>لماذا نكرر القياس؟ ماذا تمثل القيمة التي حصلنا عليها؟</p></div></div></div><button class="scq-hint-close" type="button" onclick="peakCloseHint(2)">العودة للسؤال</button></div></div>
 
   <section class="screen" data-screen="3" id="s3">
     <div class="peak-question">
-      <p class="scq-qtext scq-qtext--mixed">
-        <b class="scq-qtext-part">סעיף ג:</b><br />
-        מנהל המעבדה טוען: "המדידות מהימנות"!<br />
-        <b>סמנו מי מבין עובדות ועובדי המעבדה מסביר טענה זו בצורה מדעית המבוססת על נתונים ותומכת בטענה?</b></p>
-      <div class="scq-answers peak-options" id="s3-opts" role="radiogroup" aria-label="הסבר מדעי">
-        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="a" onclick="peakSelect(3,'a')"><span class="scq-opt-text"><b>איריס:</b> שלוש תוצאות המדידה קרובות מאוד זו לזו, מה שמוכיח שהתוצאות יציבות ואינן מקריות</span><span class="scq-radio" aria-hidden="true"></span></button>
-        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="b" onclick="peakSelect(3,'b')"><span class="scq-opt-text"><b>משה:</b> כיוון שחוקר מנוסה ביצע את המדידה במעבדה, אין סיכוי לשגיאת מדידה אנושית</span><span class="scq-radio" aria-hidden="true"></span></button>
-        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="c" onclick="peakSelect(3,'c')"><span class="scq-opt-text"><b>רינה:</b> תוצאות מדידת הנפח גדולות משמעותית מכמות המים ההתחלתית ולכן הטענה נכונה</span><span class="scq-radio" aria-hidden="true"></span></button>
-        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="d" onclick="peakSelect(3,'d')"><span class="scq-opt-text"><b>עופר:</b> העובדה שניתן לחשב ממוצע למדידות מוכיחה שהמדידה מדויקת</span><span class="scq-radio" aria-hidden="true"></span></button>
+      <p class="scq-qtext scq-qtext--mixed"><b class="scq-qtext-part">الفقرة ج:</b><br/> يدّعي مدير المختبر: "القياسات موثوقة"!<br/> <b>حددوا من بين العاملين والعاملات في المختبر يشرح هذا الادّعاء بطريقة علمية مبنية على معطيات ويدعم الادّعاء؟</b></p>
+      <div class="scq-answers peak-options" id="s3-opts" role="radiogroup" aria-label="تفسير علمي">
+        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="a" onclick="peakSelect(3,'a')"><span class="scq-opt-text"><b>إيمان:</b> نتائج القياسات الثلاث قريبة جدًا من بعضها البعض، مما يثبت أن النتائج مستقرّة وغير عشوائية</span><span aria-hidden="true" class="scq-radio"></span></button>
+        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="b" onclick="peakSelect(3,'b')"><span class="scq-opt-text"><b>موسى:</b> بما أن الباحث المخضرم قام بالقياس في المختبر، فلا يوجد فرصة لوجود خطأ في القياس البشري.</span><span aria-hidden="true" class="scq-radio"></span></button>
+        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="c" onclick="peakSelect(3,'c')"><span class="scq-opt-text"><b>ريما:</b> نتائج قياس الحجم أكبر بشكل ملحوظ من كمية الماء الأولية ولذلك الادعاء صحيح</span><span aria-hidden="true" class="scq-radio"></span></button>
+        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="d" onclick="peakSelect(3,'d')"><span class="scq-opt-text"><b>عمر:</b> الحقيقة أنه يمكن حساب المتوسط للقياسات تثبت أن القياس دقيق</span><span aria-hidden="true" class="scq-radio"></span></button>
       </div>
     </div>
-    <div class="nav-bar"><button class="scq-hint peak-hint" id="s3-hint" type="button" onclick="peakHint(3)"><span>אפשר רמז?</span><img class="scq-hint-ico" src="../unit-assets/img/icon-idea-blue.svg" alt=""></button><button class="btn-continue" id="s3-continue" disabled onclick="peakCheck(3)">צדקתי?</button><button class="btn-back" onclick="goBack()">חזרה</button></div>
+    <div class="nav-bar"><button class="scq-hint peak-hint" id="s3-hint" type="button" onclick="peakHint(3)"><span>هل يمكنني الحصول على تلميح؟</span><img class="scq-hint-ico" src="../unit-assets/img/icon-idea-blue.svg" alt=""></button><button class="btn-continue" id="s3-continue" disabled onclick="peakCheck(3)">هل إجابتي صحيحة؟</button><button class="btn-back" onclick="goBack()">رجوع</button></div>
   </section>
   <div class="scq-popup hidden" id="s3-scq-popup" role="status" aria-live="polite"><div class="scq-popup-header"><p class="scq-popup-title" id="s3-scq-popup-title"></p></div><div class="scq-popup-body" id="s3-scq-popup-body"></div></div>
-  <div class="scq-hint-overlay hidden" id="s3-hint-overlay" onclick="if(event.target===this)peakCloseHint(3)"><div class="scq-hint-popup" role="dialog" aria-modal="true" aria-label="רמז"><div class="scq-hint-content"><div class="scq-hint-text"><h2 class="scq-hint-title">חישבו:</h2><div class="scq-hint-body"><!-- slide 154 gives this hint no heading of its own, only the question (QA 2026-10-11) --><p>מה חשוב בטיעון המבוסס על נתונים?</p></div></div></div><button class="scq-hint-close" type="button" onclick="peakCloseHint(3)">חזרה לשאלה</button></div></div>
+  <div class="scq-hint-overlay hidden" id="s3-hint-overlay" onclick="if(event.target===this)peakCloseHint(3)"><div class="scq-hint-popup" role="dialog" aria-modal="true" aria-label="تلميح"><div class="scq-hint-content"><div class="scq-hint-text"><h2 class="scq-hint-title">احسبوا:</h2><div class="scq-hint-body"><!-- slide 154 gives this hint no heading of its own, only the question (QA 2026-10-11) --><p>ما المهم في الحجة المبنية على البيانات؟</p></div></div></div><button class="scq-hint-close" type="button" onclick="peakCloseHint(3)">العودة للسؤال</button></div></div>
 
   <section class="screen" data-screen="4" id="s4">
     <div class="peak-question">
-      <p class="scq-qtext scq-qtext--mixed">
-        <b class="scq-qtext-part">סעיף ד:</b><br />
-        עובדות ועובדי המעבדה ביצעו מדידה חוזרת של נפח הפסלון וקיבלו תוצאה של 80&nbsp;סמ"ק.<br />
-        תוצאה זו רחוקה מאוד מהמדידות הקודמות.<br />
-        <b>מה על עובדות ועובדי המעבדה לעשות עכשיו?</b></p>
-      <div class="scq-answers peak-options" id="s4-opts" role="radiogroup" aria-label="טיפול בערך חריג">
-        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="a" onclick="peakSelect(4,'a')"><span class="scq-opt-text">לחשב ממוצע של כל ארבע הקריאות ולדווח את הממוצע כנפח הפסלון</span><span class="scq-radio" aria-hidden="true"></span></button>
-        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="b" onclick="peakSelect(4,'b')"><span class="scq-opt-text">יש לבצע את המדידה מחדש ולא להכליל את הערך 80 בחישוב הסופי</span><span class="scq-radio" aria-hidden="true"></span></button>
-        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="c" onclick="peakSelect(4,'c')"><span class="scq-opt-text">לדווח שנפח הפסלון הוא <span class="nobr">80 סמ"ק</span> כיוון שזו המדידה האחרונה</span><span class="scq-radio" aria-hidden="true"></span></button>
-        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="d" onclick="peakSelect(4,'d')"><span class="scq-opt-text">לדווח שנפח הפסלון הוא <span class="nobr">80 סמ"ק</span> כיוון שככל שהמספר גדול יותר – המדידה מדויקת יותר</span><span class="scq-radio" aria-hidden="true"></span></button>
+      <p class="scq-qtext scq-qtext--mixed"><b class="scq-qtext-part">البند د:</b><br/> أجرى العاملون والعاملات في المختبر قياسًا متكررًا لحجم التمثال وحصلوا على نتيجة 80 سم³.<br/> هذه النتيجة بعيدة جدًا عن القياسات السابقة.<br/> <b>ما الذي يجب على العاملين والعاملات في المختبر فعله الآن؟</b></p>
+      <div class="scq-answers peak-options" id="s4-opts" role="radiogroup" aria-label="التعامل مع قيمة شاذة">
+        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="a" onclick="peakSelect(4,'a')"><span class="scq-opt-text">حساب متوسط القراءات الأربع جميعها والإبلاغ عن المتوسط باعتباره حجم التمثال</span><span aria-hidden="true" class="scq-radio"></span></button>
+        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="b" onclick="peakSelect(4,'b')"><span class="scq-opt-text">يجب إعادة القياس وعدم تضمين القيمة 80 في الحساب النهائي</span><span aria-hidden="true" class="scq-radio"></span></button>
+        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="c" onclick="peakSelect(4,'c')"><span class="scq-opt-text">الإبلاغ بأن حجم التمثال هو <span class="nobr">80 سم³</span> لأن هذا هو القياس الأخير</span><span aria-hidden="true" class="scq-radio"></span></button>
+        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="d" onclick="peakSelect(4,'d')"><span class="scq-opt-text">الإبلاغ بأن حجم التمثال الصغير هو <span class="nobr">80 سم³</span> لأنه كلما كان العدد أكبر – كان القياس أدق</span><span aria-hidden="true" class="scq-radio"></span></button>
       </div>
     </div>
-    <div class="nav-bar"><button class="scq-hint peak-hint" id="s4-hint" type="button" onclick="peakHint(4)"><span>אפשר רמז?</span><img class="scq-hint-ico" src="../unit-assets/img/icon-idea-blue.svg" alt=""></button><button class="btn-continue" id="s4-continue" disabled onclick="peakCheck(4)">צדקתי?</button><button class="btn-back" onclick="goBack()">חזרה</button></div>
+    <div class="nav-bar"><button class="scq-hint peak-hint" id="s4-hint" type="button" onclick="peakHint(4)"><span>هل يمكنني الحصول على تلميح؟</span><img class="scq-hint-ico" src="../unit-assets/img/icon-idea-blue.svg" alt=""></button><button class="btn-continue" id="s4-continue" disabled onclick="peakCheck(4)">هل إجابتي صحيحة؟</button><button class="btn-back" onclick="goBack()">رجوع</button></div>
   </section>
   <div class="scq-popup hidden" id="s4-scq-popup" role="status" aria-live="polite"><div class="scq-popup-header"><p class="scq-popup-title" id="s4-scq-popup-title"></p></div><div class="scq-popup-body" id="s4-scq-popup-body"></div></div>
-  <div class="scq-hint-overlay hidden" id="s4-hint-overlay" onclick="if(event.target===this)peakCloseHint(4)"><div class="scq-hint-popup" role="dialog" aria-modal="true" aria-label="רמז"><div class="scq-hint-content"><div class="scq-hint-text"><h2 class="scq-hint-title">חישבו:</h2><div class="scq-hint-body"><p><strong>עד כמה המדידה חריגה?</strong></p><p>מה ניתן להניח מכך שהמדידה רחוקה מאוד<br />משאר המדידות?</p></div></div></div><button class="scq-hint-close" type="button" onclick="peakCloseHint(4)">חזרה לשאלה</button></div></div>
+  <div class="scq-hint-overlay hidden" id="s4-hint-overlay" onclick="if(event.target===this)peakCloseHint(4)"><div class="scq-hint-popup" role="dialog" aria-modal="true" aria-label="تلميح"><div class="scq-hint-content"><div class="scq-hint-text"><h2 class="scq-hint-title">احسبوا:</h2><div class="scq-hint-body"><p><strong>ما مدى انحراف القياس؟</strong></p><p>ما الذي يمكن استنتاجه من كون القياس بعيدًا جدًا<br/>عن بقية القياسات؟</p></div></div></div><button class="scq-hint-close" type="button" onclick="peakCloseHint(4)">العودة للسؤال</button></div></div>
 
   <!-- ═══ S5 — Scenario (storyboard slide 148) ═══
        Sits between the transition (s0) and סעיף א (s1); the id is the next free one and the order
@@ -166,48 +150,44 @@
   <section class="screen" data-screen="5" id="s5">
     <div class="scq-question scq-question--withimage">
       <div class="scq-figure">
-        <img src="assets/img/s0-figurine.jpg" alt="קופסת משחק Kingdom Quest פתוחה על שולחן, ולידה פסלון אריה מפלסטיק אפור, קלפים, קוביות ואסימונים">
+        <img src="assets/img/s0-figurine.jpg" alt="صندوق لعبة Kingdom Quest مفتوح على طاولة، وبجانبه تمثال أسد بلاستيكي رمادي، وبطاقات، ونرد، وقطع لعب">
       </div>
       <div class="scq-side">
-        <h1 class="peak-scenario-title">בואו נשחק!</h1>
-        <p class="scq-qtext scq-qtext--mixed">
-          חברת משחקי קופסה יצרה אבטיפוס חדש.<br /><br />
-          המשחק מכיל <b>פסלון מפלסטיק</b>.<br />
-          כדי לדעת איך לייצר אותו בכמויות גדולות צריך לדעת<br />מה המסה והנפח שלו.<br /><br />
-          בבדיקת הפסלון במעבדה התקבלו הנתונים הבאים:</p>
+        <h1 class="peak-scenario-title">هيا نلعب!</h1>
+        <p class="scq-qtext scq-qtext--mixed">شركة ألعاب لوحية أنتجت نموذجًا أوليًا جديدًا.<br/><br/> تحتوي اللعبة على <b>تمثال صغير من البلاستيك</b>.<br/> لمعرفة كيفية إنتاجه بكميات كبيرة، يجب معرفة<br/>كتلته وحجمه.<br/><br/> عند فحص التمثال الصغير في المختبر تم الحصول على البيانات التالية:</p>
         <ul class="peak-scenario-list">
-          <li>המסה במאזניים: 156&nbsp;גרם.</li>
-          <li>מדידה במשורה לפני הכנסת הפסלון: 50&nbsp;מ"ל מים.</li>
-          <li>מדידה במשורה אחרי הכנסת הפסל: 110&nbsp;מ"ל.</li>
+          <li>الكتلة في الميزان: 156 غرام.</li>
+          <li>قياس في الاسطوانة المدرجة قبل إدخال التمثال الصغير: 50 ملل ماء.</li>
+          <li>القياس في الاسطوانة المدرجة بعد إدخال التمثال: 110 ملل.</li>
         </ul>
       </div>
     </div>
     <div class="nav-bar">
-      <button class="btn-continue" id="s5-continue" onclick="goTo(1)">המשך</button>
-      <button class="btn-back" onclick="goBack()">חזרה</button>
+      <button class="btn-continue" id="s5-continue" onclick="goTo(1)">تابِع</button>
+      <button class="btn-back" onclick="goBack()">رجوع</button>
     </div>
   </section>
 
   <!-- ═══════════════ REPORT MODAL ═══════════════ -->
   <div id="report-modal" class="report-modal-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="report-modal-title">
     <div class="report-modal-box">
-      <button class="report-close-btn" onclick="tryCloseReportModal()" aria-label="סגור">&#10005;</button>
-      <h2 class="report-modal-title" id="report-modal-title">דיווח על בעיה</h2>
-      <p class="report-modal-body">משהו לא ברור או לא עובד כמו שצריך? ספרו לנו מה קרה כדי שנטפל.</p>
-      <div class="report-field"><label class="report-label" for="report-type">מה סוג הבעיה <span class="required-star">*</span></label>
-        <select class="report-select" id="report-type"><option value="" disabled selected>בחרו סוג בעיה</option><option value="technical">תקלה טכנית או שמשהו לא עובד</option><option value="unclear">משהו לא ברור לי</option><option value="other">אחר</option></select></div>
-      <div class="report-field"><label class="report-label" for="report-text">מה קרה? <span class="required-star">*</span></label>
-        <textarea class="report-textarea" id="report-text" maxlength="250" rows="4" placeholder="תארו את הבעיה..."></textarea><span class="report-char-count" id="report-char-count">0 / 250</span></div>
-      <p class="report-error" id="report-error" hidden>נא לבחור סוג בעיה ולתאר מה קרה.</p>
-      <div class="report-actions"><button class="report-submit-btn" onclick="submitReport()">שליחה</button><button class="report-cancel-btn" onclick="tryCloseReportModal()">ביטול</button></div>
-      <div class="report-thanks" id="report-thanks" hidden><p>תודה! הדיווח נשלח. נטפל בהקדם.</p><button class="report-submit-btn" onclick="forceCloseReportModal()">סגירה</button></div>
+      <button class="report-close-btn" onclick="tryCloseReportModal()" aria-label="أغلق">&#10005;</button>
+      <h2 class="report-modal-title" id="report-modal-title">الإبلاغ عن مشكلة</h2>
+      <p class="report-modal-body">هل هناك شيء غير واضح أو لا يعمل كما ينبغي؟ أخبرونا بما حدث حتى نتمكن من المعالجة.</p>
+      <div class="report-field"><label class="report-label" for="report-type">ما نوع المشكلة؟ <span class="required-star">*</span></label>
+        <select class="report-select" id="report-type"><option value="" disabled selected>اختاروا نوع المشكلة</option><option value="technical">عطل تقني أو أن شيئًا ما لا يعمل</option><option value="unclear">هناك شيء لا أفهمه</option><option value="other">آخر</option></select></div>
+      <div class="report-field"><label class="report-label" for="report-text">ماذا حدث؟ <span class="required-star">*</span></label>
+        <textarea class="report-textarea" id="report-text" maxlength="250" rows="4" placeholder="صفوا المشكلة..."></textarea><span class="report-char-count" id="report-char-count">0 / 250</span></div>
+      <p class="report-error" id="report-error" hidden>يرجى اختيار نوع المشكلة ووصف ما حدث.</p>
+      <div class="report-actions"><button class="report-submit-btn" onclick="submitReport()">إرسال</button><button class="report-cancel-btn" onclick="tryCloseReportModal()">إلغاء</button></div>
+      <div class="report-thanks" id="report-thanks" hidden><p>شكرًا! تم إرسال البلاغ. سنعالج الأمر في أقرب وقت.</p><button class="report-submit-btn" onclick="forceCloseReportModal()">إغلاق</button></div>
     </div>
   </div>
   <div id="report-confirm-modal" class="report-modal-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="confirm-modal-title">
     <div class="report-modal-box report-confirm-box">
-      <h2 class="report-modal-title" id="confirm-modal-title">בטוח לסגור את החלון?</h2>
-      <p class="report-modal-body">בלחיצה על סגירה לא יישלח דיווח</p>
-      <div class="report-actions"><button class="report-cancel-btn" onclick="forceCloseReportModal()">סגור חלון</button><button class="report-submit-btn" onclick="backToReportForm()">אני רוצה לדווח</button></div>
+      <h2 class="report-modal-title" id="confirm-modal-title">هل أنت متأكد من إغلاق النافذة؟</h2>
+      <p class="report-modal-body">بالنقر على إغلاق لن يتم إرسال تقرير</p>
+      <div class="report-actions"><button class="report-cancel-btn" onclick="forceCloseReportModal()">إغلاق النافذة</button><button class="report-submit-btn" onclick="backToReportForm()">أريد أن أُبلِّغ</button></div>
     </div>
   </div>
 

@@ -119,25 +119,25 @@ function renderCompanion(n) {
    wrong-final titles are the unit's standard ones (part 05's FB_RETRY / FB_WRONG2).
    Slide 170 writes the volume as "12,50 סמ"ק" — a transposition of 1,250, which is what every other
    line on the same slide and the question itself use. */
-const FB_RETRY  = { title: 'התשובה אינה נכונה.', body: ['שננסה שוב?'] };
-const FB_WRONG2 = 'התשובה אינה נכונה.<br />התשובה הנכונה מסומנת.';
+const FB_RETRY  = { title: 'الإجابة غير صحيحة.', body: ['هل نحاول مجدداً؟'] };
+const FB_WRONG2 = 'الإجابة غير صحيحة.<br />الإجابة الصحيحة تم تحديدها.';
 const fbPopups = explanation => ({
   retry:   FB_RETRY,
-  correct: { title: 'נכון מאוד!', body: explanation },
+  correct: { title: 'أحسنت!', body: explanation },
   wrong2:  { title: FB_WRONG2,    body: explanation }
 });
 const PEAK_FEEDBACK = {
   1: fbPopups([   /* sb170 א */
-    'הפסל הוא גוף שאינו הנדסי ואינו נכנס במשורה, לכן ארז בחר <b>בשיטת ההצפה</b>.']),
+    'التمثال هو جسم غير هندسي ولا يمكن إدخاله في أسطوانة مدرجة، لذلك اختار يوسف <b>طريقة الإغمار</b>.']),
   2: fbPopups([   /* sb170 ב */
-    'בשיטת ההצפה נפח המים שנאספו שווה לנפח הפסל.',
-    'למדנו ש: 1\u00A0מ"ל = 1\u00A0סמ"ק,<br />ו-1,000\u00A0מ"ל = 1\u00A0ליטר.',
-    'ולכן 1,250 סמ"ק שווים ל-1.25 ליטר.']),
+    'في طريقة الإفاضة، حجم الماء الذي تمّ جمعه يساوي حجم التمثال.',
+    'تعلمنا أن: 1 ملل = 1 سم³،<br />و-1,000 ملل = 1 لتر.',
+    'وبالتالي 1,250 سم³ تساوي 1.25 لتر.']),
   3: fbPopups([   /* sb170 ג */
-    'כאשר האקווריום מלא עד הקצה, כל המים שגולשים החוצה נדחקים על ידי הגוף שהוכנס לתוכו.',
-    'לכן, כמות המים שנאספה שווה לנפח הפסל שנמצא בתוך המים.']),
+    'عندما يكون الحوض ممتلئًا حتى الحافة، فإن كل الماء الذي يفيض إلى الخارج يتم إزاحته بواسطة الجسم الذي أُدخل فيه.',
+    'لذلك، كمية الماء التي تم جمعها تساوي حجم التمثال الموجود داخل الماء.']),
   4: fbPopups([   /* sb170 ד */
-    'הטיעון המדעי הנתמך בראייה הוא: בשיטת ההצפה נאספו בממוצע 1,250 מ"ל מים, ונפח המים שנדחק שווה לנפח הגוף שהוכנס למים.'])
+    'الحجة العلمية المدعومة بالدليل هي: في طريقة الإفاضة تم جمع 1,250 ملل من الماء في المتوسط، وحجم الماء الذي تمّ إزاحته يساوي حجم الجسم الذي أُدخل في الماء.'])
 };
 
 /* ⚠️ NOTHING HERE MAY REPORT. resetScreenState() runs on every navigation, every back-navigation
@@ -262,7 +262,7 @@ function peakPaint(idx) {
   });
   const btn = document.getElementById(screen + '-continue');
   if (btn) {
-    btn.textContent = s.done ? 'שנמשיך?' : 'צדקתי?';
+    btn.textContent = s.done ? 'متابعة' : 'هل إجابتي صحيحة؟';
     btn.disabled = s.done ? (idx === PEAK_PARTS && xapiComponentEnded()) : (!s.sel || s.sel === s.lastWrong);   // D-8: the ledger decides
   }
   /* Hint policy (2026-10-15, as in the practice questions' hintAfterWrong): the hint appears only

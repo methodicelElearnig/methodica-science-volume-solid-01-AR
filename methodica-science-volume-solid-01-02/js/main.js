@@ -428,7 +428,7 @@ function scqFinish(screen, isCorrect) {
   const s = SCQ_REG[screen];
   s.answered = true; s.done = true;
   scqOpts(screen).forEach(o => { o.disabled = true; });
-  const chk = document.getElementById(screen + '-scq-check'); if (chk) { chk.textContent = 'שנמשיך?'; chk.disabled = false; }
+  const chk = document.getElementById(screen + '-scq-check'); if (chk) { chk.textContent = 'متابعة'; chk.disabled = false; }
   scqSyncHint(screen);
   if (s.cfg.onFinish) s.cfg.onFinish(isCorrect);
 }
@@ -463,7 +463,7 @@ function scqEnter(screen) {
   scqClosePopup(screen);
   if (s.done) {
     scqOpts(screen).forEach(o => { o.disabled = true; });   // marks already painted persist
-    const chk = document.getElementById(screen + '-scq-check'); if (chk) { chk.textContent = 'שנמשיך?'; chk.disabled = false; }
+    const chk = document.getElementById(screen + '-scq-check'); if (chk) { chk.textContent = 'متابعة'; chk.disabled = false; }
     scqSyncHint(screen);
   } else {
     scqReset(screen);
@@ -477,7 +477,7 @@ function scqReset(screen) {
     o.setAttribute('aria-checked', 'false');
     o.disabled = !!s.locked;
   });
-  const chk = document.getElementById(screen + '-scq-check'); if (chk) { chk.textContent = 'צדקתי?'; chk.disabled = true; }
+  const chk = document.getElementById(screen + '-scq-check'); if (chk) { chk.textContent = 'هل إجابتي صحيحة؟'; chk.disabled = true; }
   const hint = document.getElementById(screen + '-scq-hint'); if (hint) hint.disabled = false;
   scqSyncHint(screen);
 }
@@ -495,8 +495,8 @@ function scqReset(screen) {
        earlier revision; the question asks about a crystal, so the subject follows the question.
      - deck expressions are wrapped in .section-result-expr: digits and operators are
        bidi-neutral and reorder inside an RTL paragraph without it. */
-const FB_RETRY  = { title: 'התשובה אינה נכונה.', body: ['שננסה שוב?'] };
-const FB_WRONG2 = 'התשובה אינה נכונה.<br />התשובה הנכונה מסומנת.';
+const FB_RETRY  = { title: 'الإجابة غير صحيحة.', body: ['هل نحاول مجدداً؟'] };
+const FB_WRONG2 = 'الإجابة غير صحيحة.<br />الإجابة الصحيحة تم تحديدها.';
 /* `wrong2Extra`: a line the deck adds to the wrong-final popup only. Slide 55 (s1) closes with the
    encouragement "לא נורא אם טעית…", which its note gives to the mascot's GIF and bubble; that pose
    (`encourage`) was never produced, so the line sits in the popup until it is (ASSETS-TODO.md). */
@@ -597,30 +597,30 @@ function registerPractice(idx, cfg) {
 registerPractice(0, {
   correctId: 'c',
   item: '01',
-  popups: fbPopups('נכון מאוד!', [   /* sb52/54/55 */
-    'נפח הגוף שווה לכמות המים שדחק — כלומר ההפרש בין הנפח הסופי לנפח ההתחלתי.',
+  popups: fbPopups('أحسنت!', [   /* sb52/54/55 */
+    'حجم الجسم يساوي كمية الماء التي أزاحها — أي الفرق بين الحجم النهائي والحجم الابتدائي.',
     '<span class="section-result-expr">73 − 50 = 23</span>',
-    'נפח האבן = 23\u00A0סמ"ק'],
-    ['לא נורא אם טעית, כל טעות היא צעד קדימה בדרך\u00A0הנכונה!']   /* sb55, not bold on the slide */)
+    'حجم الحجر = 23 سم³'],
+    ['لا بأس إن أخطأت، كل خطأ هو خطوة للأمام في الطريق الصحيح!']   /* sb55, not bold on the slide */)
 });
 registerPractice(1, {
   correctId: 'a',
   item: '02',
-  popups: fbPopups('תשובה נכונה!', [   /* sb57/59/60 */
-    'נפח המים שישפכו מהכלי שווה בדיוק לנפח הכדור, כך ניתן למדוד נפח של גוף שלא נכנס במשורה — זוהי שיטת\u00A0ההצפה.'])
+  popups: fbPopups('إجابة صحيحة!', [   /* sb57/59/60 */
+    'حجم الماء الذي سينسكب من الوعاء يساوي تمامًا حجم الكرة، وبهذه الطريقة يمكن قياس حجم جسم لا يدخل في الاسطوانة المدرجة — وهذه هي طريقة الإفاضة.'])
 });
 registerPractice(2, {
   correctId: 'd',
   item: '03',
-  popups: fbPopups('תשובה נכונה!', [   /* sb62/64/65 */
-    'הילד מימין השתמש בנתון מדעי שנמדד בפועל על ידי שיטת דחיקת המים.',
-    'שאר הילדים הסתמכו על השערות או על מדידות שאינן מתאימות למדידת נפח של גוף בעל צורה שאינה הנדסית.'])
+  popups: fbPopups('إجابة صحيحة!', [   /* sb62/64/65 */
+    'الولد على اليمين استخدم معطى علمي تم قياسه فعليًا بواسطة طريقة إزاحة الماء.',
+    'بقية الأطفال اعتمدوا على تخمينات أو على قياسات غير مناسبة لقياس حجم جسم ذي شكل غير هندسي.'])
 });
 registerPractice(4, {
   correctId: 'd',
   item: '05',
-  popups: fbPopups('תשובה נכונה!', [   /* sb72/74/75 */
-    'בשיטת ההצפה נפח המים שנשפכו מהכלי שווה לנפח הגוף שהוכנס אליו. לכן, אם מודדים את נפח המים שנאספו במשורה, אפשר לדעת מה נפח הקריסטל.'])
+  popups: fbPopups('إجابة صحيحة!', [   /* sb72/74/75 */
+    'في طريقة الإفاضة، حجم الماء الذي انسكب من الوعاء يساوي حجم الجسم الذي أُدخل إليه. لذلك، إذا قِسنا حجم الماء الذي تجمّع في الاسطوانة المدرجة، يمكننا معرفة حجم البلّورة.'])
 });
 /* ═══════════════════════════════════════════════════════════
    TEMPLATE — DragAndDropQuestion (generic matching, reusable)
@@ -785,7 +785,7 @@ function ddqCheck(screen) {
   }
   ddqRender(screen);
   ddqShowPopup(screen, allCorrect ? 'correct' : 'incorrect');
-  const btn = document.getElementById(screen + '-ddq-check'); if (btn) { btn.textContent = 'שנמשיך?'; btn.disabled = false; }
+  const btn = document.getElementById(screen + '-ddq-check'); if (btn) { btn.textContent = 'متابعة'; btn.disabled = false; }
   ddqSyncHint(screen);
   if (cfg.onFinish) cfg.onFinish(allCorrect);
 
@@ -839,8 +839,8 @@ function ddqIsPartial(screen, board) {
   if (!lp) return false;
   return Object.keys(s.cfg.correctMap).some(t => lp[s.cfg.correctMap[t]] === t);
 }
-const DDQ_PARTIAL_TITLE = 'התשובה אינה נכונה במלואה.';
-const DDQ_ANSWER_VIEW_LINE = 'אפשר לצפות שוב בפתרון הנכון.';
+const DDQ_PARTIAL_TITLE = 'الإجابة ليست صحيحة تماماً.';
+const DDQ_ANSWER_VIEW_LINE = 'يمكنك مشاهدة الحل الصحيح مرة أخرى.';
 function ddqWrongTitle(screen) {
   const s = DDQ_REG[screen];
   const first = ddqIsPartial(screen) ? DDQ_PARTIAL_TITLE : s.cfg.popups.incorrect.title;
@@ -863,7 +863,7 @@ function ddqSyncAnswerToggle(screen) {
   const s = DDQ_REG[screen];
   const b = document.getElementById(screen + '-ddq-answer-toggle');
   if (!s || !b) return;
-  b.textContent = (s.answerView === 'correct') ? 'התשובה שלי' : 'תשובה נכונה';
+  b.textContent = (s.answerView === 'correct') ? 'إجابتي' : 'إجابة صحيحة';
   const t = document.getElementById(screen + '-ddq-popup-title');
   if (t) t.innerHTML = ddqWrongTitle(screen);
 }
@@ -874,14 +874,14 @@ function ddqEnter(screen) {
   if (!s.done) {
     s.checked = false; s.attempts = 0; s.phase = null; s.lastWrong = null;
     s.cfg.items.forEach(it => { s.cfg.placement[it.id] = 'source'; });
-    const btn = document.getElementById(screen + '-ddq-check'); if (btn) { btn.textContent = 'בדיקה'; btn.disabled = true; }
+    const btn = document.getElementById(screen + '-ddq-check'); if (btn) { btn.textContent = 'تحقّق'; btn.disabled = true; }
   }
   /* The "revisited wrong answer opens on the model board" rule used to live here. It cannot: this
      runs BEFORE applyResumeVars() restores the two board snapshots, so on a reload there is nothing
      yet to open onto — and the restore that follows would overwrite whatever it decided. It is now
      ddqRestoreUI()'s, which runs LAST. */
   ddqRender(screen);
-  if (s.done) { const btn = document.getElementById(screen + '-ddq-check'); if (btn) { btn.textContent = 'שנמשיך?'; btn.disabled = false; } }
+  if (s.done) { const btn = document.getElementById(screen + '-ddq-check'); if (btn) { btn.textContent = 'متابعة'; btn.disabled = false; } }
   // An answered question keeps its hint hidden on return, as the SCQ screens do.
   ddqSyncHint(screen);
 }
@@ -925,27 +925,27 @@ registerPracticeDnD(3, {
      shell, goblet, cube — which is the order asked for and, checked against correctMap, leaves no
      pill at the index of its own target. */
   items: [
-    { id: 'shell',      label: 'צדפה',        img: 'assets/img/s4-shell.png',      w: 92 },
-    { id: 'goblet',     label: 'גביע גדול',   img: 'assets/img/s4-trophy.png',     w: 86 },
-    { id: 'metal-cube', label: 'קוביית מתכת', img: 'assets/img/s4-metal-cube.png', w: 96 }
+    { id: 'shell',      label: 'صدفة',        img: 'assets/img/s4-shell.png',      w: 92 },
+    { id: 'goblet',     label: 'كأس كبير',   img: 'assets/img/s4-trophy.png',     w: 86 },
+    { id: 'metal-cube', label: 'مكعب معدني', img: 'assets/img/s4-metal-cube.png', w: 96 }
   ],
   targets: [
-    { id: 't-ruler',    label: 'מדידה הנדסית בעזרת סרגל' },
-    { id: 't-displace', label: 'שיטת דחיקת המים' },
-    { id: 't-flood',    label: 'שיטת ההצפה' }
+    { id: 't-ruler',    label: 'قياس هندسي بمساعدة مسطرة' },
+    { id: 't-displace', label: 'طريقة إزاحة الماء' },
+    { id: 't-flood',    label: 'طريقة الإغمار' }
   ],
   correctMap: { 't-ruler': 'metal-cube', 't-displace': 'shell', 't-flood': 'goblet' },
   /* Copy verbatim from storyboard slides 69 (correct) and 70 (wrong). Slide 70's second title line,
      'התשובה הנכונה מוצגת.', is `answerNote` — see ddqWrongTitle. */
-  answerNote: 'התשובה הנכונה מוצגת.',
+  answerNote: 'الإجابة الصحيحة معروضة.',
   /* Two attempts, slides 66-70: 67 is "מענה שגוי 1" (retry), 70 "מענה שגוי 2" (the model board).
      Slide 68's note: the hint is available only after that first wrong answer. Approved 2026-10-11. */
   maxAttempts: 2,
   hintAfterWrong: true,
   popups: {
     retry:     FB_RETRY,
-    correct:   { title: 'תשובה נכונה!', body: ['קוביית המתכת היא גוף הנדסי ולכן נבצע מדידה הנדסית.', 'צדפה היא גוף שאינו הנדסי וקטן מספיק להיכנס למשורה ולכן נבצע דחיקת מים.', 'גביע הוא גוף שאינו הנדסי ולא נכנס במשורה ולכן נבצע את שיטת ההצפה.'] },
-    incorrect: { title: 'התשובה אינה נכונה.', body: ['קוביית המתכת היא גוף הנדסי ולכן נבצע מדידה הנדסית.', 'צדפה היא גוף שאינו הנדסי וקטן מספיק להיכנס למשורה ולכן נבצע דחיקת מים.', 'גביע הוא גוף שאינו הנדסי ולא נכנס במשורה ולכן נבצע את שיטת ההצפה.'] }
+    correct:   { title: 'إجابة صحيحة!', body: ['مكعب المعدن هو جسم هندسي ولذلك سنقوم بقياس هندسي.', 'الصدفة جسم غير هندسي وصغيرة بما يكفي لتدخل في الاسطوانة المدرجة، ولذلك سنقوم بإزاحة الماء.', 'الكأس جسم غير هندسي ولا يمكن إدخاله في الاسطوانة المدرجة، لذلك سنستخدم طريقة الإزاحة.'] },
+    incorrect: { title: 'الإجابة غير صحيحة.', body: ['مكعب المعدن هو جسم هندسي ولذلك سنقوم بقياس هندسي.', 'الصدفة جسم غير هندسي وصغيرة بما يكفي لتدخل في الاسطوانة المدرجة، ولذلك سنقوم بإزاحة الماء.', 'الكأس جسم غير هندسي ولا يمكن إدخاله في الاسطوانة المدرجة، لذلك سنستخدم طريقة الإزاحة.'] }
   }
 });
 /* ═══════════════════════════════════════════════════════════

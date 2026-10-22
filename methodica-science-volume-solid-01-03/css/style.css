@@ -243,3 +243,12 @@
 .scq-popup { width: fit-content; max-width: min(480px, 46%); }
 
 #s7 .s7-para-gap { display: block; height: 16px; }
+
+/* S2 (Arabic): the two speech bubbles run longer than the Hebrew ones and their lower edge now reaches the
+   photo's top-right corner, where the zoom button (z-index 10, above the bubbles) sat on top of Tom's text.
+   Move the magnifier to the photo's bottom-right corner, clear of both bubbles. */
+#s2 .scq-figure > .img-zoom-btn { top: auto; bottom: 10px; }
+
+/* S6 (Arabic): the stem runs to six lines and grows upward from its centred anchor, so its first line met the
+   "سؤال 1/2" labels. Lift the progress bar on this screen only (48px -> 22px) to clear it. */
+#s6 .progress-question { top: 22px; }

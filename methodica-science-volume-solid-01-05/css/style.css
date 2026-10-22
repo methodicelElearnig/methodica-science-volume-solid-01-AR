@@ -70,3 +70,13 @@
 .screen.fb-shown .companion-say { visibility: hidden; }
 /* No lone word on a popup's last line. */
 .scq-popup-body p { text-wrap: pretty; }
+
+/* S1 (Arabic layout pass): the stem is wider than the answer column so the scenario reads as two lines
+   (the sentences now flow instead of breaking after each one; the extra width spills to the left, over
+   free canvas - the popup lives at the bottom). Everything is lifted ~30px, the progress bar included,
+   and the answer pills get more padding and line spacing. */
+#s1 .progress-question { top: 18px; }
+#s1 .scq-question { top: max(84px, calc(50% - 20px - 245px - 32px)); }
+#s1 .scq-qtext { width: 1040px; max-width: none; }
+#s1 .scq-opt { min-height: 80px; padding: 10px 26px; }
+#s1 .scq-opt-text { line-height: 1.28; }

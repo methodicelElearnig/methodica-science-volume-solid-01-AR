@@ -20,3 +20,6 @@
    Narrowing the column instead would break the QA'd one-line options onto two lines. */
 .scq-popup { width: 400px; }
 .scq-popup-body p { text-wrap: pretty; }
+
+/* S1 (Arabic layout pass): the stem sat right on top of the first answer bubble. */
+#s1 .peak-options { margin-top: 28px; }

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>לומדה — מדידת נפח מוצק · שאלת שיא (מועד ב)</title>
+  <title>وحدة تعليمية — قياس حجم جسم صلب · سؤال القمة (الموعد ب)</title>
   <link rel="stylesheet" href="../unit-css/style.css?v=20261020">
   <link rel="stylesheet" href="css/style.css?v=20261020">
 </head>
@@ -30,10 +30,7 @@
 
 <div id="app">
 
-  <button class="flag-btn" id="flag-btn" type="button" aria-label="מצאתם בעיה?">
-    <span class="flag-btn-icon"></span>
-    <span class="flag-btn-label">מצאתם בעיה?</span>
-  </button>
+  <button class="flag-btn" id="flag-btn" type="button" aria-label="هل وجدتم مشكلة؟"><span class="flag-btn-icon"></span> <span class="flag-btn-label">هل وجدتم مشكلة؟</span></button>
 
   <!-- ═══ S0 — Peak intro (מועד ב) ═══ -->
   <section class="screen active" data-screen="0" id="s0">
@@ -42,15 +39,15 @@
          (requested 2026-10-15). The scenario that used to sit here is s5 (slide 161). -->
     <div class="peak-transition">
       <div class="peak-transition-text">
-        <h1 class="peak-transition-title">כל הכבוד!</h1>
-        <p class="peak-transition-sub">אם לא הצלחת לענות נכון על חלק מהשאלות,<br>חשוב להבין מה עדיין לא ברור.</p>
-        <p class="peak-transition-body">עכשיו מגיעה שאלת השיא</p>
-        <p class="peak-transition-body">יש בה 4 סעיפים. עליכם להצליח בכולם.</p>
+        <h1 class="peak-transition-title">كلّ الاحترام!</h1>
+        <p class="peak-transition-sub">إذا لم تتمكن من الإجابة بشكل صحيح على بعض الأسئلة،<br/>من المهم أن تفهم ما الذي لا يزال غير واضح.</p>
+        <p class="peak-transition-body">الآن تأتي السؤال الأهم</p>
+        <p class="peak-transition-body">تتكوّن من 4 بنود. عليكم النجاح في جميعها.</p>
       </div>
       <div class="peak-transition-video" id="s0-video"></div>
     </div>
-    <div class="nav-bar"><button class="btn-back" id="back-to-prev-part" onclick="goBackToPreviousPart('methodica-science-volume-solid-01-06')" hidden style="display:none" aria-hidden="true">חזרה</button>
-      <button class="btn-continue" id="s0-continue" onclick="peakStart()">שנמשיך?</button></div>
+    <div class="nav-bar"><button class="btn-back" id="back-to-prev-part" onclick="goBackToPreviousPart('methodica-science-volume-solid-01-06')" hidden style="display:none" aria-hidden="true">رجوع</button>
+      <button class="btn-continue" id="s0-continue" onclick="peakStart()">متابعة</button></div>
   </section>
 
   <!-- Storyboard slide 162. The photo and the method description are NOT repeated here: they are
@@ -60,72 +57,64 @@
          2026-10-14: feedback now follows each סעיף, and the line said nothing else. -->
     <div class="peak-question">
       <div class="peak-side">
-        <p class="scq-qtext scq-qtext--mixed">
-          <b class="scq-qtext-part">סעיף א:</b><br />
-          <b>באיזו שיטה ארז השתמש למדידת נפח הפסל?</b></p>
-        <div class="scq-answers peak-options" id="s1-opts" role="radiogroup" aria-label="באיזו שיטה">
-          <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="a" onclick="peakSelect(1,'a')"><span class="scq-opt-text">שיטת ההצפה</span><span class="scq-radio" aria-hidden="true"></span></button>
-          <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="b" onclick="peakSelect(1,'b')"><span class="scq-opt-text">שיטת דחיקת המים</span><span class="scq-radio" aria-hidden="true"></span></button>
-          <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="c" onclick="peakSelect(1,'c')"><span class="scq-opt-text">מדידת הפסל בסרגל</span><span class="scq-radio" aria-hidden="true"></span></button>
-          <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="d" onclick="peakSelect(1,'d')"><span class="scq-opt-text">מדידת הפסל במאזניים</span><span class="scq-radio" aria-hidden="true"></span></button>
+        <p class="scq-qtext scq-qtext--mixed"><b class="scq-qtext-part">الفقرة أ:</b><br/> <b>بأي طريقة استخدم يوسف لقياس حجم التمثال؟</b></p>
+        <div class="scq-answers peak-options" id="s1-opts" role="radiogroup" aria-label="بأي طريقة">
+          <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="a" onclick="peakSelect(1,'a')"><span class="scq-opt-text">طريقة الإطفاء</span><span aria-hidden="true" class="scq-radio"></span></button>
+          <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="b" onclick="peakSelect(1,'b')"><span class="scq-opt-text">طريقة إزاحة الماء</span><span aria-hidden="true" class="scq-radio"></span></button>
+          <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="c" onclick="peakSelect(1,'c')"><span class="scq-opt-text">قياس التمثال بالمسطرة</span><span aria-hidden="true" class="scq-radio"></span></button>
+          <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="d" onclick="peakSelect(1,'d')"><span class="scq-opt-text">قياس التمثال بالميزان</span><span aria-hidden="true" class="scq-radio"></span></button>
         </div>
       </div>
     </div>
-    <div class="nav-bar"><button class="scq-hint peak-hint" id="s1-hint" type="button" onclick="peakHint(1)"><span>אפשר רמז?</span><img class="scq-hint-ico" src="../unit-assets/img/icon-idea-blue.svg" alt=""></button><button class="btn-continue" id="s1-continue" disabled onclick="peakCheck(1)">צדקתי?</button><button class="btn-back" onclick="goBack()">חזרה</button></div>
+    <div class="nav-bar"><button class="scq-hint peak-hint" id="s1-hint" type="button" onclick="peakHint(1)"><span>هل يمكنني الحصول على تلميح؟</span><img class="scq-hint-ico" src="../unit-assets/img/icon-idea-blue.svg" alt=""></button><button class="btn-continue" id="s1-continue" disabled onclick="peakCheck(1)">هل إجابتي صحيحة؟</button><button class="btn-back" onclick="goBack()">رجوع</button></div>
   </section>
   <div class="scq-popup hidden" id="s1-scq-popup" role="status" aria-live="polite"><div class="scq-popup-header"><p class="scq-popup-title" id="s1-scq-popup-title"></p></div><div class="scq-popup-body" id="s1-scq-popup-body"></div></div>
-  <div class="scq-hint-overlay hidden" id="s1-hint-overlay" onclick="if(event.target===this)peakCloseHint(1)"><div class="scq-hint-popup" role="dialog" aria-modal="true" aria-label="רמז"><div class="scq-hint-content"><div class="scq-hint-text"><h2 class="scq-hint-title">חישבו:</h2><div class="scq-hint-body"><p><strong>הפסל לא נכנס למשורה</strong></p><p>איזו שיטה מאפשרת למדוד נפח של גוף מוצק שאינו נכנס במשורה?</p></div></div></div><button class="scq-hint-close" type="button" onclick="peakCloseHint(1)">חזרה לשאלה</button></div></div>
+  <div class="scq-hint-overlay hidden" id="s1-hint-overlay" onclick="if(event.target===this)peakCloseHint(1)"><div class="scq-hint-popup" role="dialog" aria-modal="true" aria-label="تلميح"><div class="scq-hint-content"><div class="scq-hint-text"><h2 class="scq-hint-title">احسبوا:</h2><div class="scq-hint-body"><p><strong>التمثال لا يتسع داخل الأسطوانة المدرجة</strong></p><p>أي طريقة تتيح قياس حجم جسم صلب لا يدخل في الاسطوانة المدرجة؟</p></div></div></div><button class="scq-hint-close" type="button" onclick="peakCloseHint(1)">العودة للسؤال</button></div></div>
 
   <section class="screen" data-screen="2" id="s2">
     <div class="peak-question">
-      <p class="scq-qtext scq-qtext--mixed">
-        <b class="scq-qtext-part">סעיף ב:</b><br />
-        ממוצע המדידות הוא 1,250&nbsp;מ"ל.<br /><b>מהו נפח הפסל ובאיזו יחידת מידה נוספת אפשר לבטא אותו?</b></p>
-      <div class="scq-answers peak-options" id="s2-opts" role="radiogroup" aria-label="נפח הפסל ויחידות">
-        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="b" onclick="peakSelect(2,'b')"><span class="scq-opt-text"><span class="nobr">125 סמ"ק</span> השווים ל-<span class="nobr">0.125 ליטר</span></span><span class="scq-radio" aria-hidden="true"></span></button>
-        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="c" onclick="peakSelect(2,'c')"><span class="scq-opt-text"><span class="nobr">12,500 סמ"ק</span> השווים ל-<span class="nobr">12.5 ליטר</span></span><span class="scq-radio" aria-hidden="true"></span></button>
-        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="d" onclick="peakSelect(2,'d')"><span class="scq-opt-text"><span class="nobr">12.5 סמ"ק</span> השווים ל-<span class="nobr">0.0125 ליטר</span></span><span class="scq-radio" aria-hidden="true"></span></button>
-        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="a" onclick="peakSelect(2,'a')"><span class="scq-opt-text"><span class="nobr">1,250 סמ"ק</span> השווים ל-<span class="nobr">1.25 ליטר</span></span><span class="scq-radio" aria-hidden="true"></span></button>
+      <p class="scq-qtext scq-qtext--mixed"><b class="scq-qtext-part">الفقرة ب:</b><br/> المتوسط للقياسات هو 1250 ملل.<br/><b>ما هو حجم التمثال وبأي وحدة قياس أخرى يمكن التعبير عنه؟</b></p>
+      <div class="scq-answers peak-options" id="s2-opts" role="radiogroup" aria-label="حجم التمثال والوحدات">
+        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="b" onclick="peakSelect(2,'b')"><span class="scq-opt-text"><span class="nobr">125 سم³</span> أي ما يعادل <span class="nobr">0.125 لتر</span></span><span aria-hidden="true" class="scq-radio"></span></button>
+        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="c" onclick="peakSelect(2,'c')"><span class="scq-opt-text"><span class="nobr">12,500 سم³</span> أي ما يعادل <span class="nobr">12.5 لتر</span></span><span aria-hidden="true" class="scq-radio"></span></button>
+        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="d" onclick="peakSelect(2,'d')"><span class="scq-opt-text"><span class="nobr">12.5 سم³</span> تساوي <span class="nobr">0.0125 لتر</span></span><span aria-hidden="true" class="scq-radio"></span></button>
+        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="a" onclick="peakSelect(2,'a')"><span class="scq-opt-text"><span class="nobr">1,250 سم³</span> تساوي <span class="nobr">1.25 لتر</span></span><span aria-hidden="true" class="scq-radio"></span></button>
       </div>
     </div>
-    <div class="nav-bar"><button class="scq-hint peak-hint" id="s2-hint" type="button" onclick="peakHint(2)"><span>אפשר רמז?</span><img class="scq-hint-ico" src="../unit-assets/img/icon-idea-blue.svg" alt=""></button><button class="btn-continue" id="s2-continue" disabled onclick="peakCheck(2)">צדקתי?</button><button class="btn-back" onclick="goBack()">חזרה</button></div>
+    <div class="nav-bar"><button class="scq-hint peak-hint" id="s2-hint" type="button" onclick="peakHint(2)"><span>هل يمكنني الحصول على تلميح؟</span><img class="scq-hint-ico" src="../unit-assets/img/icon-idea-blue.svg" alt=""></button><button class="btn-continue" id="s2-continue" disabled onclick="peakCheck(2)">هل إجابتي صحيحة؟</button><button class="btn-back" onclick="goBack()">رجوع</button></div>
   </section>
   <div class="scq-popup hidden" id="s2-scq-popup" role="status" aria-live="polite"><div class="scq-popup-header"><p class="scq-popup-title" id="s2-scq-popup-title"></p></div><div class="scq-popup-body" id="s2-scq-popup-body"></div></div>
-  <div class="scq-hint-overlay hidden" id="s2-hint-overlay" onclick="if(event.target===this)peakCloseHint(2)"><div class="scq-hint-popup" role="dialog" aria-modal="true" aria-label="רמז"><div class="scq-hint-content"><div class="scq-hint-text"><h2 class="scq-hint-title">חישבו:</h2><div class="scq-hint-body"><p><strong>תזכורת!</strong></p><p>למדנו ביחידות קודמות ש: 1 מ"ל = 1 סמ"ק, ו-1,000 מ"ל = 1 ליטר.</p></div></div></div><button class="scq-hint-close" type="button" onclick="peakCloseHint(2)">חזרה לשאלה</button></div></div>
+  <div class="scq-hint-overlay hidden" id="s2-hint-overlay" onclick="if(event.target===this)peakCloseHint(2)"><div class="scq-hint-popup" role="dialog" aria-modal="true" aria-label="تلميح"><div class="scq-hint-content"><div class="scq-hint-text"><h2 class="scq-hint-title">احسبوا:</h2><div class="scq-hint-body"><p><strong>تذكير!</strong></p><p>تعلمنا في الوحدات السابقة أن: 1 ملل = 1 سم³، و-1,000 ملل = 1 لتر.</p></div></div></div><button class="scq-hint-close" type="button" onclick="peakCloseHint(2)">العودة للسؤال</button></div></div>
 
   <section class="screen" data-screen="3" id="s3">
     <div class="peak-question">
-      <p class="scq-qtext scq-qtext--mixed">
-        <b class="scq-qtext-part">סעיף ג:</b><br />
-        אחותו של ארז ראתה מה הוא עושה וטענה:<br />"כמות המים שנאספה היא 1,250&nbsp;מ"ל — שווה בדיוק לנפח הפסל!"<br /><b>איזה מהמשפטים הבאים נכון?</b></p>
-      <div class="scq-answers peak-options" id="s3-opts" role="radiogroup" aria-label="איזה משפט נכון">
-        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="a" onclick="peakSelect(3,'a')"><span class="scq-opt-text">האקווריום הוא כלי גדול ולכן הנפח שנמדוד בו תמיד יהיה מדויק</span><span class="scq-radio" aria-hidden="true"></span></button>
-        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="b" onclick="peakSelect(3,'b')"><span class="scq-opt-text">כיוון שהאקווריום היה מלא עד הקצה, נפח המים שנדחקו החוצה שווה לנפח הפסל בדיוק</span><span class="scq-radio" aria-hidden="true"></span></button>
-        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="c" onclick="peakSelect(3,'c')"><span class="scq-opt-text">לא ניתן לדעת נפח של גוף מסוים בלי להכניס אותו למשורה לבדיקה</span><span class="scq-radio" aria-hidden="true"></span></button>
-        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="d" onclick="peakSelect(3,'d')"><span class="scq-opt-text">בגלל שהפסל עשוי מתכת וכבד, הוא דוחק הרבה מים החוצה ולכן הטענה&nbsp;נכונה</span><span class="scq-radio" aria-hidden="true"></span></button>
+      <p class="scq-qtext scq-qtext--mixed"><b class="scq-qtext-part">البند ج:</b><br/> رأت أخت إيرز ما يفعله، وادّعت:<br/>"كمية الماء التي جُمعت هي 1,250 ملل — تساوي تمامًا حجم التمثال!"<br/><b>أيّ من الجمل التالية صحيحة؟</b></p>
+      <div class="scq-answers peak-options" id="s3-opts" role="radiogroup" aria-label="أي جملة صحيحة">
+        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="a" onclick="peakSelect(3,'a')"><span class="scq-opt-text">حوض الأسماك وعاء كبير ولذلك فإن الحجم الذي نقيسه فيه سيكون دائمًا دقيقًا</span><span aria-hidden="true" class="scq-radio"></span></button>
+        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="b" onclick="peakSelect(3,'b')"><span class="scq-opt-text">بما أن الحوض كان ممتلئًا حتى الحافة، فإن حجم الماء الذي أُزيح إلى الخارج يساوي حجم التمثال بالضبط</span><span aria-hidden="true" class="scq-radio"></span></button>
+        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="c" onclick="peakSelect(3,'c')"><span class="scq-opt-text">لا يمكن معرفة حجم جسم معيّن دون وضعه في الاسطوانة المدرجة لفحصه</span><span aria-hidden="true" class="scq-radio"></span></button>
+        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="d" onclick="peakSelect(3,'d')"><span class="scq-opt-text">لأن التمثال مصنوع من المعدن وثقيل، فإنه يزيح كمية كبيرة من الماء إلى الخارج ولذلك الادعاء صحيح</span><span aria-hidden="true" class="scq-radio"></span></button>
       </div>
     </div>
-    <div class="nav-bar"><button class="scq-hint peak-hint" id="s3-hint" type="button" onclick="peakHint(3)"><span>אפשר רמז?</span><img class="scq-hint-ico" src="../unit-assets/img/icon-idea-blue.svg" alt=""></button><button class="btn-continue" id="s3-continue" disabled onclick="peakCheck(3)">צדקתי?</button><button class="btn-back" onclick="goBack()">חזרה</button></div>
+    <div class="nav-bar"><button class="scq-hint peak-hint" id="s3-hint" type="button" onclick="peakHint(3)"><span>هل يمكنني الحصول على تلميح؟</span><img class="scq-hint-ico" src="../unit-assets/img/icon-idea-blue.svg" alt=""></button><button class="btn-continue" id="s3-continue" disabled onclick="peakCheck(3)">هل إجابتي صحيحة؟</button><button class="btn-back" onclick="goBack()">رجوع</button></div>
   </section>
   <div class="scq-popup hidden" id="s3-scq-popup" role="status" aria-live="polite"><div class="scq-popup-header"><p class="scq-popup-title" id="s3-scq-popup-title"></p></div><div class="scq-popup-body" id="s3-scq-popup-body"></div></div>
-  <div class="scq-hint-overlay hidden" id="s3-hint-overlay" onclick="if(event.target===this)peakCloseHint(3)"><div class="scq-hint-popup" role="dialog" aria-modal="true" aria-label="רמז"><div class="scq-hint-content"><div class="scq-hint-text"><h2 class="scq-hint-title">חישבו:</h2><div class="scq-hint-body"><!-- slide 167 writes "אותם"; the grammatical "שאותן" is kept by QA decision (2026-10-11, docs-and-tools/TEXT-FIDELITY.md §Approved departures) --><p>על מה מבוססות השיטות למדידת נפח שאותן<br />למדנו ביחידה?</p></div></div></div><button class="scq-hint-close" type="button" onclick="peakCloseHint(3)">חזרה לשאלה</button></div></div>
+  <div class="scq-hint-overlay hidden" id="s3-hint-overlay" onclick="if(event.target===this)peakCloseHint(3)"><div class="scq-hint-popup" role="dialog" aria-modal="true" aria-label="تلميح"><div class="scq-hint-content"><div class="scq-hint-text"><h2 class="scq-hint-title">احسبوا:</h2><div class="scq-hint-body"><!-- slide 167 writes "אותם"; the grammatical "שאותן" is kept by QA decision (2026-10-11, docs-and-tools/TEXT-FIDELITY.md §Approved departures) --><p>على ماذا تعتمد طرق قياس الحجم التي<br/>تعلمناها في الوحدة؟</p></div></div></div><button class="scq-hint-close" type="button" onclick="peakCloseHint(3)">العودة للسؤال</button></div></div>
 
   <section class="screen" data-screen="4" id="s4">
     <div class="peak-question">
-      <p class="scq-qtext scq-qtext--mixed">
-        <b class="scq-qtext-part">סעיף ד:</b><br />
-        כדי לבסס את הטענה כי נפח הפסל הוא 1,250&nbsp;סמ"ק, יש לתמוך בה בטיעון מדעי.<br /><b>איזה מהמשפטים הבאים הוא טיעון מדעי הנתמך בראיה?</b></p>
-      <div class="scq-answers peak-options" id="s4-opts" role="radiogroup" aria-label="טיעון מדעי">
-        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="c" onclick="peakSelect(4,'c')"><span class="scq-opt-text">נפח הפסל הוא כ-<span class="nobr">1,250 סמ"ק</span>,<br />משום שהפסל נראה גדול ותופס מקום רב בתוך האקווריום</span><span class="scq-radio" aria-hidden="true"></span></button>
-        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="b" onclick="peakSelect(4,'b')"><span class="scq-opt-text">נפח הפסל הוא כ-<span class="nobr">1,250 סמ"ק</span>, משום שכל גוף<br />שמכניסים למים דוחק מים, וכך ניתן לדעת את נפחו</span><span class="scq-radio" aria-hidden="true"></span></button>
-        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="a" onclick="peakSelect(4,'a')"><span class="scq-opt-text">בשיטת ההצפה נאספו בממוצע <span class="nobr">1,250 מ"ל</span> מים,<br />ונפח המים שנדחק שווה לנפח הגוף שהוכנס למים</span><span class="scq-radio" aria-hidden="true"></span></button>
-        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="d" onclick="peakSelect(4,'d')"><span class="scq-opt-text">נפח הפסל הוא כ-<span class="nobr">1,250 סמ"ק</span>,<br />משום שהמוכרת בחנות העריכה שזהו נפחו והיא בעלת ניסיון רב בתחום</span><span class="scq-radio" aria-hidden="true"></span></button>
+      <p class="scq-qtext scq-qtext--mixed"><b class="scq-qtext-part">البند د:</b><br/> لإثبات الادعاء بأن حجم التمثال هو 1,250 سم³، يجب دعمه بحجة علمية.<br/><b>أيٌّ من الجمل التالية هي حجة علمية مدعومة بدليل؟</b></p>
+      <div class="scq-answers peak-options" id="s4-opts" role="radiogroup" aria-label="حجّة علمية">
+        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="c" onclick="peakSelect(4,'c')"><span class="scq-opt-text">حجم التمثال حوالي <span class="nobr">1,250 سم³</span>،<br/>لأن التمثال يبدو كبيرًا ويشغل مكانًا واسعًا داخل حوض السمك</span><span aria-hidden="true" class="scq-radio"></span></button>
+        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="b" onclick="peakSelect(4,'b')"><span class="scq-opt-text">حجم التمثال هو حوالي <span class="nobr">1,250 سم³</span>، لأن كل جسم<br/>يُدخل في الماء يزيح الماء، وبهذه الطريقة يمكن معرفة حجمه</span><span aria-hidden="true" class="scq-radio"></span></button>
+        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="a" onclick="peakSelect(4,'a')"><span class="scq-opt-text">بطريقة الإزاحة جُمع في المتوسط <span class="nobr">1,250 ملل</span> من الماء،<br/>وحجم الماء المُزاح يساوي حجم الجسم الذي أُدخل إلى الماء</span><span aria-hidden="true" class="scq-radio"></span></button>
+        <button class="scq-opt peak-opt" type="button" role="radio" aria-checked="false" data-id="d" onclick="peakSelect(4,'d')"><span class="scq-opt-text">حجم التمثال حوالي <span class="nobr">1,250 سم³</span>،<br/>لأن البائعة في المتجر قدّرت أن هذا هو حجمه، وهي ذات خبرة كبيرة في المجال</span><span aria-hidden="true" class="scq-radio"></span></button>
       </div>
     </div>
-    <div class="nav-bar"><button class="scq-hint peak-hint" id="s4-hint" type="button" onclick="peakHint(4)"><span>אפשר רמז?</span><img class="scq-hint-ico" src="../unit-assets/img/icon-idea-blue.svg" alt=""></button><button class="btn-continue" id="s4-continue" disabled onclick="peakCheck(4)">צדקתי?</button><button class="btn-back" onclick="goBack()">חזרה</button></div>
+    <div class="nav-bar"><button class="scq-hint peak-hint" id="s4-hint" type="button" onclick="peakHint(4)"><span>هل يمكنني الحصول على تلميح؟</span><img class="scq-hint-ico" src="../unit-assets/img/icon-idea-blue.svg" alt=""></button><button class="btn-continue" id="s4-continue" disabled onclick="peakCheck(4)">هل إجابتي صحيحة؟</button><button class="btn-back" onclick="goBack()">رجوع</button></div>
   </section>
   <div class="scq-popup hidden" id="s4-scq-popup" role="status" aria-live="polite"><div class="scq-popup-header"><p class="scq-popup-title" id="s4-scq-popup-title"></p></div><div class="scq-popup-body" id="s4-scq-popup-body"></div></div>
-  <div class="scq-hint-overlay hidden" id="s4-hint-overlay" onclick="if(event.target===this)peakCloseHint(4)"><div class="scq-hint-popup" role="dialog" aria-modal="true" aria-label="רמז"><div class="scq-hint-content"><div class="scq-hint-text"><h2 class="scq-hint-title">חישבו:</h2><div class="scq-hint-body"><p><strong>איך אנחנו יודעים שהטענה נכונה?</strong></p><p>בטיעון מדעי נחפש ממצא שנמדד בניסוי או בתצפית.</p></div></div></div><button class="scq-hint-close" type="button" onclick="peakCloseHint(4)">חזרה לשאלה</button></div></div>
+  <div class="scq-hint-overlay hidden" id="s4-hint-overlay" onclick="if(event.target===this)peakCloseHint(4)"><div class="scq-hint-popup" role="dialog" aria-modal="true" aria-label="تلميح"><div class="scq-hint-content"><div class="scq-hint-text"><h2 class="scq-hint-title">احسبوا:</h2><div class="scq-hint-body"><p><strong>كيف نعرف أن الادعاء صحيح؟</strong></p><p>في الحجة العلمية نبحث عن نتيجة تم قياسها في تجربة أو في رصد.</p></div></div></div><button class="scq-hint-close" type="button" onclick="peakCloseHint(4)">العودة للسؤال</button></div></div>
 
   <!-- ═══ S5 — Scenario (storyboard slide 161) ═══
        Between the transition (s0) and סעיף א (s1); next free id, order in peakStart()/goBack().
@@ -133,47 +122,44 @@
   <section class="screen" data-screen="5" id="s5">
     <div class="scq-question scq-question--withimage">
       <div class="scq-figure">
-        <img src="assets/img/s0-aquarium-statue.jpg" alt="אקווריום ובתוכו פסל של ספינה טרופה">
+        <img src="assets/img/s0-aquarium-statue.jpg" alt="حوض أسماك بداخله تمثال لسفينة غارقة">
       </div>
       <div class="scq-side">
-        <h1 class="peak-scenario-title">האקווריום של ארז</h1>
-        <p class="scq-qtext scq-qtext--mixed">
-          ארז קנה פסל חדש של ספינה טרופה לאקווריום שלו.<br />חשוב לו לדעת מה נפח הפסל.<br /><br />
-          <b>השיטה:</b><br />ארז הניח את האקווריום על כלי איסוף, מילא אותו במים עד הסוף והכניס פנימה את הפסל. את המים שנשפכו לכלי האיסוף הוא אסף ומדד את נפחם.<br /><br />
-          <b>המדידות:</b></p>
+        <h1 class="peak-scenario-title">حوض أسماك يوسف</h1>
+        <p class="scq-qtext scq-qtext--mixed">اشترى يوسف تمثالًا جديدًا لسفينة غارقة لحوض الأسماك الخاص به.<br/>من المهم له معرفة ما هو حجم التمثال.<br/><br/> <b>الطريقة:</b><br/>وضع يوسف حوض الأسماك على وعاء تجميع، ملأه بالماء حتى النهاية وأدخل التمثال بداخله. جمع الماء الذي انسكب في وعاء التجميع وقاس حجمه.<br/><br/> <b>القياسات:</b></p>
         <ul class="peak-scenario-list">
-          <li>מדידה 1: 1,250&nbsp;מ"ל</li>
-          <li>מדידה 2: 1,240&nbsp;מ"ל</li>
-          <li>מדידה 3: 1,260&nbsp;מ"ל</li>
+          <li>القياس 1: 1,250 ملل</li>
+          <li>القياس 2: 1,240 ملل</li>
+          <li>القياس 3: 1,260 ملل</li>
         </ul>
       </div>
     </div>
     <div class="nav-bar">
-      <button class="btn-continue" id="s5-continue" onclick="goTo(1)">המשך</button>
-      <button class="btn-back" onclick="goBack()">חזרה</button>
+      <button class="btn-continue" id="s5-continue" onclick="goTo(1)">تابِع</button>
+      <button class="btn-back" onclick="goBack()">رجوع</button>
     </div>
   </section>
 
   <!-- ═══════════════ REPORT MODAL ═══════════════ -->
   <div id="report-modal" class="report-modal-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="report-modal-title">
     <div class="report-modal-box">
-      <button class="report-close-btn" onclick="tryCloseReportModal()" aria-label="סגור">&#10005;</button>
-      <h2 class="report-modal-title" id="report-modal-title">דיווח על בעיה</h2>
-      <p class="report-modal-body">משהו לא ברור או לא עובד כמו שצריך? ספרו לנו מה קרה כדי שנטפל.</p>
-      <div class="report-field"><label class="report-label" for="report-type">מה סוג הבעיה <span class="required-star">*</span></label>
-        <select class="report-select" id="report-type"><option value="" disabled selected>בחרו סוג בעיה</option><option value="technical">תקלה טכנית או שמשהו לא עובד</option><option value="unclear">משהו לא ברור לי</option><option value="other">אחר</option></select></div>
-      <div class="report-field"><label class="report-label" for="report-text">מה קרה? <span class="required-star">*</span></label>
-        <textarea class="report-textarea" id="report-text" maxlength="250" rows="4" placeholder="תארו את הבעיה..."></textarea><span class="report-char-count" id="report-char-count">0 / 250</span></div>
-      <p class="report-error" id="report-error" hidden>נא לבחור סוג בעיה ולתאר מה קרה.</p>
-      <div class="report-actions"><button class="report-submit-btn" onclick="submitReport()">שליחה</button><button class="report-cancel-btn" onclick="tryCloseReportModal()">ביטול</button></div>
-      <div class="report-thanks" id="report-thanks" hidden><p>תודה! הדיווח נשלח. נטפל בהקדם.</p><button class="report-submit-btn" onclick="forceCloseReportModal()">סגירה</button></div>
+      <button class="report-close-btn" onclick="tryCloseReportModal()" aria-label="أغلق">&#10005;</button>
+      <h2 class="report-modal-title" id="report-modal-title">الإبلاغ عن مشكلة</h2>
+      <p class="report-modal-body">هل هناك شيء غير واضح أو لا يعمل كما ينبغي؟ أخبرونا بما حدث حتى نتمكن من المعالجة.</p>
+      <div class="report-field"><label class="report-label" for="report-type">ما نوع المشكلة <span class="required-star">*</span></label>
+        <select class="report-select" id="report-type"><option value="" disabled selected>اختاروا نوع المشكلة</option><option value="technical">عطل تقني أو أن شيئًا ما لا يعمل</option><option value="unclear">هناك شيء لا أفهمه</option><option value="other">آخر</option></select></div>
+      <div class="report-field"><label class="report-label" for="report-text">ماذا حدث؟ <span class="required-star">*</span></label>
+        <textarea class="report-textarea" id="report-text" maxlength="250" rows="4" placeholder="صفوا المشكلة..."></textarea><span class="report-char-count" id="report-char-count">0 / 250</span></div>
+      <p class="report-error" id="report-error" hidden>يرجى اختيار نوع المشكلة ووصف ما حدث.</p>
+      <div class="report-actions"><button class="report-submit-btn" onclick="submitReport()">إرسال</button><button class="report-cancel-btn" onclick="tryCloseReportModal()">إلغاء</button></div>
+      <div class="report-thanks" id="report-thanks" hidden><p>شكرًا! تم إرسال البلاغ. سنعالج الأمر في أقرب وقت.</p><button class="report-submit-btn" onclick="forceCloseReportModal()">إغلاق</button></div>
     </div>
   </div>
   <div id="report-confirm-modal" class="report-modal-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="confirm-modal-title">
     <div class="report-modal-box report-confirm-box">
-      <h2 class="report-modal-title" id="confirm-modal-title">בטוח לסגור את החלון?</h2>
-      <p class="report-modal-body">בלחיצה על סגירה לא יישלח דיווח</p>
-      <div class="report-actions"><button class="report-cancel-btn" onclick="forceCloseReportModal()">סגור חלון</button><button class="report-submit-btn" onclick="backToReportForm()">אני רוצה לדווח</button></div>
+      <h2 class="report-modal-title" id="confirm-modal-title">هل أنت متأكد من إغلاق النافذة؟</h2>
+      <p class="report-modal-body">بالنقر على إغلاق لن يتم إرسال تقرير</p>
+      <div class="report-actions"><button class="report-cancel-btn" onclick="forceCloseReportModal()">إغلاق النافذة</button><button class="report-submit-btn" onclick="backToReportForm()">أريد أن أُبلِّغ</button></div>
     </div>
   </div>
 

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>לומדה — מדידת נפח מוצק · תרגול בסיסי</title>
+  <title>وحدة تعليمية — قياس حجم المادة الصلبة · تمرين أساسي</title>
   <link rel="stylesheet" href="../unit-css/style.css?v=20261020">
   <link rel="stylesheet" href="css/style.css?v=20261020">
 </head>
@@ -30,10 +30,7 @@
 
 <div id="app">
 
-  <button class="flag-btn" id="flag-btn" type="button" aria-label="מצאתם בעיה?">
-    <span class="flag-btn-icon"></span>
-    <span class="flag-btn-label">מצאתם בעיה?</span>
-  </button>
+  <button class="flag-btn" id="flag-btn" type="button" aria-label="هل وجدتم مشكلة؟"><span class="flag-btn-icon"></span> <span class="flag-btn-label">هل وجدتم مشكلة؟</span></button>
 
   <!-- ═══ S0 — TransitionScreen (remediation intro) ═══ -->
   <section class="screen active" data-screen="0" id="s0">
@@ -45,7 +42,7 @@
          The line breaks are the deck's, not the browser's — see the note in css/style.css
          on why they are authored rather than left to wrapping. -->
     <div class="transition-content transition-content--rules transition-content--compact">
-      <p class="transition-sub">כל הכבוד שניסיתם, זה חשוב מאוד!<br>כדי לחזק את ההבנה נמשיך לתרגל —<br><strong class="transition-lead">4 שאלות פשוטות יותר</strong><br>וכבר בהתחלה יש רמז! ענו נכון על 3 שאלות ומעלה כדי להתקדם.</p>
+      <p class="transition-sub">أحسنتم بالمحاولة، هذا مهم جدًا!<br/>لتعزيز الفهم سنواصل التدريب —<br/><strong class="transition-lead">4 أسئلة أبسط</strong><br/>وهناك تلميح منذ البداية! أجيبوا بشكل صحيح عن 3 أسئلة أو أكثر للتقدّم.</p>
       <!-- Bubble FIRST, sprite second: .companion-say sets direction:ltr, so DOM order is
            physical order and --right puts the beak on the edge facing him. The pair is
            shrink-to-fit inside .transition-content's centred column, which is what centres it. -->
@@ -55,59 +52,59 @@
       </div>
     </div>
     <div class="nav-bar">
-      <button class="btn-back" id="back-to-prev-part" onclick="goBackToPreviousPart('methodica-science-volume-solid-01-02')" hidden style="display:none" aria-hidden="true">חזרה</button>
-      <button class="btn-continue" id="s0-continue" onclick="advanceScreen()">שנמשיך?</button>
+      <button class="btn-back" id="back-to-prev-part" onclick="goBackToPreviousPart('methodica-science-volume-solid-01-02')" hidden style="display:none" aria-hidden="true">رجوع</button>
+      <button class="btn-continue" id="s0-continue" onclick="advanceScreen()">متابعة</button>
     </div>
   </section>
 
 
   <!-- ═══ S1 — Basic 1 (item 02-01) · identify non-geometric body ═══ -->
   <section class="screen" data-screen="1" id="s1">
-    <nav class="progress-question" aria-label="ניווט שאלות">
-      <div class="progress-question__item" data-question="1"><div class="progress-question__icon"></div><span class="progress-question__label">שאלה 1</span></div>
+    <nav class="progress-question" aria-label="التنقل بين الأسئلة">
+      <div class="progress-question__item" data-question="1"><div class="progress-question__icon"></div><span class="progress-question__label">سؤال 1</span></div>
       <div class="progress-question__connector" data-connector="1"></div>
-      <div class="progress-question__item" data-question="2"><div class="progress-question__icon"></div><span class="progress-question__label">שאלה 2</span></div>
+      <div class="progress-question__item" data-question="2"><div class="progress-question__icon"></div><span class="progress-question__label">سؤال 2</span></div>
       <div class="progress-question__connector" data-connector="2"></div>
-      <div class="progress-question__item" data-question="3"><div class="progress-question__icon"></div><span class="progress-question__label">שאלה 3</span></div>
+      <div class="progress-question__item" data-question="3"><div class="progress-question__icon"></div><span class="progress-question__label">سؤال 3</span></div>
       <div class="progress-question__connector" data-connector="3"></div>
-      <div class="progress-question__item" data-question="4"><div class="progress-question__icon"></div><span class="progress-question__label">שאלה 4</span></div>
+      <div class="progress-question__item" data-question="4"><div class="progress-question__icon"></div><span class="progress-question__label">سؤال 4</span></div>
     </nav>
     <div class="scq-question scq-question--withimage">
       <div class="scq-figure">
-        <img src="assets/img/s1-bodies.jpg" alt="ארבעה גופים על שולחן: לבנה, מפלצת פלסטלינה, קופסת קרטון וקוביית עץ">
+        <img src="assets/img/s1-bodies.jpg" alt="أربعة أجسام على الطاولة: طوبة، مجسم صلصال، علبة كرتون ومكعب خشبي">
       </div>
       <div class="scq-side">
-      <p class="scq-qtext">איזה מהגופים שבתמונה אינו בעל צורה הנדסית מוגדרת?</p>
-      <div class="scq-answers" id="s1-answers" role="radiogroup" aria-label="איזה גוף אינו בעל צורה הנדסית מוגדרת?">
-        <button class="scq-opt" type="button" role="radio" aria-checked="false" data-id="a" onclick="scqSelect('s1','a')"><span class="scq-opt-text">לבנה</span><span class="scq-radio" aria-hidden="true"></span></button>
-        <button class="scq-opt" type="button" role="radio" aria-checked="false" data-id="b" onclick="scqSelect('s1','b')"><span class="scq-opt-text">מפלצת פלסטלינה</span><span class="scq-radio" aria-hidden="true"></span></button>
-        <button class="scq-opt" type="button" role="radio" aria-checked="false" data-id="c" onclick="scqSelect('s1','c')"><span class="scq-opt-text">קופסת קרטון</span><span class="scq-radio" aria-hidden="true"></span></button>
-        <button class="scq-opt" type="button" role="radio" aria-checked="false" data-id="d" onclick="scqSelect('s1','d')"><span class="scq-opt-text">קוביית עץ</span><span class="scq-radio" aria-hidden="true"></span></button>
+      <p class="scq-qtext">أيّ من الأجسام في الصورة ليس له شكل هندسي محدد؟</p>
+      <div class="scq-answers" id="s1-answers" role="radiogroup" aria-label="أي جسم ليس له شكل هندسي محدد؟">
+        <button class="scq-opt" type="button" role="radio" aria-checked="false" data-id="a" onclick="scqSelect('s1','a')"><span class="scq-opt-text">لبنة</span><span aria-hidden="true" class="scq-radio"></span></button>
+        <button class="scq-opt" type="button" role="radio" aria-checked="false" data-id="b" onclick="scqSelect('s1','b')"><span class="scq-opt-text">وحش من الصلصال</span><span aria-hidden="true" class="scq-radio"></span></button>
+        <button class="scq-opt" type="button" role="radio" aria-checked="false" data-id="c" onclick="scqSelect('s1','c')"><span class="scq-opt-text">صندوق من الكرتون</span><span aria-hidden="true" class="scq-radio"></span></button>
+        <button class="scq-opt" type="button" role="radio" aria-checked="false" data-id="d" onclick="scqSelect('s1','d')"><span class="scq-opt-text">مكعب خشبي</span><span aria-hidden="true" class="scq-radio"></span></button>
       </div>
       </div>
     </div>
     <div class="scq-bar">
       <div class="scq-bar-main">
-        <button class="scq-check" id="s1-scq-check" type="button" disabled onclick="scqCheck('s1')">צדקתי?</button>
-        <button class="scq-hint" id="s1-scq-hint" type="button" onclick="scqHint('s1')"><span>אפשר רמז?</span><img class="scq-hint-ico" src="../unit-assets/img/icon-idea-blue.svg" alt=""></button>
+        <button class="scq-check" id="s1-scq-check" type="button" disabled onclick="scqCheck('s1')">هل إجابتي صحيحة؟</button>
+        <button class="scq-hint" id="s1-scq-hint" type="button" onclick="scqHint('s1')"><span>هل يمكنني الحصول على تلميح؟</span><img class="scq-hint-ico" src="../unit-assets/img/icon-idea-blue.svg" alt=""></button>
       </div>
-      <button class="btn-back" onclick="goBack()">חזרה</button>
+      <button class="btn-back" onclick="goBack()">رجوع</button>
     </div>
   </section>
   <div class="scq-popup hidden" id="s1-scq-popup" role="status" aria-live="polite"><div class="scq-popup-header"><p class="scq-popup-title" id="s1-scq-popup-title"></p></div><div class="scq-popup-body" id="s1-scq-popup-body"></div></div>
-  <div class="scq-hint-overlay hidden" id="s1-scq-hint-overlay" onclick="if(event.target===this)scqCloseHint('s1')"><div class="scq-hint-popup" role="dialog" aria-modal="true" aria-label="רמז"><div class="scq-hint-content"><div class="scq-hint-text"><h2 class="scq-hint-title">חישבו:</h2><div class="scq-hint-body"><p><strong>מהי צורה הנדסית מוגדרת?</strong></p><p>צורה שאפשר למדוד אותה ולחשב את נפחה.</p></div></div></div><button class="scq-hint-close" type="button" onclick="scqCloseHint('s1')">חזרה לשאלה</button></div></div>
+  <div class="scq-hint-overlay hidden" id="s1-scq-hint-overlay" onclick="if(event.target===this)scqCloseHint('s1')"><div class="scq-hint-popup" role="dialog" aria-modal="true" aria-label="تلميح"><div class="scq-hint-content"><div class="scq-hint-text"><h2 class="scq-hint-title">احسبوا:</h2><div class="scq-hint-body"><p><strong>ما هي الشكل الهندسي المحدد؟</strong></p><p>شكل يمكن قياسه وحساب حجمه.</p></div></div></div><button class="scq-hint-close" type="button" onclick="scqCloseHint('s1')">العودة للسؤال</button></div></div>
 
 
   <!-- ═══ S2 — Basic 2 (item 02-02) · who is right (true/false) ═══ -->
   <section class="screen" data-screen="2" id="s2">
-    <nav class="progress-question" aria-label="ניווט שאלות">
-      <div class="progress-question__item" data-question="1"><div class="progress-question__icon"></div><span class="progress-question__label">שאלה 1</span></div>
+    <nav class="progress-question" aria-label="التنقل بين الأسئلة">
+      <div class="progress-question__item" data-question="1"><div class="progress-question__icon"></div><span class="progress-question__label">سؤال 1</span></div>
       <div class="progress-question__connector" data-connector="1"></div>
-      <div class="progress-question__item" data-question="2"><div class="progress-question__icon"></div><span class="progress-question__label">שאלה 2</span></div>
+      <div class="progress-question__item" data-question="2"><div class="progress-question__icon"></div><span class="progress-question__label">سؤال 2</span></div>
       <div class="progress-question__connector" data-connector="2"></div>
-      <div class="progress-question__item" data-question="3"><div class="progress-question__icon"></div><span class="progress-question__label">שאלה 3</span></div>
+      <div class="progress-question__item" data-question="3"><div class="progress-question__icon"></div><span class="progress-question__label">سؤال 3</span></div>
       <div class="progress-question__connector" data-connector="3"></div>
-      <div class="progress-question__item" data-question="4"><div class="progress-question__icon"></div><span class="progress-question__label">שאלה 4</span></div>
+      <div class="progress-question__item" data-question="4"><div class="progress-question__icon"></div><span class="progress-question__label">سؤال 4</span></div>
     </nav>
     <div class="scq-question scq-question--withimage">
       <!-- Photo stays 470px (bubble geometry is in % of it); margin-left keeps the left bubble, which
@@ -117,97 +114,97 @@
            as stem text. -->
       <div class="scq-figure-frame" style="position: relative; flex: 0 0 470px; align-self: center; margin-left: 60px;">
         <div class="scq-figure" style="width: 100%">
-          <img src="assets/img/s2-tom-shirley.jpg" alt="שני ילדים בחלוקי מעבדה עומדים משני צדי שולחן ועליו מפלצת פלסטלינה ירוקה">
+          <img src="assets/img/s2-tom-shirley.jpg" alt="طفلان يرتديان معاطف مختبر يقفان على جانبي طاولة عليها مجسّم وحش من الصلصال الأخضر">
         </div>
         <div class="speech-bubble" style="left: -10%; top: -40%; width: 57%">
-          <div class="speech-bubble__frame"><p class="speech-bubble__text">שירלי: כדי למדוד נפח של גוף ללא צורה הנדסית מוגדרת, יש להשתמש בשיטת דחיקת המים.</p></div>
+          <div class="speech-bubble__frame"><p class="speech-bubble__text">سلمى: لقياس حجم جسم ليس له شكل هندسي محدد، يجب استخدام طريقة إزاحة الماء.</p></div>
           <span class="speech-bubble__tail" aria-hidden="true"></span>
         </div>
         <div class="speech-bubble" style="left: 49%; top: -42%; width: 51%">
-          <div class="speech-bubble__frame"><p class="speech-bubble__text">תום: כדי למדוד נפח של גוף ללא צורה הנדסית מוגדרת, יש להשתמש במאזניים וסרגל.</p></div>
+          <div class="speech-bubble__frame"><p class="speech-bubble__text">طارق: لقياس حجم جسم ليس له شكل هندسي محدد، يجب استخدام ميزان ومسطرة.</p></div>
           <span class="speech-bubble__tail" aria-hidden="true"></span>
         </div>
       </div>
       <div class="scq-side">
-      <p class="scq-qtext">מי מהילדים צודק? תום או שירלי?</p>
-      <div class="scq-answers" id="s2-answers" role="radiogroup" aria-label="מי צודק?">
-        <button class="scq-opt" type="button" role="radio" aria-checked="false" data-id="a" onclick="scqSelect('s2','a')"><span class="scq-opt-text">תום צודק</span><span class="scq-radio" aria-hidden="true"></span></button>
-        <button class="scq-opt" type="button" role="radio" aria-checked="false" data-id="b" onclick="scqSelect('s2','b')"><span class="scq-opt-text">שירלי צודקת</span><span class="scq-radio" aria-hidden="true"></span></button>
+      <p class="scq-qtext">من من الأطفال على حق؟ طارق أم سلمى؟</p>
+      <div class="scq-answers" id="s2-answers" role="radiogroup" aria-label="من على حق؟">
+        <button class="scq-opt" type="button" role="radio" aria-checked="false" data-id="a" onclick="scqSelect('s2','a')"><span class="scq-opt-text">طارق على حق</span><span aria-hidden="true" class="scq-radio"></span></button>
+        <button class="scq-opt" type="button" role="radio" aria-checked="false" data-id="b" onclick="scqSelect('s2','b')"><span class="scq-opt-text">سلمى على حق</span><span aria-hidden="true" class="scq-radio"></span></button>
       </div>
       </div>
     </div>
     <div class="scq-bar">
       <div class="scq-bar-main">
-        <button class="scq-check" id="s2-scq-check" type="button" disabled onclick="scqCheck('s2')">צדקתי?</button>
-        <button class="scq-hint" id="s2-scq-hint" type="button" onclick="scqHint('s2')"><span>אפשר רמז?</span><img class="scq-hint-ico" src="../unit-assets/img/icon-idea-blue.svg" alt=""></button>
+        <button class="scq-check" id="s2-scq-check" type="button" disabled onclick="scqCheck('s2')">هل إجابتي صحيحة؟</button>
+        <button class="scq-hint" id="s2-scq-hint" type="button" onclick="scqHint('s2')"><span>هل يمكنني الحصول على تلميح؟</span><img class="scq-hint-ico" src="../unit-assets/img/icon-idea-blue.svg" alt=""></button>
       </div>
-      <button class="btn-back" onclick="goBack()">חזרה</button>
+      <button class="btn-back" onclick="goBack()">رجوع</button>
     </div>
   </section>
   <div class="scq-popup hidden" id="s2-scq-popup" role="status" aria-live="polite"><div class="scq-popup-header"><p class="scq-popup-title" id="s2-scq-popup-title"></p></div><div class="scq-popup-body" id="s2-scq-popup-body"></div></div>
-  <div class="scq-hint-overlay hidden" id="s2-scq-hint-overlay" onclick="if(event.target===this)scqCloseHint('s2')"><div class="scq-hint-popup" role="dialog" aria-modal="true" aria-label="רמז"><div class="scq-hint-content"><div class="scq-hint-text"><h2 class="scq-hint-title">חישבו:</h2><div class="scq-hint-body"><p><strong>גוף שאין לו צורה הנדסית מוגדרת</strong></p><p>הצורה שלה לא אחידה, לא בנויה מקווים ישרים או מעגלים, ואי-אפשר לחשב את נפחה בעזרת נוסחה.</p></div></div></div><button class="scq-hint-close" type="button" onclick="scqCloseHint('s2')">חזרה לשאלה</button></div></div>
+  <div class="scq-hint-overlay hidden" id="s2-scq-hint-overlay" onclick="if(event.target===this)scqCloseHint('s2')"><div class="scq-hint-popup" role="dialog" aria-modal="true" aria-label="تلميح"><div class="scq-hint-content"><div class="scq-hint-text"><h2 class="scq-hint-title">احسبوا:</h2><div class="scq-hint-body"><p><strong>جسم ليس له شكل هندسي محدّد</strong></p><p>شكلها غير منتظم، وليست مبنية من خطوط مستقيمة أو دوائر، ولا يمكن حساب حجمها باستخدام معادلة.</p></div></div></div><button class="scq-hint-close" type="button" onclick="scqCloseHint('s2')">العودة للسؤال</button></div></div>
 
 
   <!-- ═══ S3 — Basic 3 (item 02-03) · which tool for displacement ═══ -->
   <section class="screen" data-screen="3" id="s3">
-    <nav class="progress-question" aria-label="ניווט שאלות">
-      <div class="progress-question__item" data-question="1"><div class="progress-question__icon"></div><span class="progress-question__label">שאלה 1</span></div>
+    <nav class="progress-question" aria-label="التنقل بين الأسئلة">
+      <div class="progress-question__item" data-question="1"><div class="progress-question__icon"></div><span class="progress-question__label">سؤال 1</span></div>
       <div class="progress-question__connector" data-connector="1"></div>
-      <div class="progress-question__item" data-question="2"><div class="progress-question__icon"></div><span class="progress-question__label">שאלה 2</span></div>
+      <div class="progress-question__item" data-question="2"><div class="progress-question__icon"></div><span class="progress-question__label">سؤال 2</span></div>
       <div class="progress-question__connector" data-connector="2"></div>
-      <div class="progress-question__item" data-question="3"><div class="progress-question__icon"></div><span class="progress-question__label">שאלה 3</span></div>
+      <div class="progress-question__item" data-question="3"><div class="progress-question__icon"></div><span class="progress-question__label">سؤال 3</span></div>
       <div class="progress-question__connector" data-connector="3"></div>
-      <div class="progress-question__item" data-question="4"><div class="progress-question__icon"></div><span class="progress-question__label">שאלה 4</span></div>
+      <div class="progress-question__item" data-question="4"><div class="progress-question__icon"></div><span class="progress-question__label">سؤال 4</span></div>
     </nav>
     <!-- DropdownQuestion — Single Paragraph variant: one bold sentence with
          the blank as an inline dropdown, no instruction line or image. -->
     <div class="dq-question">
-      <p class="scq-qtext">כשמודדים נפח בשיטת דחיקת המים משתמשים ב-
+      <p class="scq-qtext">عند قياس الحجم بطريقة إزاحة الماء نستخدم
         <span class="dropdown" id="s3-dropdown">
           <button class="dropdown-trigger is-placeholder" id="s3-dropdown-trigger" type="button" onclick="dqToggle('s3')"><span class="dropdown-trigger-text"></span><span class="dropdown-caret" aria-hidden="true">▾</span></button>
           <span class="dropdown-list hidden" id="s3-answers" role="listbox">
-            <button class="scq-opt dropdown-opt" type="button" role="option" data-id="a" onclick="dqPick('s3','a','סרגל')">סרגל</button>
-            <button class="scq-opt dropdown-opt" type="button" role="option" data-id="b" onclick="dqPick('s3','b','משורה')">משורה</button>
-            <button class="scq-opt dropdown-opt" type="button" role="option" data-id="c" onclick="dqPick('s3','c','מאזניים')">מאזניים</button>
-            <button class="scq-opt dropdown-opt" type="button" role="option" data-id="d" onclick="dqPick('s3','d','משקולת')">משקולת</button>
+            <button class="scq-opt dropdown-opt" type="button" role="option" data-id="a" onclick="dqPick('s3','a','مسطرة')">مسطرة</button>
+            <button class="scq-opt dropdown-opt" type="button" role="option" data-id="b" onclick="dqPick('s3','b','اسطوانة مدرجة')">اسطوانة مدرجة</button>
+            <button class="scq-opt dropdown-opt" type="button" role="option" data-id="c" onclick="dqPick('s3','c','ميزان')">ميزان</button>
+            <button class="scq-opt dropdown-opt" type="button" role="option" data-id="d" onclick="dqPick('s3','d','ثِقل')">ثِقل</button>
           </span>
         </span>.
       </p>
     </div>
     <div class="scq-bar">
       <div class="scq-bar-main">
-        <button class="scq-check" id="s3-scq-check" type="button" disabled onclick="scqCheck('s3')">צדקתי?</button>
-        <button class="scq-hint" id="s3-scq-hint" type="button" onclick="scqHint('s3')"><span>אפשר רמז?</span><img class="scq-hint-ico" src="../unit-assets/img/icon-idea-blue.svg" alt=""></button>
+        <button class="scq-check" id="s3-scq-check" type="button" disabled onclick="scqCheck('s3')">هل إجابتي صحيحة؟</button>
+        <button class="scq-hint" id="s3-scq-hint" type="button" onclick="scqHint('s3')"><span>هل يمكنني الحصول على تلميح؟</span><img class="scq-hint-ico" src="../unit-assets/img/icon-idea-blue.svg" alt=""></button>
       </div>
-      <button class="btn-back" onclick="goBack()">חזרה</button>
+      <button class="btn-back" onclick="goBack()">رجوع</button>
     </div>
   </section>
   <div class="scq-popup hidden" id="s3-scq-popup" role="status" aria-live="polite"><div class="scq-popup-header"><p class="scq-popup-title" id="s3-scq-popup-title"></p></div><div class="scq-popup-body" id="s3-scq-popup-body"></div></div>
-  <div class="scq-hint-overlay hidden" id="s3-scq-hint-overlay" onclick="if(event.target===this)scqCloseHint('s3')"><div class="scq-hint-popup" role="dialog" aria-modal="true" aria-label="רמז"><div class="scq-hint-content"><div class="scq-hint-text"><h2 class="scq-hint-title">חישבו:</h2><div class="scq-hint-body"><p><strong>כלי עם מים</strong></p><p>איזה מבין הכלים בתשובות יכול להכיל מים?</p></div></div></div><button class="scq-hint-close" type="button" onclick="scqCloseHint('s3')">חזרה לשאלה</button></div></div>
+  <div class="scq-hint-overlay hidden" id="s3-scq-hint-overlay" onclick="if(event.target===this)scqCloseHint('s3')"><div class="scq-hint-popup" role="dialog" aria-modal="true" aria-label="تلميح"><div class="scq-hint-content"><div class="scq-hint-text"><h2 class="scq-hint-title">احسبوا:</h2><div class="scq-hint-body"><p><strong>وعاء فيه ماء</strong></p><p>أي من الأوعية في الإجابات يمكن أن يحتوي على ماء؟</p></div></div></div><button class="scq-hint-close" type="button" onclick="scqCloseHint('s3')">العودة للسؤال</button></div></div>
 
 
   <!-- ═══ S4 — Basic 4 (item 02-04) · flooding volume = 760 ═══ -->
   <section class="screen" data-screen="4" id="s4">
-    <nav class="progress-question" aria-label="ניווט שאלות">
-      <div class="progress-question__item" data-question="1"><div class="progress-question__icon"></div><span class="progress-question__label">שאלה 1</span></div>
+    <nav class="progress-question" aria-label="التنقل بين الأسئلة">
+      <div class="progress-question__item" data-question="1"><div class="progress-question__icon"></div><span class="progress-question__label">سؤال 1</span></div>
       <div class="progress-question__connector" data-connector="1"></div>
-      <div class="progress-question__item" data-question="2"><div class="progress-question__icon"></div><span class="progress-question__label">שאלה 2</span></div>
+      <div class="progress-question__item" data-question="2"><div class="progress-question__icon"></div><span class="progress-question__label">سؤال 2</span></div>
       <div class="progress-question__connector" data-connector="2"></div>
-      <div class="progress-question__item" data-question="3"><div class="progress-question__icon"></div><span class="progress-question__label">שאלה 3</span></div>
+      <div class="progress-question__item" data-question="3"><div class="progress-question__icon"></div><span class="progress-question__label">سؤال 3</span></div>
       <div class="progress-question__connector" data-connector="3"></div>
-      <div class="progress-question__item" data-question="4"><div class="progress-question__icon"></div><span class="progress-question__label">שאלה 4</span></div>
+      <div class="progress-question__item" data-question="4"><div class="progress-question__icon"></div><span class="progress-question__label">سؤال 4</span></div>
     </nav>
     <div class="scq-question scq-question--textonly">
       <!-- QA 2026-08-30: only the QUESTION is bold; the two scenario lines are regular.
            `scq-qtext--mixed` is the existing seam for that (it beats --textonly's blanket 700
            on source order at equal specificity) and `<b>`, not `<strong>` — `.scq-qtext strong`
            would also repaint the line blue. -->
-      <p class="scq-qtext scq-qtext--mixed">במפעל לייצור מתכות הכניסו גליל מתכת לכלי מלא במים כדי למדוד את הנפח שלו בשיטת ההצפה.<br />נפח המים שגלשו מהכלי היה 760&nbsp;מ"ל.<br /><b>מה נפח הגליל?</b></p>
-      <div class="scq-answers" id="s4-answers" role="radiogroup" aria-label="מה נפח הגליל?">
-        <button class="scq-opt" type="button" role="radio" aria-checked="false" data-id="a" onclick="scqSelect('s4','a')"><span class="scq-opt-text">כמות המים המקורית בכלי פחות <span class="nobr">760 מ"ל</span></span><span class="scq-radio" aria-hidden="true"></span></button>
-        <button class="scq-opt" type="button" role="radio" aria-checked="false" data-id="b" onclick="scqSelect('s4','b')"><span class="scq-opt-text">נפח הגליל הוא <span class="nobr">760 מ"ל</span></span><span class="scq-radio" aria-hidden="true"></span></button>
-        <button class="scq-opt" type="button" role="radio" aria-checked="false" data-id="c" onclick="scqSelect('s4','c')"><span class="scq-opt-text">אי אפשר לדעת מה הנפח של הגליל לפי הנתונים הקיימים</span><span class="scq-radio" aria-hidden="true"></span></button>
-        <button class="scq-opt" type="button" role="radio" aria-checked="false" data-id="d" onclick="scqSelect('s4','d')"><span class="scq-opt-text">יש לשקול את הגליל במאזניים כדי לדעת מה הנפח שלו</span><span class="scq-radio" aria-hidden="true"></span></button>
+      <p class="scq-qtext scq-qtext--mixed">في مصنع لإنتاج المعادن، تم إدخال أسطوانة معدنية في وعاء مملوء بالماء لقياس حجمها بطريقة الإزاحة.<br/>حجم الماء الذي فاض من الوعاء كان 760 ملل.<br/><b>ما حجم الأسطوانة؟</b></p>
+      <div class="scq-answers" id="s4-answers" role="radiogroup" aria-label="ما حجم الأسطوانة؟">
+        <button class="scq-opt" type="button" role="radio" aria-checked="false" data-id="a" onclick="scqSelect('s4','a')"><span class="scq-opt-text">كمية الماء الأصلية في الوعاء أقل من <span class="nobr">760 ملل</span></span><span aria-hidden="true" class="scq-radio"></span></button>
+        <button class="scq-opt" type="button" role="radio" aria-checked="false" data-id="b" onclick="scqSelect('s4','b')"><span class="scq-opt-text">حجم الأسطوانة هو <span class="nobr">760 ملل</span></span><span aria-hidden="true" class="scq-radio"></span></button>
+        <button class="scq-opt" type="button" role="radio" aria-checked="false" data-id="c" onclick="scqSelect('s4','c')"><span class="scq-opt-text">لا يمكن معرفة حجم الأسطوانة بناءً على المعطيات المتوفرة</span><span aria-hidden="true" class="scq-radio"></span></button>
+        <button class="scq-opt" type="button" role="radio" aria-checked="false" data-id="d" onclick="scqSelect('s4','d')"><span class="scq-opt-text">يجب وزن الأسطوانة بالميزان لمعرفة حجمها</span><span aria-hidden="true" class="scq-radio"></span></button>
       </div>
     </div>
     <!-- Storyboard slide 97: the mascot asks his reflection question ABOVE the feedback (bubble to
@@ -220,18 +217,18 @@
     <div class="companion-say companion-say--left hidden" id="s4-say" style="left: 16px; bottom: 244px;">
       <video class="companion" src="assets/img/character-orange-think.mp4?v=3" aria-hidden="true"
            data-pose="think" draggable="false" autoplay loop muted playsinline style="--cw: 160px;"></video>
-      <p class="companion-bubble" style="--bubble-w: 280px;">האם בעקבות השאלה תוכלו לנסות לזכור כלל או עיקרון שאפשר להשתמש בו כשמודדים&nbsp;נפח?</p>
+      <p class="companion-bubble" style="--bubble-w: 280px;">هل يمكنكم بعد هذا السؤال أن تحاولوا تذكّر قاعدة أو مبدأ يمكن استخدامه عند قياس الحجم؟</p>
     </div>
     <div class="scq-bar">
       <div class="scq-bar-main">
-        <button class="scq-check" id="s4-scq-check" type="button" disabled onclick="scqCheck('s4')">צדקתי?</button>
-        <button class="scq-hint" id="s4-scq-hint" type="button" onclick="scqHint('s4')"><span>אפשר רמז?</span><img class="scq-hint-ico" src="../unit-assets/img/icon-idea-blue.svg" alt=""></button>
+        <button class="scq-check" id="s4-scq-check" type="button" disabled onclick="scqCheck('s4')">هل إجابتي صحيحة؟</button>
+        <button class="scq-hint" id="s4-scq-hint" type="button" onclick="scqHint('s4')"><span>هل يمكنني الحصول على تلميح؟</span><img class="scq-hint-ico" src="../unit-assets/img/icon-idea-blue.svg" alt=""></button>
       </div>
-      <button class="btn-back" onclick="goBack()">חזרה</button>
+      <button class="btn-back" onclick="goBack()">رجوع</button>
     </div>
   </section>
   <div class="scq-popup hidden" id="s4-scq-popup" role="status" aria-live="polite"><div class="scq-popup-header"><p class="scq-popup-title" id="s4-scq-popup-title"></p></div><div class="scq-popup-body" id="s4-scq-popup-body"></div></div>
-  <div class="scq-hint-overlay hidden" id="s4-scq-hint-overlay" onclick="if(event.target===this)scqCloseHint('s4')"><div class="scq-hint-popup" role="dialog" aria-modal="true" aria-label="רמז"><div class="scq-hint-content"><div class="scq-hint-text"><h2 class="scq-hint-title">חישבו:</h2><div class="scq-hint-body"><p><strong>כמה מים גלשו?</strong></p><p>בשיטת ההצפה מודדים את כמות המים שגלשה מהכלי שהיה מלא במים כדי לגלות את נפח הגוף.</p></div></div></div><button class="scq-hint-close" type="button" onclick="scqCloseHint('s4')">חזרה לשאלה</button></div></div>
+  <div class="scq-hint-overlay hidden" id="s4-scq-hint-overlay" onclick="if(event.target===this)scqCloseHint('s4')"><div class="scq-hint-popup" role="dialog" aria-modal="true" aria-label="تلميح"><div class="scq-hint-content"><div class="scq-hint-text"><h2 class="scq-hint-title">احسبوا:</h2><div class="scq-hint-body"><p><strong>كم من الماء فاض؟</strong></p><p>في طريقة الإفاضة، نقيس كمية الماء التي فاضت من الوعاء الذي كان مملوءًا بالماء لاكتشاف حجم الجسم.</p></div></div></div><button class="scq-hint-close" type="button" onclick="scqCloseHint('s4')">العودة للسؤال</button></div></div>
 
 
   <!-- ═══ S5 — Storyboard slide 98 · mid-section transition ═══
@@ -244,28 +241,28 @@
          mascot's bubble. The clip is the one the deck names on this slide
          (מרים כתום משקולות.mp4 / Character-2-Sporty.mp4 = the `start-line` pair). -->
     <div class="transition-content">
-      <h1 class="transition-title">יופי של עבודה!</h1>
-      <p class="transition-sub">נחזור ל-2 תרגילים ברמת קושי גבוהה יותר.</p>
+      <h1 class="transition-title">يا لها من عمل رائع!</h1>
+      <p class="transition-sub">سنعود الى تمارين بمستوى أصعب</p>
       <div class="companion-say companion-say--right">
-        <p class="companion-bubble" style="--bubble-w: 240px;">ברור לי שתצליחו!</p>
+        <p class="companion-bubble" style="--bubble-w: 240px;">أنا متأكد أنكم ستنجحون!</p>
         <video class="companion" src="assets/img/character-orange-start-line.mp4?v=3" aria-hidden="true"
              data-pose="start-line" draggable="false" autoplay loop muted playsinline
              style="--ca: 700 / 640;"></video>
       </div>
     </div>
     <div class="nav-bar">
-      <button class="btn-continue" id="s5-continue" onclick="advanceScreen()">שנמשיך?</button>
-      <button class="btn-back" onclick="goBack()">חזרה</button>
+      <button class="btn-continue" id="s5-continue" onclick="advanceScreen()">متابعة</button>
+      <button class="btn-back" onclick="goBack()">رجوع</button>
     </div>
   </section>
 
 
   <!-- ═══ S6 — Standard-ב 1 (item 02-05) · identify the rise area ═══ -->
   <section class="screen" data-screen="6" id="s6">
-    <nav class="progress-question" aria-label="ניווט שאלות">
-      <div class="progress-question__item" data-question="5"><div class="progress-question__icon"></div><span class="progress-question__label">שאלה 1</span></div>
+    <nav class="progress-question" aria-label="التنقل بين الأسئلة">
+      <div class="progress-question__item" data-question="5"><div class="progress-question__icon"></div><span class="progress-question__label">سؤال 1</span></div>
       <div class="progress-question__connector" data-connector="5"></div>
-      <div class="progress-question__item" data-question="6"><div class="progress-question__icon"></div><span class="progress-question__label">שאלה 2</span></div>
+      <div class="progress-question__item" data-question="6"><div class="progress-question__icon"></div><span class="progress-question__label">سؤال 2</span></div>
     </nav>
     <!-- Storyboard slides 99–103 — rebuilt 2026-08-30 to what the deck actually draws: the
          stem across the top, the two labelled photos under it, and the answer given by MARKING
@@ -298,102 +295,102 @@
          glass too) — the blurred window reflection made the glass unreadable. Old set: _soft-bg/.
          Rings: c 19% (air), b 34.7% (the rise, 30.7–38.7), a 50% (original water). -->
     <div class="scq-question scq-question--textonly">
-      <p class="scq-qtext scq-qtext--mixed">בתמונה א' ניתן לראות את נפח המים במשורה <b>לפני</b> שהכניסו אליה את בובת המפלצת.<br />בתמונה ב' ניתן לראות את נפח המים במשורה <b>אחרי</b> שהכניסו אליה את בובת המפלצת.<br />סמנו בתמונה ב' את האזור בו ניתן לראות שגובה המים במשורה עלה.</p>
-      <div class="hotspot-pair" role="radiogroup" aria-label="סמנו בתמונה ב' את האזור שבו גובה המים עלה">
+      <p class="scq-qtext scq-qtext--mixed">في الصورة أ يمكن رؤية حجم الماء في الأسطوانة المدرّجة <b>قبل</b> إدخال دمية الوحش إليها.<br/>في الصورة ب يمكن رؤية حجم الماء في الأسطوانة المدرّجة <b>بعد</b> إدخال دمية الوحش إليها.<br/>حدّدوا في الصورة ب المنطقة التي يمكن فيها رؤية ارتفاع مستوى الماء في الأسطوانة المدرّجة.</p>
+      <div class="hotspot-pair" role="radiogroup" aria-label="حددوا في الصورة ب المنطقة التي ارتفع فيها مستوى الماء">
         <div class="scq-figure scq-figure--square" style="width: 359px">
-          <img src="assets/img/s6-cylinder-before.jpg?v=5" alt="משורה עם מים, ולידה בובת מפלצת ירוקה קטנה">
-          <span class="scq-figure__label">תמונה א'</span>
+          <img src="assets/img/s6-cylinder-before.jpg?v=5" alt="أسطوانة مدرجة بها ماء، وبجانبها دمية وحش صغيرة خضراء">
+          <span class="scq-figure__label">صورة "أ"</span>
         </div>
         <div class="hotspot-photo hotspot-photo--square" style="width: 359px">
-          <img src="assets/img/s6-cylinder-after.jpg?v=5" alt="אותה משורה לאחר שבובת המפלצת הוכנסה למים">
-          <span class="scq-figure__label">תמונה ב'</span>
-          <button class="scq-opt hotspot-area" type="button" role="radio" aria-checked="false" data-id="c" onclick="scqSelect('s6','c')" aria-label="האזור הריק שמעל מפלס המים" style="--x:46.7%;--y:19%;--w:19%;--h:8%"></button>
-          <button class="scq-opt hotspot-area" type="button" role="radio" aria-checked="false" data-id="b" onclick="scqSelect('s6','b')" aria-label="אזור העלייה — התוספת שמעל המפלס המקורי" style="--x:46.7%;--y:34.7%;--w:19%;--h:8%"></button>
-          <button class="scq-opt hotspot-area" type="button" role="radio" aria-checked="false" data-id="a" onclick="scqSelect('s6','a')" aria-label="אזור המים ההתחלתי" style="--x:46.7%;--y:50%;--w:19%;--h:8%"></button>
+          <img src="assets/img/s6-cylinder-after.jpg?v=5" alt="نفس الأسطوانة المدرجة بعد إدخال دمية الوحش في الماء">
+          <span class="scq-figure__label">صورة "ب"</span>
+          <button class="scq-opt hotspot-area" type="button" role="radio" aria-checked="false" data-id="c" onclick="scqSelect('s6','c')" aria-label="المنطقة الفارغة فوق مستوى الماء" style="--x:46.7%;--y:19%;--w:19%;--h:8%"></button>
+          <button class="scq-opt hotspot-area" type="button" role="radio" aria-checked="false" data-id="b" onclick="scqSelect('s6','b')" aria-label="منطقة الارتفاع — الإضافة فوق المستوى الأصلي" style="--x:46.7%;--y:34.7%;--w:19%;--h:8%"></button>
+          <button class="scq-opt hotspot-area" type="button" role="radio" aria-checked="false" data-id="a" onclick="scqSelect('s6','a')" aria-label="منطقة الماء الأولية" style="--x:46.7%;--y:50%;--w:19%;--h:8%"></button>
         </div>
       </div>
     </div>
     <div class="scq-bar">
       <div class="scq-bar-main">
-        <button class="scq-check" id="s6-scq-check" type="button" disabled onclick="scqCheck('s6')">צדקתי?</button>
-        <button class="scq-hint" id="s6-scq-hint" type="button" onclick="scqHint('s6')"><span>אפשר רמז?</span><img class="scq-hint-ico" src="../unit-assets/img/icon-idea-blue.svg" alt=""></button>
+        <button class="scq-check" id="s6-scq-check" type="button" disabled onclick="scqCheck('s6')">هل إجابتي صحيحة؟</button>
+        <button class="scq-hint" id="s6-scq-hint" type="button" onclick="scqHint('s6')"><span>هل يمكنني الحصول على تلميح؟</span><img class="scq-hint-ico" src="../unit-assets/img/icon-idea-blue.svg" alt=""></button>
       </div>
-      <button class="btn-back" onclick="goBack()">חזרה</button>
+      <button class="btn-back" onclick="goBack()">رجوع</button>
     </div>
   </section>
   <div class="scq-popup hidden" id="s6-scq-popup" role="status" aria-live="polite"><div class="scq-popup-header"><p class="scq-popup-title" id="s6-scq-popup-title"></p></div><div class="scq-popup-body" id="s6-scq-popup-body"></div></div>
-  <div class="scq-hint-overlay hidden" id="s6-scq-hint-overlay" onclick="if(event.target===this)scqCloseHint('s6')"><div class="scq-hint-popup" role="dialog" aria-modal="true" aria-label="רמז"><div class="scq-hint-content"><div class="scq-hint-text"><h2 class="scq-hint-title">חישבו:</h2><div class="scq-hint-body"><p><strong>מה ההבדל?</strong></p><p>איפה בתמונות ניתן לראות את ההבדל שהתרחש כשהכניסו את המפלצת למים?</p></div></div></div><button class="scq-hint-close" type="button" onclick="scqCloseHint('s6')">חזרה לשאלה</button></div></div>
+  <div class="scq-hint-overlay hidden" id="s6-scq-hint-overlay" onclick="if(event.target===this)scqCloseHint('s6')"><div class="scq-hint-popup" role="dialog" aria-modal="true" aria-label="تلميح"><div class="scq-hint-content"><div class="scq-hint-text"><h2 class="scq-hint-title">احسبوا:</h2><div class="scq-hint-body"><p><strong>ما الفرق؟</strong></p><p>أين يمكن أن نرى في الصور الفرق الذي حدث عند إدخال الوحش إلى الماء؟</p></div></div></div><button class="scq-hint-close" type="button" onclick="scqCloseHint('s6')">العودة للسؤال</button></div></div>
 
 
   <!-- ═══ S7 — Standard-ב 2 (item 02-06) · single-bead volume = 10 ═══ -->
   <section class="screen" data-screen="7" id="s7">
-    <nav class="progress-question" aria-label="ניווט שאלות">
-      <div class="progress-question__item" data-question="5"><div class="progress-question__icon"></div><span class="progress-question__label">שאלה 1</span></div>
+    <nav class="progress-question" aria-label="التنقل بين الأسئلة">
+      <div class="progress-question__item" data-question="5"><div class="progress-question__icon"></div><span class="progress-question__label">سؤال 1</span></div>
       <div class="progress-question__connector" data-connector="5"></div>
-      <div class="progress-question__item" data-question="6"><div class="progress-question__icon"></div><span class="progress-question__label">שאלה 2</span></div>
+      <div class="progress-question__item" data-question="6"><div class="progress-question__icon"></div><span class="progress-question__label">سؤال 2</span></div>
     </nav>
     <div class="scq-question scq-question--textonly">
       <!-- Same shape as s4 (QA 2026-08-30): only the QUESTION is bold, the two data lines are
            regular. `scq-qtext--mixed` + `<b>`, not `<strong>` — see the note on s4. -->
-      <p class="scq-qtext scq-qtext--mixed">מעצבת תכשיטים צריכה לדעת מה נפחו של חרוז קטן.<br />מכיוון שקשה למדוד חרוז אחד במדויק, היא הכניסה למשורה 3 חרוזים זהים.<span class="s7-para-gap"></span>נפח המים לפני המדידה: 100&nbsp;מ"ל. נפח המים לאחר הכנסת החרוזים: 130&nbsp;מ"ל.<br /><b>מהו נפחו של חרוז אחד?</b></p>
-      <div class="scq-answers" id="s7-answers" role="radiogroup" aria-label="מהו נפח חרוז אחד?">
-        <button class="scq-opt" type="button" role="radio" aria-checked="false" data-id="a" onclick="scqSelect('s7','a')"><span class="scq-opt-text">10 סמ"ק</span><span class="scq-radio" aria-hidden="true"></span></button>
-        <button class="scq-opt" type="button" role="radio" aria-checked="false" data-id="b" onclick="scqSelect('s7','b')"><span class="scq-opt-text">30 סמ"ק</span><span class="scq-radio" aria-hidden="true"></span></button>
-        <button class="scq-opt" type="button" role="radio" aria-checked="false" data-id="c" onclick="scqSelect('s7','c')"><span class="scq-opt-text">אי אפשר לדעת</span><span class="scq-radio" aria-hidden="true"></span></button>
-        <button class="scq-opt" type="button" role="radio" aria-checked="false" data-id="d" onclick="scqSelect('s7','d')"><span class="scq-opt-text">130 סמ"ק</span><span class="scq-radio" aria-hidden="true"></span></button>
+      <p class="scq-qtext scq-qtext--mixed">مصممة مجوهرات تحتاج إلى معرفة حجم خرزة صغيرة.<br/>بما أنه من الصعب قياس خرزة واحدة بدقة، أدخلت إلى الاسطوانة المدرجة 3 خرزات متطابقة.<span class="s7-para-gap"></span>حجم الماء قبل القياس: 100 ملل. حجم الماء بعد إدخال الخرزات: 130 ملل.<br/><b>ما هو حجم خرزة واحدة؟</b></p>
+      <div class="scq-answers" id="s7-answers" role="radiogroup" aria-label="ما حجم خرزة واحدة؟">
+        <button class="scq-opt" type="button" role="radio" aria-checked="false" data-id="a" onclick="scqSelect('s7','a')"><span class="scq-opt-text">10 سم³</span><span aria-hidden="true" class="scq-radio"></span></button>
+        <button class="scq-opt" type="button" role="radio" aria-checked="false" data-id="b" onclick="scqSelect('s7','b')"><span class="scq-opt-text">30 سم³</span><span aria-hidden="true" class="scq-radio"></span></button>
+        <button class="scq-opt" type="button" role="radio" aria-checked="false" data-id="c" onclick="scqSelect('s7','c')"><span class="scq-opt-text">لا يمكن معرفة ذلك</span><span aria-hidden="true" class="scq-radio"></span></button>
+        <button class="scq-opt" type="button" role="radio" aria-checked="false" data-id="d" onclick="scqSelect('s7','d')"><span class="scq-opt-text">130 سم³</span><span aria-hidden="true" class="scq-radio"></span></button>
       </div>
     </div>
     <div class="scq-bar">
       <div class="scq-bar-main">
-        <button class="scq-check" id="s7-scq-check" type="button" disabled onclick="scqCheck('s7')">צדקתי?</button>
-        <button class="scq-hint" id="s7-scq-hint" type="button" onclick="scqHint('s7')"><span>אפשר רמז?</span><img class="scq-hint-ico" src="../unit-assets/img/icon-idea-blue.svg" alt=""></button>
+        <button class="scq-check" id="s7-scq-check" type="button" disabled onclick="scqCheck('s7')">هل إجابتي صحيحة؟</button>
+        <button class="scq-hint" id="s7-scq-hint" type="button" onclick="scqHint('s7')"><span>هل يمكنني الحصول على تلميح؟</span><img class="scq-hint-ico" src="../unit-assets/img/icon-idea-blue.svg" alt=""></button>
       </div>
-      <button class="btn-back" onclick="goBack()">חזרה</button>
+      <button class="btn-back" onclick="goBack()">رجوع</button>
     </div>
   </section>
   <div class="scq-popup hidden" id="s7-scq-popup" role="status" aria-live="polite"><div class="scq-popup-header"><p class="scq-popup-title" id="s7-scq-popup-title"></p></div><div class="scq-popup-body" id="s7-scq-popup-body"></div></div>
-  <div class="scq-hint-overlay hidden" id="s7-scq-hint-overlay" onclick="if(event.target===this)scqCloseHint('s7')"><div class="scq-hint-popup" role="dialog" aria-modal="true" aria-label="רמז"><div class="scq-hint-content"><div class="scq-hint-text"><h2 class="scq-hint-title">חישבו:</h2><div class="scq-hint-body"><p><strong>מה נפח 3 החרוזים ביחד?</strong></p><p>מה התרגיל שצריך לעשות כדי לחשב<br />נפח של חרוז אחד?</p></div></div></div><button class="scq-hint-close" type="button" onclick="scqCloseHint('s7')">חזרה לשאלה</button></div></div>
+  <div class="scq-hint-overlay hidden" id="s7-scq-hint-overlay" onclick="if(event.target===this)scqCloseHint('s7')"><div class="scq-hint-popup" role="dialog" aria-modal="true" aria-label="تلميح"><div class="scq-hint-content"><div class="scq-hint-text"><h2 class="scq-hint-title">احسبوا:</h2><div class="scq-hint-body"><p><strong>ما حجم 3 حبّات الخرز معًا؟</strong></p><p>ما هو التمرين الذي يجب القيام به لحساب<br/>حجم خرزة واحدة؟</p></div></div></div><button class="scq-hint-close" type="button" onclick="scqCloseHint('s7')">العودة للسؤال</button></div></div>
 
 
 
   <!-- ═══════════════ REPORT MODAL ═══════════════ -->
   <div id="report-modal" class="report-modal-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="report-modal-title">
     <div class="report-modal-box">
-      <button class="report-close-btn" onclick="tryCloseReportModal()" aria-label="סגור">&#10005;</button>
-      <h2 class="report-modal-title" id="report-modal-title">דיווח על בעיה</h2>
-      <p class="report-modal-body">משהו לא ברור או לא עובד כמו שצריך? ספרו לנו מה קרה כדי שנטפל.</p>
+      <button class="report-close-btn" onclick="tryCloseReportModal()" aria-label="أغلق">&#10005;</button>
+      <h2 class="report-modal-title" id="report-modal-title">الإبلاغ عن مشكلة</h2>
+      <p class="report-modal-body">هل هناك شيء غير واضح أو لا يعمل كما ينبغي؟ أخبرونا بما حدث حتى نتمكن من المعالجة.</p>
       <div class="report-field">
-        <label class="report-label" for="report-type">מה סוג הבעיה <span class="required-star">*</span></label>
+        <label class="report-label" for="report-type">ما نوع المشكلة؟ <span class="required-star">*</span></label>
         <select class="report-select" id="report-type">
-          <option value="" disabled selected>בחרו סוג בעיה</option>
-          <option value="technical">תקלה טכנית או שמשהו לא עובד</option>
-          <option value="unclear">משהו לא ברור לי</option>
-          <option value="other">אחר</option>
+          <option value="" disabled selected>اختاروا نوع المشكلة</option>
+          <option value="technical">عطل تقني أو أن شيئًا ما لا يعمل</option>
+          <option value="unclear">هناك شيء لا أفهمه</option>
+          <option value="other">آخر</option>
         </select>
       </div>
       <div class="report-field">
-        <label class="report-label" for="report-text">מה קרה? <span class="required-star">*</span></label>
-        <textarea class="report-textarea" id="report-text" maxlength="250" rows="4" placeholder="תארו את הבעיה..."></textarea>
+        <label class="report-label" for="report-text">ماذا حدث؟ <span class="required-star">*</span></label>
+        <textarea class="report-textarea" id="report-text" maxlength="250" rows="4" placeholder="صفوا المشكلة..."></textarea>
         <span class="report-char-count" id="report-char-count">0 / 250</span>
       </div>
-      <p class="report-error" id="report-error" hidden>נא לבחור סוג בעיה ולתאר מה קרה.</p>
+      <p class="report-error" id="report-error" hidden>يرجى اختيار نوع المشكلة ووصف ما حدث.</p>
       <div class="report-actions">
-        <button class="report-submit-btn" onclick="submitReport()">שליחה</button>
-        <button class="report-cancel-btn" onclick="tryCloseReportModal()">ביטול</button>
+        <button class="report-submit-btn" onclick="submitReport()">إرسال</button>
+        <button class="report-cancel-btn" onclick="tryCloseReportModal()">إلغاء</button>
       </div>
       <div class="report-thanks" id="report-thanks" hidden>
-        <p>תודה! הדיווח נשלח. נטפל בהקדם.</p>
-        <button class="report-submit-btn" onclick="forceCloseReportModal()">סגירה</button>
+        <p>شكرًا! تم إرسال البلاغ. سنعالج الأمر في أقرب وقت.</p>
+        <button class="report-submit-btn" onclick="forceCloseReportModal()">إغلاق</button>
       </div>
     </div>
   </div>
   <div id="report-confirm-modal" class="report-modal-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="confirm-modal-title">
     <div class="report-modal-box report-confirm-box">
-      <h2 class="report-modal-title" id="confirm-modal-title">בטוח לסגור את החלון?</h2>
-      <p class="report-modal-body">בלחיצה על סגירה לא יישלח דיווח</p>
+      <h2 class="report-modal-title" id="confirm-modal-title">هل أنت متأكد من إغلاق النافذة؟</h2>
+      <p class="report-modal-body">بالنقر على إغلاق لن يتم إرسال تقرير</p>
       <div class="report-actions">
-        <button class="report-cancel-btn" onclick="forceCloseReportModal()">סגור חלון</button>
-        <button class="report-submit-btn" onclick="backToReportForm()">אני רוצה לדווח</button>
+        <button class="report-cancel-btn" onclick="forceCloseReportModal()">إغلاق النافذة</button>
+        <button class="report-submit-btn" onclick="backToReportForm()">أريد أن أُبلِّغ</button>
       </div>
     </div>
   </div>

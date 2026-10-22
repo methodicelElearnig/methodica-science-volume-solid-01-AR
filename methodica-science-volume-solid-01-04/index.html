@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>לומדה — מדידת נפח מוצק · משימת כיתה</title>
+  <title>وحدة تعليمية — قياس حجم جسم صلب · مهمة صفية</title>
   <link rel="stylesheet" href="../unit-css/style.css?v=20261020">
   <link rel="stylesheet" href="css/style.css?v=20261020">
 </head>
@@ -30,10 +30,7 @@
 
 <div id="app">
 
-  <button class="flag-btn" id="flag-btn" type="button" aria-label="מצאתם בעיה?">
-    <span class="flag-btn-icon"></span>
-    <span class="flag-btn-label">מצאתם בעיה?</span>
-  </button>
+  <button class="flag-btn" id="flag-btn" type="button" aria-label="هل وجدتم مشكلة؟"><span class="flag-btn-icon"></span> <span class="flag-btn-label">هل وجدتم مشكلة؟</span></button>
 
   <!-- ═══ S0 — TransitionScreen · opening of the class task ═══
        The standard "משימת כיתה" opener from the template, as built in yaad4-science-mass-weight-01
@@ -43,78 +40,78 @@
        order and --right puts the beak on the edge facing him. -->
   <section class="screen active" data-screen="0" id="s0">
     <div class="transition-content">
-      <p class="transition-sub">השלמתם בהצלחה את התרגול – כל הכבוד!</p>
-      <h1 class="transition-title">משימת כיתה</h1>
-      <p class="transition-sub">זמן טוב ללמוד גם בצורה אחרת, כי למידה מתרחשת בכל מיני צורות.</p>
+      <p class="transition-sub">لقد أكملتم التمرين بنجاح – أحسنتم!</p>
+      <h1 class="transition-title">مهمّة صفّيّة</h1>
+      <p class="transition-sub">وقت مناسب للتعلّم بطريقة مختلفة أيضًا، لأن التعلّم يحدث بأشكال متنوّعة.</p>
       <div class="companion-say companion-say--right">
-        <p class="companion-bubble" style="--bubble-w: 240px;">זמן טוב לחלץ עצמות!</p>
+        <p class="companion-bubble" style="--bubble-w: 240px;">حان الوقت لاستخراج العظام!</p>
         <video class="companion" src="assets/img/character-orange-stretch.mp4?v=3" aria-hidden="true"
              data-pose="stretch" draggable="false" autoplay loop muted playsinline></video>
       </div>
     </div>
     <div class="nav-bar">
-      <button class="btn-back" id="back-to-prev-part" onclick="goBackToPreviousPart('methodica-science-volume-solid-01-02')" hidden style="display:none" aria-hidden="true">חזרה</button>
-      <button class="btn-continue" id="s0-continue" onclick="advanceScreen()">אפשר להתחיל!</button>
+      <button class="btn-back" id="back-to-prev-part" onclick="goBackToPreviousPart('methodica-science-volume-solid-01-02')" hidden style="display:none" aria-hidden="true">رجوع</button>
+      <button class="btn-continue" id="s0-continue" onclick="advanceScreen()">يمكننا البدء!</button>
     </div>
   </section>
 
   <!-- ═══ S1 — Class task (offline notebook synthesis task) ═══ -->
   <section class="screen" data-screen="1" id="s1">
     <div class="task-content">
-      <h1 class="task-title">משימת כיתה: אימון מודל AI למדידת נפח</h1>
-      <p class="task-intro">דמיינו שאתם מלמדים מודל בינה מלאכותית איך למדוד נפח של גופים מוצקים.<br>רשמו במחברת תשובות לשאלות הבאות:</p>
+      <h1 class="task-title">مهمة صفية: تدريب نموذج AI على قياس الحجم</h1>
+      <p class="task-intro">تخيلوا أنكم تعلمون نموذج ذكاء اصطناعي كيف يقيس حجم أجسام صلبة.<br/>اكتبوا في الدفتر إجابات عن الأسئلة التالية:</p>
       <ol class="task-list">
-        <li>איזה מידע המודל צריך לקבל על גוף מוצק? (למשל: האם הוא בעל צורה הנדסית, והאם הוא נכנס למשורה)</li>
-        <li>אילו שאלות המודל צריך לשאול כדי לבחור את שיטת המדידה המתאימה?</li>
-        <li>אילו כללים חשוב ללמד אותו? (עיקרון הדחיקה, השוואה בין הנפח הסופי להתחלתי, שיטת ההצפה לגוף גדול)</li>
-        <li>אילו דוגמאות מוחשיות כדאי לתת לו?</li>
+        <li>ما هي المعلومات التي يحتاج النموذج إلى الحصول عليها عن جسم صلب؟ (مثلاً: هل له شكل هندسي، وهل يمكن إدخاله في اسطوانة مدرجة)</li>
+        <li>ما الأسئلة التي يجب أن يطرحها النموذج لاختيار طريقة القياس المناسبة؟</li>
+        <li>ما هي القواعد المهمة التي يجب تعليمه إياها؟ (مبدأ الإزاحة، المقارنة بين الحجم النهائي والحجم الابتدائي، طريقة الإغمار للجسم الكبير)</li>
+        <li>ما الأمثلة الملموسة التي يُفضّل تقديمها له؟</li>
       </ol>
-      <p class="task-note">אין תשובה נכונה אחת - המשימה מזמינה אתכם לסכם את כל מה שלמדתם ביחידה.</p>
+      <p class="task-note">لا توجد إجابة صحيحة واحدة - المهمة تدعوكم لتلخيص كل ما تعلمتموه في الوحدة.</p>
     </div>
     <div class="nav-bar">
-      <button class="btn-back" onclick="goBack()">חזרה</button>
-      <button class="btn-continue" id="s1-continue" onclick="classTaskDone()">חזרתי</button>
+      <button class="btn-back" onclick="goBack()">رجوع</button>
+      <button class="btn-continue" id="s1-continue" onclick="classTaskDone()">عودتي</button>
     </div>
   </section>
 
   <!-- ═══════════════ REPORT MODAL ═══════════════ -->
   <div id="report-modal" class="report-modal-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="report-modal-title">
     <div class="report-modal-box">
-      <button class="report-close-btn" onclick="tryCloseReportModal()" aria-label="סגור">&#10005;</button>
-      <h2 class="report-modal-title" id="report-modal-title">דיווח על בעיה</h2>
-      <p class="report-modal-body">משהו לא ברור או לא עובד כמו שצריך? ספרו לנו מה קרה כדי שנטפל.</p>
+      <button class="report-close-btn" onclick="tryCloseReportModal()" aria-label="أغلق">&#10005;</button>
+      <h2 class="report-modal-title" id="report-modal-title">الإبلاغ عن مشكلة</h2>
+      <p class="report-modal-body">هل هناك شيء غير واضح أو لا يعمل كما ينبغي؟ أخبرونا بما حدث حتى نتمكن من المعالجة.</p>
       <div class="report-field">
-        <label class="report-label" for="report-type">מה סוג הבעיה <span class="required-star">*</span></label>
+        <label class="report-label" for="report-type">ما نوع المشكلة؟ <span class="required-star">*</span></label>
         <select class="report-select" id="report-type">
-          <option value="" disabled selected>בחרו סוג בעיה</option>
-          <option value="technical">תקלה טכנית או שמשהו לא עובד</option>
-          <option value="unclear">משהו לא ברור לי</option>
-          <option value="other">אחר</option>
+          <option value="" disabled selected>اختاروا نوع المشكلة</option>
+          <option value="technical">عطل تقني أو أن شيئًا ما لا يعمل</option>
+          <option value="unclear">هناك شيء لا أفهمه</option>
+          <option value="other">آخر</option>
         </select>
       </div>
       <div class="report-field">
-        <label class="report-label" for="report-text">מה קרה? <span class="required-star">*</span></label>
-        <textarea class="report-textarea" id="report-text" maxlength="250" rows="4" placeholder="תארו את הבעיה..."></textarea>
+        <label class="report-label" for="report-text">ماذا حدث؟ <span class="required-star">*</span></label>
+        <textarea class="report-textarea" id="report-text" maxlength="250" rows="4" placeholder="صفوا المشكلة..."></textarea>
         <span class="report-char-count" id="report-char-count">0 / 250</span>
       </div>
-      <p class="report-error" id="report-error" hidden>נא לבחור סוג בעיה ולתאר מה קרה.</p>
+      <p class="report-error" id="report-error" hidden>يرجى اختيار نوع المشكلة ووصف ما حدث.</p>
       <div class="report-actions">
-        <button class="report-submit-btn" onclick="submitReport()">שליחה</button>
-        <button class="report-cancel-btn" onclick="tryCloseReportModal()">ביטול</button>
+        <button class="report-submit-btn" onclick="submitReport()">إرسال</button>
+        <button class="report-cancel-btn" onclick="tryCloseReportModal()">إلغاء</button>
       </div>
       <div class="report-thanks" id="report-thanks" hidden>
-        <p>תודה! הדיווח נשלח. נטפל בהקדם.</p>
-        <button class="report-submit-btn" onclick="forceCloseReportModal()">סגירה</button>
+        <p>شكرًا! تم إرسال البلاغ. سنعالج الأمر في أقرب وقت.</p>
+        <button class="report-submit-btn" onclick="forceCloseReportModal()">إغلاق</button>
       </div>
     </div>
   </div>
   <div id="report-confirm-modal" class="report-modal-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="confirm-modal-title">
     <div class="report-modal-box report-confirm-box">
-      <h2 class="report-modal-title" id="confirm-modal-title">בטוח לסגור את החלון?</h2>
-      <p class="report-modal-body">בלחיצה על סגירה לא יישלח דיווח</p>
+      <h2 class="report-modal-title" id="confirm-modal-title">هل أنت متأكد من إغلاق النافذة؟</h2>
+      <p class="report-modal-body">بالنقر على إغلاق لن يتم إرسال تقرير</p>
       <div class="report-actions">
-        <button class="report-cancel-btn" onclick="forceCloseReportModal()">סגור חלון</button>
-        <button class="report-submit-btn" onclick="backToReportForm()">אני רוצה לדווח</button>
+        <button class="report-cancel-btn" onclick="forceCloseReportModal()">إغلاق النافذة</button>
+        <button class="report-submit-btn" onclick="backToReportForm()">أريد أن أُبلِّغ</button>
       </div>
     </div>
   </div>

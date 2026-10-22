@@ -121,24 +121,24 @@ function renderCompanion(n) {
    Feedback now follows each סעיף (producer decision, as in יעד 4 and יעד 9), replacing the combined
    answer slides 157/158. Each סעיף's explanation is its own row of those slides; the retry and
    wrong-final titles are the unit's standard ones (part 05's FB_RETRY / FB_WRONG2). */
-const FB_RETRY  = { title: 'התשובה אינה נכונה.', body: ['שננסה שוב?'] };
-const FB_WRONG2 = 'התשובה אינה נכונה.<br />התשובה הנכונה מסומנת.';
+const FB_RETRY  = { title: 'الإجابة غير صحيحة.', body: ['هل نحاول مجدداً؟'] };
+const FB_WRONG2 = 'الإجابة غير صحيحة.<br />الإجابة الصحيحة تم تحديدها.';
 const fbPopups = explanation => ({
   retry:   FB_RETRY,
-  correct: { title: 'נכון מאוד!', body: explanation },
+  correct: { title: '! أحسنت', body: explanation },
   wrong2:  { title: FB_WRONG2,    body: explanation }
 });
 const PEAK_FEEDBACK = {
   1: fbPopups([   /* sb157 א */
-    'נפח הפסלון = נפח המים הסופי פחות<br />נפח המים המקורי = <b>60 סמ"ק</b>.']),
+    'حجم التمثال = حجم الماء النهائي ناقص<br />حجم الماء الأصلي = <b>60 سم³</b>.']),
   2: fbPopups([   /* sb157 ב */
-    'בוצעו 3 מדידות כדי <b>לצמצם טעויות מקריות ולקבל קריאה מהימנה</b>.',
-    'כדאי <b>לדווח על הממוצע</b> = 60 סמ"ק.']),
+    'أُجريت 3 قياسات <b>لتقليل الأخطاء العشوائية والحصول على قراءة موثوقة</b>.',
+    'من الأفضل <b>إعلان المتوسط</b> = 60 سم³.']),
   3: fbPopups([   /* sb157 ג */
-    'איריס צודקת: שלוש תוצאות המדידה קרובות מאוד זו לזו, מה שמוכיח שהתוצאות יציבות ואינן מקריות.']),
+    'إيمان محقّة: نتائج القياسات الثلاث قريبة جدًا من بعضها البعض، مما يثبت أن النتائج ثابتة وليست عشوائية.']),
   4: fbPopups([   /* sb157 ד */
-    'המדידה חריגה מאוד וסביר שנפלה בה טעות.',
-    '<b>יש למדוד מחדש ולא להכליל את הערך 80 בחישוב הסופי</b>.'])
+    'القياس شاذ جدًا ومن المحتمل أن يكون قد وقع فيه خطأ.',
+    '<b>يجب إعادة القياس وعدم تعميم القيمة 80 في الحساب النهائي</b>.'])
 };
 
 /* ⚠️ NOTHING HERE MAY REPORT. resetScreenState() runs on every navigation, every back-navigation
@@ -264,7 +264,7 @@ function peakPaint(idx) {
   });
   const btn = document.getElementById(screen + '-continue');
   if (btn) {
-    btn.textContent = s.done ? 'שנמשיך?' : 'צדקתי?';
+    btn.textContent = s.done ? 'متابعة' : 'هل إجابتي صحيحة؟';
     btn.disabled = s.done ? (idx === PEAK_PARTS && xapiComponentEnded()) : (!s.sel || s.sel === s.lastWrong);   // D-8: the ledger decides
   }
   /* Hint policy: available on every סעיף until it resolves (slides "אפשר רמז?"), hidden — not

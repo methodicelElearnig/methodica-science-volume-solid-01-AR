@@ -84,8 +84,8 @@ var IMG_ZOOM_ICON =
 
 var IMG_ZOOM_MODAL_HTML =
   '<div class="img-zoom-modal__backdrop" data-zoom-close="true"></div>' +
-  '<div class="img-zoom-modal__panel" role="dialog" aria-modal="true" aria-label="תצוגת תמונה מוגדלת">' +
-  '<button class="img-zoom-modal__close" type="button" aria-label="סגירת התמונה" data-zoom-close="true">' +
+  '<div class="img-zoom-modal__panel" role="dialog" aria-modal="true" aria-label="عرض صورة مكبّرة">' +
+  '<button class="img-zoom-modal__close" type="button" aria-label="إغلاق الصورة" data-zoom-close="true">' +
   '<svg class="img-zoom-modal__close-icon" aria-hidden="true" width="15" height="15" viewBox="0 0 15 15" ' +
   'fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.192 1.192L13.808 13.808M13.808 1.192L1.192 13.808" ' +
   'stroke="currentColor" stroke-width="2.383" stroke-linecap="round"/></svg></button>' +
@@ -122,7 +122,7 @@ function provisionImgZoom() {
     const btn = document.createElement('button');
     btn.className = 'img-zoom-btn';
     btn.type = 'button';
-    btn.setAttribute('aria-label', 'הגדלת התמונה');
+    btn.setAttribute('aria-label', 'تكبير الصورة');
     btn.dataset.zoomSrc = img.getAttribute('src') || '';
     btn.dataset.zoomAlt = img.getAttribute('alt') || '';
     btn.innerHTML = IMG_ZOOM_ICON;

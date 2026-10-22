@@ -223,7 +223,7 @@ function scqMark(screen, id, cls) { document.querySelectorAll('#' + screen + ' .
 function scqFinish(screen, isCorrect) {
   const s = SCQ_REG[screen]; s.answered = true; s.done = true;
   scqOpts(screen).forEach(o => { o.disabled = true; });
-  const chk = document.getElementById(screen + '-scq-check'); if (chk) { chk.textContent = 'שנמשיך?'; chk.disabled = false; }
+  const chk = document.getElementById(screen + '-scq-check'); if (chk) { chk.textContent = 'متابعة'; chk.disabled = false; }
   scqSyncHint(screen);
   if (s.cfg.onFinish) s.cfg.onFinish(isCorrect);
 }
@@ -277,14 +277,14 @@ function scqEnter(screen) {
   scqClosePopup(screen);
   if (s.done) {
     scqOpts(screen).forEach(o => { o.disabled = true; });
-    const chk = document.getElementById(screen + '-scq-check'); if (chk) { chk.textContent = 'שנמשיך?'; chk.disabled = false; }
+    const chk = document.getElementById(screen + '-scq-check'); if (chk) { chk.textContent = 'متابعة'; chk.disabled = false; }
     scqSyncHint(screen);
   } else { scqReset(screen); }
 }
 function scqReset(screen) {
   const s = SCQ_REG[screen]; s.sel = null; s.attempts = 0; s.answered = false; s.phase = null; s.lastWrong = null;
   scqOpts(screen).forEach(o => { o.classList.remove('selected', 'correct', 'wrong'); o.setAttribute('aria-checked', 'false'); o.disabled = false; });
-  const chk = document.getElementById(screen + '-scq-check'); if (chk) { chk.textContent = 'צדקתי?'; chk.disabled = true; }
+  const chk = document.getElementById(screen + '-scq-check'); if (chk) { chk.textContent = 'هل إجابتي صحيحة؟'; chk.disabled = true; }
   const hint = document.getElementById(screen + '-scq-hint'); if (hint) hint.disabled = false;
   scqSyncHint(screen);
 }
@@ -307,7 +307,7 @@ function dqPick(screen, id, label) {
 }
 /* Unsolved blank shows a plain-black prompt (same as 01's S19); the box is widened past the
    longest option so the caret never sits on the word. */
-const DQ_PLACEHOLDER = 'בחרו מילה';
+const DQ_PLACEHOLDER = 'اختاروا كلمة';
 const DQ_CARET_ROOM = 50;
 function dqEnter(screen) {
   const s = SCQ_REG[screen];
@@ -421,8 +421,8 @@ function registerPractice(idx, cfg) {
        deck's usual "נכון מאוד!".
      - deck expressions are wrapped in .section-result-expr: digits and operators are
        bidi-neutral and reorder inside an RTL paragraph without it. */
-const FB_RETRY  = { title: 'התשובה אינה נכונה.', body: ['שננסה שוב?'] };
-const FB_WRONG2 = 'התשובה אינה נכונה.<br />התשובה הנכונה מסומנת.';
+const FB_RETRY  = { title: 'الإجابة غير صحيحة.', body: ['هل نحاول مجدداً؟'] };
+const FB_WRONG2 = 'الإجابة غير صحيحة.<br />الإجابة الصحيحة تم تحديدها.';
 const fbPopups = (correctTitle, explanation) => ({
   retry:   FB_RETRY,
   correct: { title: correctTitle, body: explanation },
@@ -431,35 +431,35 @@ const fbPopups = (correctTitle, explanation) => ({
 
 registerPractice(0, {  // Basic 1 — non-geometric body
   correctId: 'b', item: '01',
-  popups: fbPopups('נכון מאוד!', [   /* sb79/81/82 */
-    'למפלצת יש צורה הנדסית שאינה מוגדרת: הצורה שלה לא אחידה, לא בנויה מקווים ישרים או מעגלים, ואי-אפשר לחשב את נפחה בעזרת נוסחה.'])
+  popups: fbPopups('صحيح جدًا!', [   /* sb79/81/82 */
+    'للوحش شكل هندسي غير محدد: شكله غير منتظم، وليس مبنيًا من خطوط مستقيمة أو دوائر، ولا يمكن حساب حجمه باستخدام صيغة رياضية.'])
 });
 registerPractice(1, {  // Basic 2 — who is right
   correctId: 'b', item: '02',
-  popups: fbPopups('נכון מאוד!', [   /* sb85/86 */
-    'לגוף שאינו הנדסי מודדים את הנפח בעזרת דחיקת מים – מכניסים אותו למשורה ובודקים בכמה המים עלו. ההפרש בין כמות המים המקורית לכמות החדשה = נפח הגוף!'])
+  popups: fbPopups('صحيح جدًا!', [   /* sb85/86 */
+    'لقياس حجم جسم غير منتظم الشكل نستخدم طريقة إزاحة الماء – نُدخله في الاسطوانة المدرجة ونتحقق من مقدار ارتفاع الماء. الفرق بين كمية الماء الأصلية والكمية الجديدة = حجم الجسم!'])
 });
 registerPractice(2, {  // Basic 3 — which tool
   correctId: 'b', item: '03',
-  popups: fbPopups('נכון מאוד!', [   /* sb88/90/91 */
-    'ניתן להכניס גוף מסוים למשורה עם מים ולמדוד את הנפח שלו לפי כמות המים שעלתה.'])
+  popups: fbPopups('صحيح جدًا!', [   /* sb88/90/91 */
+    'يمكن إدخال جسم معيّن في الاسطوانة المدرجة تحتوي على ماء وقياس حجمه وفقًا لكمية الماء التي ارتفعت.'])
 });
 registerPractice(3, {  // Basic 4 — flooding 760
   correctId: 'b', item: '04',
-  popups: fbPopups('נכון מאוד!', [   /* sb93/95/96 */
-    'גוף שנכנס למים גורם להצפת מים בכמות זהה לנפח שלו בדיוק. לכן נפח הגליל הוא בדיוק 760\u00A0מ"ל.'])
+  popups: fbPopups('صحيح جدًا!', [   /* sb93/95/96 */
+    'جسم يُغمر في الماء يتسبب في إزاحة كمية من الماء مساوية تمامًا لحجمه. لذلك فإن حجم الأسطوانة هو بالضبط 760 ملل.'])
 });
 registerPractice(4, {  // Standard-ב 1 — rise area
   correctId: 'b', item: '05', hintAfterWrong: true,   // slide 101
-  popups: fbPopups('תשובה נכונה!', [   /* sb100/102/103 */
-    'האזור שבו רואים את כמות המים שעלתה במשורה הוא זה שמייצג את נפח המפלצת.'])
+  popups: fbPopups('إجابة صحيحة!', [   /* sb100/102/103 */
+    'المنطقة التي نرى فيها كمية الماء التي ارتفعت في الاسطوانة المدرجة هي التي تمثل حجم الوحش.'])
 });
 registerPractice(5, {  // Standard-ב 2 — single bead = 10
   correctId: 'a', item: '06', hintAfterWrong: true,   // slide 106
-  popups: fbPopups('נכון מאוד!', [   /* sb105/107/108 */
-    'שלושת החרוזים יחד העלו את מפלס המים ב-30\u00A0מ"ל <span class="section-result-expr">(130 − 100)</span>.',
-    'לכן נפחם הכולל הוא 30\u00A0סמ"ק.',
-    'מכיוון שכל החרוזים זהים, נחלק את הנפח הכולל ב-3 ונגלה שנפחו של כל חרוז הוא 10\u00A0סמ"ק.'])
+  popups: fbPopups('صحيح تمامًا!', [   /* sb105/107/108 */
+    'الخرزات الثلاث معًا رفعت مستوى الماء بمقدار 30 ملل <span class="section-result-expr">(130 − 100)</span>.',
+    'لذلك حجمها الإجمالي هو 30 سم³.',
+    'بما أن جميع الخرزات متطابقة، نقسم الحجم الإجمالي على 3 فنجد أن حجم كل خرزة هو 10 سم³.'])
 });
 
 /* ═══════════════════════════════════════════════════════════
