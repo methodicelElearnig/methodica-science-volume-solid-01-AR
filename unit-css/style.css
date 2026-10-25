@@ -684,7 +684,7 @@ html, body {
   display: none;
 }
 .scq-hint-close {
-  width: 196px; padding: 16px 40px;
+  min-width: 196px; padding: 16px 40px; white-space: nowrap;   /* Arabic "العودة للسؤال" is wider than the Hebrew; keep it on one line */
   border: none; border-radius: 1000px; background: #fff;
   color: #303030;
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 400;
@@ -3249,6 +3249,16 @@ html, body {
    Only the bar's own placement is set here. */
 .scq-bar-main { position: absolute; bottom: 17.5px; left: 24px; z-index: 12; display: flex; gap: 12px; align-items: center; }
 
+/* Arabic copy is wider than the Hebrew the bar was sized for: on a screen that also carries the
+   centred .path-toggle the check + hint pills ran into it. Compact the pills and the
+   toggle on those screens only so everything fits left of / around the toggle. */
+.screen:has(.path-toggle) .scq-bar-main { gap: 10px; }
+.screen:has(.path-toggle) .scq-check,
+.screen:has(.path-toggle) .scq-hint { font-size: 17px; white-space: nowrap; }
+.screen:has(.path-toggle) .scq-check { min-width: 0; padding: 6.5px 20px; }
+.screen:has(.path-toggle) .scq-hint { min-width: 0; padding: 5.5px 14px; gap: 4px; }
+.screen:has(.path-toggle) .path-toggle-opt { font-size: 17px; padding: 6px 14px; gap: 6px; }
+
 /* Feedback popup (draggable; resets to default on open) */
 /* QA 2026-08-29: 360 → 480px, so the longer feedback bodies (the DDQ ones especially) stop
    stacking into six or seven lines. The cap was `46vw`, which was the wrong unit: #app is a
@@ -4223,7 +4233,7 @@ html, body {
    .btn-continue (bottom:15px; left:24px; min-width:140px) and give it the same
    z-index so it clears the decorative bottom bar. */
 .peak-hint {
-  position: absolute; bottom: 17.5px; left: 180px; z-index: 12;
+  position: absolute; bottom: 17.5px; left: 270px; z-index: 12;   /* 180px was set for the Hebrew check label; the Arabic "هل إجابتي صحيحة؟" pill is ~230px wide, so clear it */
   pointer-events: auto;
 }
 

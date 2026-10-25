@@ -125,7 +125,7 @@ const FB_RETRY  = { title: 'الإجابة غير صحيحة.', body: ['هل ن�
 const FB_WRONG2 = 'الإجابة غير صحيحة.<br />الإجابة الصحيحة تم تحديدها.';
 const fbPopups = explanation => ({
   retry:   FB_RETRY,
-  correct: { title: '! أحسنت', body: explanation },
+  correct: { title: 'أحسنت!', body: explanation },
   wrong2:  { title: FB_WRONG2,    body: explanation }
 });
 const PEAK_FEEDBACK = {

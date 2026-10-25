@@ -136,7 +136,7 @@
       </trans-unit>
       <trans-unit id="08-01-01-003">
         <source>רוני קיבלה גלאי מתכות חדש והיא מנסה למצוא דברי ערך&lt;br/&gt;על חוף הים.</source>
-        <target>ملك حصلت على جهاز كشف معادن جديد وهي تحاول العثور على أشياء ثمينة&lt;br/&gt;على شاطئ البحر.</target>
+        <target>ملك حصلت على جهاز كشف معادن جديد وهي تحاول العثور على أشياء ثمينة على شاطئ البحر.</target>
         <note from="screen-id">08-01-01</note>
         <note from="screen-title">רוני מצאה אוצר?</note>
         <note from="screen-type">other</note>
@@ -4472,7 +4472,7 @@ I need to reconsider - the source doesn't contain placeholders, it uses ** for b
       </trans-unit>
       <trans-unit id="08-01-99-043">
         <source>נכון מאוד!</source>
-        <target>! صحيح جدًا</target>
+        <target>صحيح جدًا!</target>
         <note from="screen-id">08-01-99</note>
         <note from="screen-title">Part-wide chrome / runtime strings (not tied to one screen)</note>
         <note from="screen-type">chrome</note>
@@ -5805,7 +5805,7 @@ I need to reconsider - the source doesn't contain placeholders, it uses ** for b
       </trans-unit>
       <trans-unit id="08-02-05-013">
         <source>&lt;span class="scq-opt-text"&gt;כן, בגלל שנפח המים שנשפכו שווה לנפח הקריסטל&lt;/span&gt;&lt;span aria-hidden="true" class="scq-radio"&gt;&lt;/span&gt;</source>
-        <target>نعم، لأن حجم الماء الذي انسكب يساوي كتلة البلّورة</target>
+        <target>نعم، لأن حجم الماء الذي انسكب يساوي حجم البلّورة</target>
         <note from="screen-id">08-02-05</note>
         <note from="screen-type">SingleChoiceQuestion</note>
         <note from="element-role">button-label</note>
@@ -8207,7 +8207,7 @@ Wait, the source doesn't contain placeholders. Let me re-translate:
       </trans-unit>
       <trans-unit id="08-04-01-009">
         <source>חזרתי</source>
-        <target>عودتي</target>
+        <target>عُدتُ</target>
         <note from="screen-id">08-04-01</note>
         <note from="screen-title">משימת כיתה: אימון מודל AI למדידת נפח</note>
         <note from="screen-type">other</note>
@@ -9902,7 +9902,7 @@ Wait, the source doesn't contain placeholders. Let me re-translate:
       </trans-unit>
       <trans-unit id="08-06-00-002">
         <source>עכשיו מגיעה שאלת השיא</source>
-        <target>الآن تأتي السؤال الأهم</target>
+        <target>الآن يأتي السؤال الأهم</target>
         <note from="screen-id">08-06-00</note>
         <note from="screen-title">עכשיו מגיעה שאלת השיא</note>
         <note from="screen-type">TransitionScreen</note>
@@ -9912,7 +9912,7 @@ Wait, the source doesn't contain placeholders. Let me re-translate:
       </trans-unit>
       <trans-unit id="08-06-00-003">
         <source>יש בה 4 סעיפים. עליכם להצליח ב-3 לפחות.</source>
-        <target>تتكوّن من 4 بنود. عليكم النجاح في 3 على الأقل.</target>
+        <target>يتكوّن من 4 بنود. عليكم الإجابة بشكل صحيح عن 3 منها على الأقل.</target>
         <note from="screen-id">08-06-00</note>
         <note from="screen-title">עכשיו מגיעה שאלת השיא</note>
         <note from="screen-type">TransitionScreen</note>
@@ -10815,7 +10815,7 @@ Wait, the source doesn't contain placeholders. Let me re-translate:
       </trans-unit>
       <trans-unit id="08-06-99-026">
         <source>נכון מאוד!</source>
-        <target>! أحسنت</target>
+        <target>أحسنت!</target>
         <note from="screen-id">08-06-99</note>
         <note from="screen-title">Part-wide chrome / runtime strings (not tied to one screen)</note>
         <note from="screen-type">chrome</note>
@@ -10925,7 +10925,7 @@ Wait, the source doesn't contain placeholders. Let me re-translate:
       </trans-unit>
       <trans-unit id="08-07-00-003">
         <source>עכשיו מגיעה שאלת השיא</source>
-        <target>الآن تأتي السؤال الأهم</target>
+        <target>الآن يأتي السؤال الأهم</target>
         <note from="screen-id">08-07-00</note>
         <note from="screen-title">כל הכבוד!</note>
         <note from="screen-type">TransitionScreen</note>
@@ -10935,7 +10935,7 @@ Wait, the source doesn't contain placeholders. Let me re-translate:
       </trans-unit>
       <trans-unit id="08-07-00-004">
         <source>יש בה 4 סעיפים. עליכם להצליח בכולם.</source>
-        <target>تتكوّن من 4 بنود. عليكم النجاح في جميعها.</target>
+        <target>يتكوّن من 4 بنود. عليكم الإجابة بشكل صحيح عن جميعها.</target>
         <note from="screen-id">08-07-00</note>
         <note from="screen-title">כל הכבוד!</note>
         <note from="screen-type">TransitionScreen</note>
@@ -11218,7 +11218,7 @@ Wait, the source doesn't contain placeholders. Let me re-translate:
       </trans-unit>
       <trans-unit id="08-07-03-001">
         <source>&lt;b class="scq-qtext-part"&gt;סעיף ג:&lt;/b&gt;&lt;br/&gt; אחותו של ארז ראתה מה הוא עושה וטענה:&lt;br/&gt;"כמות המים שנאספה היא 1,250 מ"ל — שווה בדיוק לנפח הפסל!"&lt;br/&gt;&lt;b&gt;איזה מהמשפטים הבאים נכון?&lt;/b&gt;</source>
-        <target>&lt;b class="scq-qtext-part"&gt;البند ج:&lt;/b&gt;&lt;br/&gt; رأت أخت إيرز ما يفعله، وادّعت:&lt;br/&gt;"كمية الماء التي جُمعت هي 1,250 ملل — تساوي تمامًا حجم التمثال!"&lt;br/&gt;&lt;b&gt;أيّ من الجمل التالية صحيحة؟&lt;/b&gt;</target>
+        <target>&lt;b class="scq-qtext-part"&gt;البند ج:&lt;/b&gt;&lt;br/&gt; رأت أخت وليد ما يفعله، وادّعت:&lt;br/&gt;"كمية الماء التي جُمعت هي 1,250 ملل — تساوي تمامًا حجم التمثال!"&lt;br/&gt;&lt;b&gt;أيّ من الجمل التالية صحيحة؟&lt;/b&gt;</target>
         <note from="screen-id">08-07-03</note>
         <note from="screen-type">Peak question (SingleChoice)</note>
         <note from="element-role">paragraph</note>
