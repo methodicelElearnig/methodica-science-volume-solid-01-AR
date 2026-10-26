@@ -50,6 +50,23 @@
   src: url('../unit-assets/fonts/Assistant-ExtraBold.ttf') format('truetype');
   font-weight: 800; font-style: normal; font-display: swap;
 }
+/* Calibri — local copy, loaded from ../unit-assets/fonts/. Calibri has NO Arabic glyphs: Latin
+   letters, digits and punctuation render in Calibri, Arabic letters fall through to Arial. */
+@font-face {
+  font-family: 'Calibri';
+  src: url('../unit-assets/fonts/Calibri-Light.ttf') format('truetype');
+  font-weight: 300; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Calibri';
+  src: url('../unit-assets/fonts/Calibri-Regular.ttf') format('truetype');
+  font-weight: 400 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Calibri';
+  src: url('../unit-assets/fonts/Calibri-Bold.ttf') format('truetype');
+  font-weight: 700 900; font-style: normal; font-display: swap;
+}
 @font-face {
   font-family: 'Merriweather';
   src: url('../unit-assets/fonts/Merriweather-BoldItalic.ttf') format('truetype');
@@ -114,7 +131,7 @@ html, body {
   width: 100%; height: 100%;
   overflow: hidden;
   direction: rtl;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   background: #fff;
 }
 
@@ -188,7 +205,7 @@ html, body {
   background-image: url('../unit-assets/img/btn-flag-hover.png');
 }
 .flag-btn-label {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 600; font-size: 14px; color: var(--subject-500);
   text-align: center; width: 80px; line-height: normal;
   direction: rtl; display: none;
@@ -206,7 +223,7 @@ html, body {
   background: var(--cta-gradient);
   color: #fff;
   border: none; border-radius: 1000px;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 20px; font-weight: 400;
   cursor: pointer; direction: rtl;
   text-align: center; white-space: nowrap;
@@ -368,7 +385,7 @@ html, body {
   display: flex; align-items: center; justify-content: center;
   background: #fff;
   color: var(--subject-500);
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 1;
@@ -387,7 +404,7 @@ html, body {
   width: 792px; height: auto;
   display: flex; flex-direction: column; justify-content: flex-start; gap: 0;
   padding-top: 16px;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px; font-weight: normal; color: var(--subject-500);   /* Blue/70, Body/B5 Bold */
   text-align: right; direction: rtl; line-height: normal;
 }
@@ -408,7 +425,7 @@ html, body {
   background: #fff; padding: 7px 20px;
   display: flex; align-items: center; gap: 10px;
   direction: rtl; cursor: pointer;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   overflow: visible;
 }
 /* A number and its unit never split across lines (720 _question-template-defaults). Used inside
@@ -474,13 +491,13 @@ html, body {
 }
 .scq-fb-title {
   flex: 1;   /* fills the row; text right-aligned next to the toggle on the right */
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 700; font-size: 20px; color: #222; text-align: right;
   line-height: normal;
 }
 /* All feedback titles are bold (incl. 2nd-attempt "תשובתך אינה נכונה." — fixed in Figma) */
 .scq-fb-text {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 400; font-size: 20px; color: #222;
   text-align: right; line-height: normal; width: 100%;
 }
@@ -533,7 +550,7 @@ html, body {
   background: #fff; border: 1px solid #aeaeae; border-radius: 12px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.08);
   padding: 18px 15px;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 18px; font-weight: 400; color: #222;
   text-align: right; direction: rtl; line-height: normal;
   display: none; z-index: 40;
@@ -566,7 +583,7 @@ html, body {
 }
 .scq-popup-title {
   flex: 1;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 20px; font-weight: 700;
   text-align: right; direction: rtl;
   line-height: normal; margin: 0;
@@ -574,7 +591,7 @@ html, body {
 }
 .scq-popup-body { direction: rtl; }
 .scq-popup-body p {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 20px; font-weight: 400; color: #222;
   text-align: right; direction: rtl;
   line-height: normal; margin: 0 0 4px;
@@ -598,7 +615,7 @@ html, body {
   min-width: 140px; padding: 6.5px 40px;
   border: none; border-radius: 1000px;
   background: #aeaeae; color: #303030;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; font-weight: 400;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; font-weight: 400;
   cursor: not-allowed; direction: rtl; white-space: nowrap;
   text-align: center;
 }
@@ -613,7 +630,7 @@ html, body {
   min-width: 140px; padding: 5.5px 20px;
   border: 1px solid var(--subject-700); border-radius: 1000px; background: #fff;
   color: var(--subject-700);
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; font-weight: 400;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; font-weight: 400;
   cursor: pointer; direction: rtl;
 }
 /* Figma 196:6024 — bulb icon sits to the RIGHT of the text (first flex item in RTL) */
@@ -630,7 +647,7 @@ html, body {
   width: auto; min-width: 140px; white-space: nowrap; padding: 5.5px 40px;
   border: 1px solid var(--subject-700); border-radius: 1000px; background: #fff;
   color: var(--subject-700);
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; font-weight: 400;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; font-weight: 400;
   cursor: pointer; direction: rtl;
 }
 .scq-back:hover { text-shadow: 0.35px 0 0 currentColor, -0.35px 0 0 currentColor; box-shadow: inset 0 0 0 0.5px var(--subject-700); } /* Figma 230:4050 */
@@ -660,7 +677,7 @@ html, body {
 .scq-hint-title {
   width: 100%; text-align: right; position: relative;
   padding-right: 56px;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 32px;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 32px;
   color: #fff; line-height: normal;
 }
 .scq-hint-title::before {
@@ -676,7 +693,7 @@ html, body {
 }
 .scq-hint-body {
   width: 100%; text-align: right;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 400; font-size: 24px;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 400; font-size: 24px;
   color: #fff; line-height: normal;
 }
 .scq-hint-body p { line-height: normal; }
@@ -687,7 +704,7 @@ html, body {
   min-width: 196px; padding: 16px 40px; white-space: nowrap;   /* Arabic "العودة للسؤال" is wider than the Hebrew; keep it on one line */
   border: none; border-radius: 1000px; background: #fff;
   color: #303030;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 400;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 400;
   cursor: pointer;
 }
 
@@ -767,7 +784,7 @@ html, body {
 }
 .frc-card-back-content p {
   width: 100%;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 22px; font-weight: 400;
   line-height: 29px; letter-spacing: 0;
   color: #222; margin: 0;
@@ -800,19 +817,19 @@ html, body {
 }
 .ddq-title {
   width: 100%; text-align: center;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 40px; font-weight: 700; color: #303030;
   direction: rtl; line-height: 1.1; margin: 0;
 }
 .ddq-subtitle {
   width: 100%; text-align: center;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 26px; font-weight: 400; color: #303030;
   direction: rtl; line-height: 1.1; margin: 0;
 }
 .ddq-instructions { width: 100%; }
 .ddq-instructions p {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 28px; font-weight: 700; color: #303030;
   text-align: center; direction: rtl; line-height: 1.2; margin: 0;
 }
@@ -930,7 +947,7 @@ html, body {
 
 /* ── Target label ── */
 .ddq-target-label {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 26px; font-weight: 700; color: #303030;
   text-align: center; direction: rtl; margin: 0;
   width: 210px;   /* slightly wider than target for longer labels */
@@ -979,7 +996,7 @@ html, body {
 }
 .ddq-popup-title {
   flex: 1;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 20px; font-weight: 700;
   text-align: right; direction: rtl;
   line-height: normal; margin: 0;
@@ -987,7 +1004,7 @@ html, body {
 }
 .ddq-popup-body { direction: rtl; }
 .ddq-popup-body p {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 20px; font-weight: 400; color: #222;
   text-align: right; direction: rtl;
   line-height: normal; margin: 0 0 4px;
@@ -1024,13 +1041,13 @@ html, body {
 }
 
 .vpv-title {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 40px; font-weight: 700; color: #303030;
   line-height: 1; margin: 0;
 }
 
 .vpv-subtitle {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 26px; font-weight: 400; color: #303030;
   line-height: 1; margin: 0;
 }
@@ -1063,7 +1080,7 @@ html, body {
   padding: 6px 24px;
   border-radius: 1000px;
   border: none; cursor: pointer;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 20px; font-weight: 400; line-height: 1;
   background: transparent;
   color: #fff;
@@ -1188,7 +1205,7 @@ html, body {
 }
 
 .fpc-back-text {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px; font-weight: 400; color: #303030;
   text-align: right; direction: rtl;
   line-height: 1.25;
@@ -1226,7 +1243,7 @@ html, body {
 }
 
 .s7-title {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 40px;
   font-weight: 700;
   color: #303030;
@@ -1234,7 +1251,7 @@ html, body {
 }
 
 .s7-subtitle {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 28px;
   font-weight: 700;
   color: #303030;
@@ -1255,14 +1272,14 @@ html, body {
 }
 
 .s9q-qtitle {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px; font-weight: 700;
   color: var(--subject-500); text-align: right; direction: rtl;
   margin: 0; line-height: 1.4;
 }
 
 .s9q-qbody {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px; font-weight: 400;
   color: #303030; text-align: right; direction: rtl;
   margin: 0; line-height: 1.5;
@@ -1289,7 +1306,7 @@ html, body {
 }
 
 .mdq-title {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px;
   font-weight: 700;
   color: var(--subject-500);
@@ -1300,7 +1317,7 @@ html, body {
 }
 
 .mdq-instruction {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px;
   font-weight: 400;
   color: #303030;
@@ -1311,7 +1328,7 @@ html, body {
 }
 
 .mdq-plain-text {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px;
   font-weight: 400;
   color: #303030;
@@ -1331,7 +1348,7 @@ html, body {
 }
 
 .mdq-word {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px;
   font-weight: 400;
   color: #303030;
@@ -1382,7 +1399,7 @@ html, body {
 .mdq-selected {
   flex: 1;
   min-width: 0;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px;
   font-weight: 400;
   color: #303030;
@@ -1435,7 +1452,7 @@ html, body {
 .mdq-option {
   padding: 8px 20px;
   border-radius: 8px;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px;
   font-weight: 400;
   color: #303030;
@@ -1502,7 +1519,7 @@ html, body {
 }
 
 .s10-subtitle {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 20px;
   font-weight: 400;
   color: #303030;
@@ -1510,7 +1527,7 @@ html, body {
 }
 
 .s10-title {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 40px;
   font-weight: 700;
   color: #303030;
@@ -1518,7 +1535,7 @@ html, body {
 }
 
 .s10-body {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 28px;
   font-weight: 700;
   color: #303030;
@@ -1632,7 +1649,7 @@ html, body {
 
 /* Nav label — base = not-visited */
 .progress-question__label {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 15px; font-weight: 400;
   color: #ececec; text-align: right;
   width: 43px; white-space: nowrap;
@@ -1669,7 +1686,7 @@ html, body {
 }
 
 .s11-title {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px;
   font-weight: 700;
   color: var(--subject-500);
@@ -1678,7 +1695,7 @@ html, body {
 }
 
 .s11-subtitle {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px;
   font-weight: 400;
   color: #303030;
@@ -1754,7 +1771,7 @@ html, body {
 }
 
 .s11ddq-card-text {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 22px;
   font-weight: 400;
   color: #222222;
@@ -1802,7 +1819,7 @@ html, body {
   border-radius: 50%;
   background: var(--subject-500);
   color: #fff;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 20px;
   font-weight: 600;
   display: flex;
@@ -2069,7 +2086,7 @@ html, body {
 }
 
 .s12q-qtitle {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px;
   font-weight: 700;
   color: var(--subject-500);
@@ -2089,7 +2106,7 @@ html, body {
 }
 
 .s12q-qbody {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px;
   font-weight: 400;
   color: #303030;
@@ -2102,7 +2119,7 @@ html, body {
 
 /* Bold question line (Figma: Assistant Bold 24px) */
 .s12q-qquestion {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px;
   font-weight: 700;
   color: #303030;
@@ -2173,7 +2190,7 @@ html, body {
   top: 272.26px;
   transform: translate(-50%, -50%);
   width: 209px;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 40px;
   font-weight: 700;
   color: #303030;
@@ -2214,7 +2231,7 @@ html, body {
 .s13-reset-btn span {
   position: relative;
   z-index: 1;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 20px;
   font-weight: 400;
   color: white;
@@ -2276,7 +2293,7 @@ html, body {
   position: relative;
   top: 10px;
   z-index: 1;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 20px;
   font-weight: 400;
   color: white;
@@ -2304,7 +2321,7 @@ html, body {
 }
 
 .s13-title {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px;
   font-weight: 700;
   color: var(--subject-500);
@@ -2314,7 +2331,7 @@ html, body {
 }
 
 .s13-body {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px;
   font-weight: 400;
   color: #303030;
@@ -2341,7 +2358,7 @@ html, body {
 }
 
 .s13-word {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px;
   font-weight: 400;
   color: #303030;
@@ -2357,7 +2374,7 @@ html, body {
   border: 1px solid rgba(174, 174, 174, 0.5);
   padding: 0 16px;
   box-sizing: border-box;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px;
   text-align: right;
   direction: rtl;
@@ -2389,7 +2406,7 @@ html, body {
   padding: 12px 40px;
   border: none;
   border-radius: 1000px;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 20px;
   font-weight: 400;
   direction: rtl;
@@ -2430,7 +2447,7 @@ html, body {
 }
 
 .s14q-qtitle {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px; font-weight: 700;
   color: var(--subject-500);
   text-align: right; direction: rtl;
@@ -2443,7 +2460,7 @@ html, body {
 }
 
 .s14q-qbody {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px; font-weight: 400;
   color: #303030;
   text-align: right; direction: rtl;
@@ -2451,7 +2468,7 @@ html, body {
 }
 
 .s14q-qquestion {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px; font-weight: 700;
   color: #303030;
   text-align: right; direction: rtl;
@@ -2474,13 +2491,13 @@ html, body {
 }
 .s16ddq-title {
   width: 100%; text-align: right;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px; font-weight: 700; color: var(--subject-500);
   direction: rtl; line-height: 1.1; margin: 0;
 }
 .s16ddq-subtitle {
   width: 100%; text-align: right;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 26px; font-weight: 400; color: #303030;
   direction: rtl; line-height: 1.2; margin: 0;
 }
@@ -2505,7 +2522,7 @@ html, body {
   user-select: none; transition: none;
 }
 .s16ddq-card-text {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 20px; font-weight: 400; color: #303030;
   direction: rtl; text-align: center; white-space: nowrap;
   pointer-events: none; user-select: none;
@@ -2612,7 +2629,7 @@ html, body {
 
 /* Target label */
 .s16ddq-target-label {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 22px; font-weight: 700; color: #303030;
   text-align: center; direction: rtl; margin: 0;
   width: 190px;
@@ -2649,12 +2666,12 @@ html, body {
   gap: 16px; align-items: flex-end; width: 100%;
 }
 .s17q-title {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px; font-weight: 700; color: var(--subject-500);
   text-align: right; direction: rtl; margin: 0; width: 100%;
 }
 .s17q-subtitle {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px; font-weight: 400; color: #303030;
   text-align: right; direction: rtl; margin: 0; width: 100%;
 }
@@ -2670,7 +2687,7 @@ html, body {
   align-items: center; gap: 12px;
 }
 .s17q-mlabel, .s17q-munit {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px; font-weight: 400; color: #303030;
   white-space: nowrap;
 }
@@ -2680,7 +2697,7 @@ html, body {
   border: 1px solid rgba(174, 174, 174, 0.5);
   border-radius: 10px; background: #fff;
   display: flex; align-items: center; justify-content: center;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px; font-weight: 400; color: #303030;
 }
 
@@ -2690,7 +2707,7 @@ html, body {
   gap: 24px; align-items: flex-end; width: 100%;
 }
 .s17q-question {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px; font-weight: 700; color: #303030;
   text-align: right; direction: rtl; margin: 0; width: 100%;
 }
@@ -2709,7 +2726,7 @@ html, body {
   gap: 16px; align-items: flex-end; width: 792px;
 }
 .s18q-title {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px; font-weight: 700; color: var(--subject-500);
   text-align: right; direction: rtl; margin: 0; width: 100%;
 }
@@ -2718,13 +2735,13 @@ html, body {
   gap: 24px; align-items: flex-end; width: 100%;
 }
 .s18q-body {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px; font-weight: 400; color: #303030;
   text-align: right; direction: rtl; margin: 0; width: 100%;
   line-height: 1.4;
 }
 .s18q-question {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px; font-weight: 700; color: #303030;
   text-align: right; direction: rtl; margin: 0; width: 100%;
   line-height: 1.4;
@@ -2773,7 +2790,7 @@ html, body {
 
 .s18-remember-bubble-text {
   display: block;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 20px;
   font-weight: 400;
   color: #000;
@@ -2799,7 +2816,7 @@ html, body {
   gap: 16px; align-items: flex-end; width: 792px;
 }
 .s19q-title {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px; font-weight: 700; color: var(--subject-500);
   text-align: right; direction: rtl; margin: 0; width: 100%;
 }
@@ -2808,13 +2825,13 @@ html, body {
   gap: 24px; align-items: flex-end; width: 100%;
 }
 .s19q-body {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px; font-weight: 400; color: #303030;
   text-align: right; direction: rtl; margin: 0; width: 100%;
   line-height: 1.4;
 }
 .s19q-question {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px; font-weight: 700; color: #303030;
   text-align: right; direction: rtl; margin: 0; width: 100%;
   line-height: 1.4;
@@ -2833,18 +2850,18 @@ html, body {
 .report-field { display: flex; flex-direction: column; gap: 6px; }
 .report-label { font-size: 16px; font-weight: 600; color: #303030; }
 .required-star { color: #D32F2F; }
-.report-select { height: 44px; border: 2px solid #C9CED8; border-radius: 10px; padding: 0 14px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 17px; color: #303030; background: #ffffff; direction: rtl; outline: none; cursor: pointer; transition: border-color 0.12s; }
+.report-select { height: 44px; border: 2px solid #C9CED8; border-radius: 10px; padding: 0 14px; font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 17px; color: #303030; background: #ffffff; direction: rtl; outline: none; cursor: pointer; transition: border-color 0.12s; }
 .report-select:focus { border-color: #8900E1; }
-.report-textarea { border: 2px solid #C9CED8; border-radius: 10px; padding: 12px 14px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 16px; color: #303030; direction: rtl; resize: none; outline: none; transition: border-color 0.12s; line-height: 1.5; }
+.report-textarea { border: 2px solid #C9CED8; border-radius: 10px; padding: 12px 14px; font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 16px; color: #303030; direction: rtl; resize: none; outline: none; transition: border-color 0.12s; line-height: 1.5; }
 .report-textarea:focus { border-color: #8900E1; }
 .report-char-count { font-size: 13px; color: #8A9AAA; text-align: left; direction: ltr; }
 .report-actions { display: flex; flex-direction: row; gap: 12px; direction: rtl; margin-top: 4px; }
 .report-error { color: #d33; font-size: 14px; margin: 4px 0 8px; direction: rtl; }
 .report-thanks { text-align: center; padding: 8px 0; direction: rtl; }
-.report-submit-btn { height: 44px; padding: 0 32px; background: linear-gradient(180deg, #8900E1 9%, #6500A5 100%); color: #ffffff; border: none; border-radius: 50px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 18px; font-weight: 600; cursor: pointer; outline: none; transition: opacity 0.12s; }
+.report-submit-btn { height: 44px; padding: 0 32px; background: linear-gradient(180deg, #8900E1 9%, #6500A5 100%); color: #ffffff; border: none; border-radius: 50px; font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 18px; font-weight: 600; cursor: pointer; outline: none; transition: opacity 0.12s; }
 .report-submit-btn:hover { opacity: 0.88; }
 .report-submit-btn:focus-visible { outline: 3px solid #8900E1; outline-offset: 3px; }
-.report-cancel-btn { height: 44px; padding: 0 28px; background: #ffffff; color: #5A6A7A; border: 2px solid #C9CED8; border-radius: 50px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 18px; font-weight: 400; cursor: pointer; outline: none; transition: border-color 0.12s, color 0.12s; }
+.report-cancel-btn { height: 44px; padding: 0 28px; background: #ffffff; color: #5A6A7A; border: 2px solid #C9CED8; border-radius: 50px; font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 18px; font-weight: 400; cursor: pointer; outline: none; transition: border-color 0.12s, color 0.12s; }
 .report-cancel-btn:hover { border-color: #8A9AAA; color: #303030; }
 .report-cancel-btn:focus-visible { outline: 3px solid #8900E1; outline-offset: 3px; }
 
@@ -2866,7 +2883,7 @@ html, body {
   color: var(--subject-700);
   border: 1px solid var(--subject-700);
   border-radius: 1000px;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 20px; font-weight: 400;
   cursor: pointer; transition: text-shadow 0.1s;
 }
@@ -2889,7 +2906,7 @@ html, body {
   color: var(--subject-700);
 }
 .char-slot-label {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 15px; font-weight: 600; line-height: 1.4;
 }
 
@@ -2906,7 +2923,7 @@ html, body {
   display: flex; flex-direction: column; align-items: center; gap: 20px;
 }
 .hook-title {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   /* QA 2026-08-25 (slide 1): 24px, matching the narration — the hook screen is one block of
      text and the title is not sized above it. Right-aligned with the rest of the column. */
   font-size: 24px; font-weight: 800; color: var(--subject-500);
@@ -2939,7 +2956,7 @@ html, body {
   text-align: right; direction: rtl;
 }
 .hook-narration p {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px; font-weight: 400; color: #303030; line-height: 1.25;
 }
 /* The mascot's line on these screens is now .companion-bubble inside a .companion-say
@@ -2953,7 +2970,7 @@ html, body {
   font-size: 24px; font-weight: 700; color: var(--subject-500);
 }
 .hook-open-label {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   /* 24px, up from 19 — it reads as body copy under the prompt, so it takes the same size as
      .hook-narration p. Weight left at 600: only the size was specified. */
   font-size: 24px; font-weight: 600; color: #303030;
@@ -2962,7 +2979,7 @@ html, body {
   width: 100%; min-height: 96px;
   padding: 12px 14px;
   border: 2px solid #C9CED8; border-radius: 12px;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; color: #303030;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; color: #303030;
   direction: rtl; text-align: right; resize: none; outline: none;
   transition: border-color 0.12s;
 }
@@ -2974,7 +2991,7 @@ html, body {
   color: #fff; border: none; border-radius: 1000px;
   /* 20px. Shared component: .meas-confirm on the applet screens is the same class
      and only override min-width, so they take this size too — checked, they still fit. */
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; font-weight: 400;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; font-weight: 400;
   cursor: pointer; transition: text-shadow 0.1s;
 }
 .btn-hint-primary:not(:disabled):hover { text-shadow: 0.35px 0 0 currentColor, -0.35px 0 0 currentColor; }
@@ -2995,7 +3012,7 @@ html, body {
   position: absolute; top: 28%; left: 68%;
   background: var(--pure-white); color: var(--subject-900);
   border: 3px solid var(--subject-500);
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 22px;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 22px;
   line-height: 1.15; text-align: center;
   padding: 10px 20px; border-radius: 16px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.18);
@@ -3028,11 +3045,11 @@ html, body {
 }
 .imgq-head { display: flex; flex-direction: column; gap: 6px; align-items: center; }
 .imgq-title {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 32px; font-weight: 800; color: var(--subject-500); text-align: center;
 }
 .imgq-subtitle {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px; font-weight: 400; color: #303030; text-align: center;
 }
 .imgq-cards {
@@ -3044,7 +3061,7 @@ html, body {
   flex: 0 0 320px; width: 320px;
   display: flex; flex-direction: column; align-items: center; gap: 12px;
   background: none; border: none; padding: 0; cursor: pointer;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
 }
 .imgq-card-img {
   position: relative; width: 100%;
@@ -3092,7 +3109,7 @@ html, body {
 /* Path-choice card label (S7) */
 .path-card { width: 300px; }
 .path-card-label {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px; font-weight: 400; color: var(--subject-900);
   text-align: center;
 }
@@ -3127,7 +3144,7 @@ html, body {
 .path-toggle-opt {
   display: flex; align-items: center; justify-content: center; gap: 8px;
   border: none; background: transparent; cursor: pointer;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; font-weight: 400; line-height: 1;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; font-weight: 400; line-height: 1;
   color: #fff; padding: 6px 24px; border-radius: 1000px; white-space: nowrap;
   transition: background 0.15s, color 0.15s;
 }
@@ -3152,7 +3169,7 @@ html, body {
   display: inline-flex; align-items: center; justify-content: center;
   background: #fff; color: var(--subject-700);
   border: 1px solid var(--subject-700); border-radius: 1000px;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 22px; font-weight: 700; cursor: pointer;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 22px; font-weight: 700; cursor: pointer;
 }
 .comic-arrow__icon { display: block; }
 .comic-arrow:disabled { color: #AEAEAE; border-color: #AEAEAE; cursor: not-allowed; }
@@ -3200,8 +3217,8 @@ html, body {
   flex: 1 1 auto; min-height: 0;
   display: flex; align-items: center; justify-content: center;
 }
-.exp-title { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 700; color: var(--subject-500); text-align: right; line-height: 1.4; }
-.exp-instruction { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 400; color: #303030; text-align: right; line-height: 1.4; }
+.exp-title { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 700; color: var(--subject-500); text-align: right; line-height: 1.4; }
+.exp-instruction { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 400; color: #303030; text-align: right; line-height: 1.4; }
 
 .disp-stage {
   flex: 1 1 auto; min-height: 0;
@@ -3216,7 +3233,7 @@ html, body {
 }
 #disp-marble.dragging { cursor: grabbing; }
 #disp-marble.placed { opacity: 0; pointer-events: none; }
-.disp-drag-hint { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; font-weight: 600; color: #303030; margin: 0; white-space: nowrap; }
+.disp-drag-hint { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; font-weight: 600; color: #303030; margin: 0; white-space: nowrap; }
 /* Both of the applet's transient bits hide by VISIBILITY, never by leaving the flow. The stage is a
    centred row inside a centred column, so anything that changes size mid-interaction re-centres the
    cylinder under the learner's hand: emptying the hint narrowed .disp-marble-zone by 19px and slid
@@ -3233,14 +3250,14 @@ html, body {
 .disp-reset {
   margin-top: 4px; padding: 8px 22px; background: #fff; color: var(--subject-700);
   border: 1px solid var(--subject-700); border-radius: 1000px;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; font-weight: 600; cursor: pointer;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; font-weight: 600; cursor: pointer;
 }
 
 /* ═══════════════════════════════════════════════════════
    TEMPLATE — SingleChoiceQuestion (generic, reusable)
    Option pills, check/hint bar, draggable feedback popup, hint overlay.
    ═══════════════════════════════════════════════════════ */
-.scq-locknote { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; color: #4a5562; text-align: right; direction: rtl; margin-top: 4px; }
+.scq-locknote { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; color: #4a5562; text-align: right; direction: rtl; margin-top: 4px; }
 .scq-locknote.hidden { display: none !important; }
 
 /* Bottom action bar — .scq-check / .scq-hint / .scq-hint-ico are DEFINED ONCE, near the
@@ -3280,11 +3297,11 @@ html, body {
 /* The ✕ that used to sit here is gone from the markup in all 19 places (QA 2026-08-25, slide 26:
    feedback popups close on advance, not by dismissal), so its rule went with it. The popup is still
    draggable by its header. */
-.scq-popup-title { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; font-weight: 700; color: #1c3a2a; }   /* Bold 20 (720 feedback typography; was 800) */
+.scq-popup-title { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; font-weight: 700; color: #1c3a2a; }   /* Bold 20 (720 feedback typography; was 800) */
 .scq-popup-body { padding: 0 16px 14px; }
 /* 17px here was shadowing the 20px rule earlier in this sheet; QA 2026-08-25 (slide 26) sets ALL
    feedback text at 20px, so the two now agree. */
-.scq-popup-body p { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; font-weight: 400; color: #303030; line-height: 1.45; margin: 3px 0; }
+.scq-popup-body p { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; font-weight: 400; color: #303030; line-height: 1.45; margin: 3px 0; }
 
 /* Hint overlay — DEFINED ONCE, near the top of this sheet (search `.scq-hint-popup`).
    A white-box variant (.scq-hint-box + its own .scq-hint-overlay/-close/-title) used to
@@ -3325,7 +3342,7 @@ html, body {
    moved by `transform`, stayed put. The learner's alignment was destroyed by the act of succeeding.
    Hence a FIXED width (not max-width) and a min-height covering both lines; aqMeasure() hides the
    hint with .is-spent (visibility) instead of clearing textContent, so the box survives either way. */
-.aq-ruler-hint { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; color: #4a5562; margin: 0; width: 140px; min-height: 52px; text-align: center; }
+.aq-ruler-hint { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; color: #4a5562; margin: 0; width: 140px; min-height: 52px; text-align: center; }
 .aq-ruler-hint.is-spent { visibility: hidden; }
 
 .aq-side {
@@ -3335,7 +3352,7 @@ html, body {
 /* Size comes from the shared .exp-title token (24px) — only the column width is local. */
 .aq-side .exp-title { max-width: 520px; }
 .aq-qtext {
-  max-width: 520px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 500;
+  max-width: 520px; font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 500;
   color: #303030; text-align: right; direction: rtl; line-height: 1.4;
 }
 /* Half-width pills (~300px, vs. the ~584-618px full-question default) — these
@@ -3392,13 +3409,13 @@ html, body {
 .flood-rock { width: 127px; height: auto; cursor: grab; touch-action: none; filter: drop-shadow(0 6px 10px rgba(20,40,60,0.28)); transition: opacity 0.3s ease; }
 .flood-rock.dragging { cursor: grabbing; }
 .flood-rock.placed { opacity: 0; pointer-events: none; }
-.flood-hint { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 15px; color: #8a97a3; margin: 0; }
+.flood-hint { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 15px; color: #8a97a3; margin: 0; }
 .flood-explain {
   align-self: center; max-width: 400px;
   background: #edf8ed; border: 2px solid #bfe0bf; border-radius: 16px; padding: 16px 20px;
   direction: rtl; text-align: right; display: flex; flex-direction: column; gap: 8px;
 }
-.flood-explain p { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 18px; font-weight: 400; color: #234a2c; line-height: 1.45; }
+.flood-explain p { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 18px; font-weight: 400; color: #234a2c; line-height: 1.45; }
 
 /* ═══════════════════════════════════════════════════════
    TransitionScreen (S12 practice merge)
@@ -3407,8 +3424,8 @@ html, body {
   position: absolute; left: 50%; top: calc(50% - 37px); transform: translate(-50%, -50%);
   width: 760px; display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center;
 }
-.transition-title { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 34px; font-weight: 800; color: #303030; }
-.transition-sub { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 22px; font-weight: 400; color: #303030; line-height: 1.5; }
+.transition-title { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 34px; font-weight: 800; color: #303030; }
+.transition-sub { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 22px; font-weight: 400; color: #303030; line-height: 1.5; }
 /* Rules screens (02 s0 and 03 s0; 01 s30 and 02 s0 when written — 2026-10-10). Their lead-in and closing lines take the TransitionScreen
    role token Body / B-1, 28 Regular, which every centred variant (A, B, C) shares; 22 was the generic
    default above. The count lines keep the sizes QA set on each screen (40 / 48). */
@@ -3426,7 +3443,7 @@ html, body {
 /* `display: block` for the same reason as the --withimage block below — see the note there. */
 .scq-question--textonly .scq-qtext {
   display: block;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 700; color: #303030;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 700; color: #303030;
   text-align: right; direction: rtl; line-height: 1.4;
 }
 /* ── The answers column sizes to its content, not to the layout ──────────────────
@@ -3467,7 +3484,7 @@ html, body {
 .dnd-question .scq-qtext {
   position: static; width: auto; padding-top: 0;
   /* QA 2026-08-25 (slides 21, 28): weight 500, not 700 — it is an instruction line. */
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 500; color: #303030;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 500; color: #303030;
   text-align: right; direction: rtl;
 }
 .dnd-board { display: flex; flex-direction: column; gap: 18px; }
@@ -3476,7 +3493,7 @@ html, body {
 .dnd-target-label {
   flex: 0 0 320px; display: flex; align-items: center; justify-content: flex-start;
   background: var(--subject-100); border-radius: 12px; padding: 12px 18px;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 19px; font-weight: 700; color: var(--subject-900);
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 19px; font-weight: 700; color: var(--subject-900);
   text-align: right; direction: rtl;
 }
 .dnd-slot {
@@ -3488,7 +3505,7 @@ html, body {
 .dnd-slot.correct { border-color: #2e9b57; background: #edf8ed; }
 .dnd-slot.wrong { border-color: #d64550; background: #ffe3e5; }
 .dnd-source-wrap { display: flex; flex-direction: column; gap: 8px; }
-.dnd-source-label { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 16px; font-weight: 600; color: #6a7683; text-align: right; direction: rtl; }
+.dnd-source-label { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 16px; font-weight: 600; color: #6a7683; text-align: right; direction: rtl; }
 /* 2026-10-19: the bank label on the measuring-method sort (component 02) matches the instruction line's size. */
 .dnd-question--columns:not(.dnd-question--warmup) .dnd-source-label { font-size: 24px; }
 .dnd-source { display: flex; direction: rtl; flex-wrap: wrap; gap: 12px; min-height: 60px; padding: 10px; background: #eef4f9; border-radius: 12px; }
@@ -3496,7 +3513,7 @@ html, body {
   display: inline-flex; align-items: center; justify-content: center;
   background: #fff; border: 2px solid var(--subject-400); border-radius: 10px;
   padding: 10px 18px; cursor: grab; touch-action: none; user-select: none;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 18px; font-weight: 600; color: var(--subject-900);
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 18px; font-weight: 600; color: var(--subject-900);
   box-shadow: 0 2px 6px rgba(0,32,96,0.1);
 }
 .dnd-pill.dragging { cursor: grabbing; opacity: 0.5; }
@@ -3553,7 +3570,7 @@ html, body {
    statements. Deck slide 61 bolds those two words; dropping that is a deliberate departure. */
 .hotspot-question .scq-qtext {
   position: static; display: block; width: 100%; padding-top: 0;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 400; color: #303030;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 400; color: #303030;
   text-align: right; direction: rtl; line-height: 1.4;
 }
 
@@ -3567,15 +3584,15 @@ html, body {
 /* Single-paragraph variant (no image) sits at the regular question top, not centred — a lone
    centred sentence floated mid-canvas (QA 2026-10-15, 03 s3). */
 .dq-question:not(.dq-question--withimage) { top: 139px; transform: none; }
-.dq-question .scq-qtext { display: block; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 700; color: #303030; text-align: right; line-height: 2.2; }
+.dq-question .scq-qtext { display: block; font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 700; color: #303030; text-align: right; line-height: 2.2; }
 /* Slide 46 keeps these three as separate lines: a blue title, then plain instruction and stem. */
-.dq-title { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 700; color: var(--subject-500); text-align: right; direction: rtl; line-height: 1.4; }
+.dq-title { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 700; color: var(--subject-500); text-align: right; direction: rtl; line-height: 1.4; }
 /* QA 2026-08-25 (slide 22): the instruction and the cloze sentence below it are one block and
    must carry the same weight; the sentence is 500, so this follows it. */
-.dq-instruction { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 500; color: #303030; text-align: right; direction: rtl; line-height: 1.4; }
+.dq-instruction { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 500; color: #303030; text-align: right; direction: rtl; line-height: 1.4; }
 /* The menu is its own centred block under the sentence, not an inline word in it. */
 .dropdown--block { display: block; align-self: center; margin-top: 4px; }
-.dq-sentence { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 500; color: #303030; line-height: 2.2; text-align: right; direction: rtl; }
+.dq-sentence { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 500; color: #303030; line-height: 2.2; text-align: right; direction: rtl; }
 .dropdown { position: relative; display: inline-block; }
 /* No fixed height — the trigger runs at the 24px question size, so a 24px box would
    clip it; content + padding size it instead. min-height is what a filled trigger
@@ -3585,7 +3602,7 @@ html, body {
   min-height: 40px; white-space: nowrap;   /* S19's "בחרו מילה" placeholder wraps to two lines at 24px otherwise */
   position: relative; display: inline-flex; align-items: center; vertical-align: middle;
   background: #fff; border: 2px solid var(--subject-500); border-radius: 10px; padding: 0 4px 4px 8px;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 400; color: #303030; cursor: pointer;   /* black, also after a wrong pick (QA 2026-10-11); regular weight, not bold, once picked (QA 2026-10-12) */
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 400; color: #303030; cursor: pointer;   /* black, also after a wrong pick (QA 2026-10-11); regular weight, not bold, once picked (QA 2026-10-12) */
 }
 .dropdown-trigger.correct { border-color: #2e9b57; color: #303030; background: #edf8ed; }   /* word stays black; frame + fill flag it (QA 2026-10-12) */
 /* Wrong: the frame and fill flag it; the chosen word itself stays black (QA 2026-10-11). */
@@ -3602,7 +3619,7 @@ html, body {
 .dropdown-opt {
   display: block; width: 100%; justify-content: initial; text-align: right; min-height: auto;
   background: #fff; border: none; border-radius: 8px; padding: 2px 14px;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 500; color: #303030; cursor: pointer;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 500; color: #303030; cursor: pointer;
 }
 .dropdown-opt:hover { background: var(--subject-100); border: none; }
 .dropdown-opt.selected { background: var(--subject-100); font-weight: 600; }   /* SemiBold (QA 2026-10-12) */
@@ -3617,7 +3634,7 @@ html, body {
    the title moved off the back face so it reads before and after the flip). The caption sits inside
    the button so clicking it flips the card too, and it becomes part of the button's accessible name. */
 .flip-card { width: 260px; perspective: 1000px; background: none; border: none; padding: 0; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 12px; }
-.flip-caption { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 700; color: var(--subject-500); line-height: 1.3; text-align: center; direction: rtl; }
+.flip-caption { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 700; color: var(--subject-500); line-height: 1.3; text-align: center; direction: rtl; }
 .flip-inner { position: relative; width: 100%; height: 300px; flex: 0 0 auto; transition: transform 0.5s cubic-bezier(.4,0,.2,1); transform-style: preserve-3d; display: block; }
 .flip-card.flipped .flip-inner { transform: rotateY(180deg); }
 .flip-front, .flip-back { position: absolute; inset: 0; -webkit-backface-visibility: hidden; backface-visibility: hidden; border-radius: 16px; display: flex; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box; }
@@ -3636,7 +3653,7 @@ html, body {
 /* Back-face body: right-aligned, the FlipCardsReveal template's Assistant 22/29 #222. */
 .flip-back-text {
   width: 100%; text-align: right;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 22px; font-weight: 400; color: #222; line-height: 29px;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 22px; font-weight: 400; color: #222; line-height: 29px;
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -3661,8 +3678,8 @@ html, body {
    and they used a little over half the stage height; the four steps all land in the same frame, so
    the whole sequence gains from the extra size. Scaled together to keep the bowl-and-tray pairing. */
 .meas-cyl-img { width: 180px; height: auto; display: block; border-radius: 8px; }
-.meas-badge { position: absolute; top: 44%; right: -6px; transform: translateX(100%); background: #fff; border: 2px solid var(--subject-500); color: #1e2a38; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; padding: 2px 9px; border-radius: 999px; white-space: nowrap; }
-.meas-vessel-label { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 14px; font-weight: 600; color: #6a7683; text-align: center; max-width: 150px; }
+.meas-badge { position: absolute; top: 44%; right: -6px; transform: translateX(100%); background: #fff; border: 2px solid var(--subject-500); color: #1e2a38; font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; padding: 2px 9px; border-radius: 999px; white-space: nowrap; }
+.meas-vessel-label { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 14px; font-weight: 600; color: #6a7683; text-align: center; max-width: 150px; }
 .meas-bowl { position: relative; width: 195px; height: 126px; border: 3px solid #7fb8d6; border-top: none; border-radius: 0 0 60px 60px; background: rgba(255,255,255,0.25); overflow: hidden; }
 .meas-bowl-water { position: absolute; left: 3px; right: 3px; top: 9px; bottom: 3px; background: rgba(120,190,225,0.5); border-radius: 0 0 54px 54px; border-top: 2px solid rgba(255,255,255,0.85); }
 /* What the learner dropped in, lying on the floor of the bowl. .meas-bowl carries overflow:hidden,
@@ -3688,7 +3705,7 @@ html, body {
 .meas-scale i.lg { width: 13px; }
 .meas-scale i.lg::after {
   content: attr(data-v); position: absolute; left: 16px; top: -1px; transform: translateY(-50%);
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 12px; font-weight: 700; line-height: 1; color: #a85d2a;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 12px; font-weight: 700; line-height: 1; color: #a85d2a;
 }
 .meas-bowl .meas-scale i { top: calc(var(--y) * 1px); }
 .meas-tray .meas-scale i { bottom: calc(var(--y) * 1px); }
@@ -3753,7 +3770,7 @@ html, body {
 .meas-tray.is-pourable { cursor: grab; touch-action: none; box-shadow: 0 0 0 3px var(--subject-200); }
 .meas-tray.is-pourable:hover { box-shadow: 0 0 0 3px var(--subject-400); }
 .meas-tray.dragging { cursor: grabbing; opacity: 0.5; }
-.meas-pour-hint { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 14px; color: #8a97a3; margin: 0; text-align: center; }
+.meas-pour-hint { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 14px; color: #8a97a3; margin: 0; text-align: center; }
 .meas-side { display: flex; flex-direction: column; align-items: center; gap: 14px; width: 380px; }
 .meas-object-zone { display: flex; flex-direction: column; align-items: center; gap: 8px; }
 /* No frame (QA 2026-08-29). The white card with its border and drop shadow was reading as a
@@ -3762,14 +3779,14 @@ html, body {
    the hint line below it. */
 .meas-object { display: inline-flex; flex-direction: column; align-items: center; gap: 6px; cursor: grab; touch-action: none; }
 .meas-object.dragging { cursor: grabbing; opacity: 0.5; }
-.meas-object-label { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 16px; font-weight: 700; color: var(--subject-900); }
-.meas-obj-hint { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 14px; color: #8a97a3; margin: 0; }
-.meas-error { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 16px; font-weight: 700; color: #d64550; background: #ffe3e5; border-radius: 10px; padding: 8px 16px; margin: 0; }
+.meas-object-label { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 16px; font-weight: 700; color: var(--subject-900); }
+.meas-obj-hint { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 14px; color: #8a97a3; margin: 0; }
+.meas-error { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 16px; font-weight: 700; color: #d64550; background: #ffe3e5; border-radius: 10px; padding: 8px 16px; margin: 0; }
 .meas-input-row { display: flex; flex-direction: column; align-items: center; gap: 10px; }
-.meas-input-label { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 18px; font-weight: 600; color: #303030; text-align: center; }
+.meas-input-label { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 18px; font-weight: 600; color: #303030; text-align: center; }
 .meas-input-wrap { display: inline-flex; align-items: center; gap: 8px; }
-.meas-input { width: 110px; padding: 8px 12px; border: 2px solid var(--subject-500); border-radius: 10px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; font-weight: 700; text-align: center; color: #303030; outline: none; }
-.meas-input-unit { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 18px; font-weight: 600; color: #303030; }
+.meas-input { width: 110px; padding: 8px 12px; border: 2px solid var(--subject-500); border-radius: 10px; font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; font-weight: 700; text-align: center; color: #303030; outline: none; }
+.meas-input-unit { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 18px; font-weight: 600; color: #303030; }
 /* .meas-next went with the applet's own "המשך לשלב הבא" (QA 2026-08-29) — the bar's המשך carries
    the step-to-step move now, through advanceScreen(). */
 .meas-confirm { min-width: 120px; }
@@ -3779,7 +3796,7 @@ html, body {
   position: absolute; left: 40px; bottom: 100px; z-index: 10; width: 360px; margin: 0;
   background: var(--pure-white); border: 3px solid var(--subject-500); border-radius: 12px;
   padding: 14px 20px; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; font-weight: 400; color: #303030;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; font-weight: 400; color: #303030;
   line-height: 1.35; direction: rtl; text-align: right;
 }
 
@@ -3793,17 +3810,17 @@ html, body {
    flex column with no align-items, so its children already stretch the full 860px and
    `text-align` has something to align against; do NOT switch these to align-self, which would
    shrink-wrap each line and re-centre the short ones. */
-.task-title { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 32px; font-weight: 800; color: var(--subject-500); text-align: right; }
-.task-intro { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 500; color: #303030; line-height: 1.5; text-align: right; }
+.task-title { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 32px; font-weight: 800; color: var(--subject-500); text-align: right; }
+.task-intro { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 500; color: #303030; line-height: 1.5; text-align: right; }
 .task-list { list-style: decimal; padding-inline-start: 26px; display: flex; flex-direction: column; gap: 12px; }
-.task-list li { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 500; color: #303030; line-height: 1.5; }
-.task-note { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 500; color: var(--subject-700); background: var(--subject-100); border-radius: 12px; padding: 12px 18px; text-align: right; }
+.task-list li { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 500; color: #303030; line-height: 1.5; }
+.task-note { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 500; color: var(--subject-700); background: var(--subject-100); border-radius: 12px; padding: 12px 18px; text-align: right; }
 
 /* ═══ Multi-part question tag ═══
    The ValueInputQuestion rules (.viq-input-row / .viq-input / .viq-unit) lived here.
    Part 05's (then 04's) s7 was the unit's only numeric-input question and became a multiple choice
    in 840d587, so the template has no users left and its CSS and controller are gone. */
-.scq-part-tag { display: block; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 15px; font-weight: 700; color: var(--subject-500); margin-bottom: 6px; }
+.scq-part-tag { display: block; font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 15px; font-weight: 700; color: var(--subject-500); margin-bottom: 6px; }
 .scq-qsub { display: block; font-size: 18px; font-weight: 500; color: #303030; margin-top: 6px; }
 
 /* ═══ PeakAssessment (Parts 06/07) ═══ */
@@ -3822,9 +3839,9 @@ html, body {
   display: flex; flex-direction: column; align-items: center; gap: 8px;
   text-align: center; direction: rtl;
 }
-.peak-transition-sub   { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; font-weight: 400; color: #303030; line-height: 1.5; }
-.peak-transition-title { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 40px; font-weight: 700; color: #303030; }
-.peak-transition-body  { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 28px; font-weight: 700; color: #303030; line-height: 1.35; }
+.peak-transition-sub   { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 20px; font-weight: 400; color: #303030; line-height: 1.5; }
+.peak-transition-title { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 40px; font-weight: 700; color: #303030; }
+.peak-transition-body  { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 28px; font-weight: 700; color: #303030; line-height: 1.35; }
 /* The sprite fills this box instead of being absolutely placed: .companion is position:absolute by
    default, which inside a flex column would take it out of the flow and collapse the gap. */
 .peak-transition-video { position: relative; width: 640px; height: 360px; flex-shrink: 0; }
@@ -3834,12 +3851,12 @@ html, body {
    .scq-question--withimage shell that part 05's scenario screens use, so only the two things the
    deck adds on top of that shell live here: the blue heading and the bulleted measurements. */
 .peak-scenario-title {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 28px; font-weight: 800;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 28px; font-weight: 800;
   color: var(--subject-500); text-align: right; direction: rtl;
 }
 .peak-scenario-list {
   direction: rtl; text-align: right; padding-right: 24px;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 400; color: #303030;   /* 24, Body / B-4 like the paragraph above it (QA 2026-10-12) */
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 400; color: #303030;   /* 24, Body / B-4 like the paragraph above it (QA 2026-10-12) */
   line-height: 1.5;
 }
 /* The reset at the top of this sheet zeroes list padding and would leave the markers outside the
@@ -3847,9 +3864,9 @@ html, body {
 .peak-scenario-list > li { margin: 0 0 6px; }
 
 .peak-intro { position: absolute; left: 50%; top: calc(50% - 37px); transform: translate(-50%, -50%); width: 820px; display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center; }
-.peak-badge { background: var(--subject-900); color: #fff; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 16px; font-weight: 800; padding: 5px 22px; border-radius: 1000px; }
-.peak-intro-title { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 34px; font-weight: 800; color: var(--subject-500); }
-.peak-intro-text { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 21px; font-weight: 400; color: #303030; line-height: 1.55; }
+.peak-badge { background: var(--subject-900); color: #fff; font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 16px; font-weight: 800; padding: 5px 22px; border-radius: 1000px; }
+.peak-intro-title { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 34px; font-weight: 800; color: var(--subject-500); }
+.peak-intro-text { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 21px; font-weight: 400; color: #303030; line-height: 1.55; }
 /* Top-aligned at 120px rather than vertically centred. Centring was inherited from the practice
    shells, and on the fluid canvas (#app height = 1280 / window aspect, not a fixed 720) it made the
    block drift down as the window got taller — the taller the browser, the bigger the empty band
@@ -3872,7 +3889,7 @@ html, body {
    block-level flex item on a row of its own. `<b>סעיף א:</b><br />question` then renders as THREE
    rows — the title, an empty row for the <br>, and the question — a measured 100.8px where two
    lines of 24px/1.4 text should be 67.2px. In block flow the <br> does what it says instead. */
-.peak-question .scq-qtext { display: block; width: 100%; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 500; color: #303030; text-align: right; direction: rtl; line-height: 1.4; }
+.peak-question .scq-qtext { display: block; width: 100%; font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 500; color: #303030; text-align: right; direction: rtl; line-height: 1.4; }
 /* Options are the template .scq-opt pill; the container carries .scq-answers for the
    flex column + gap and .peak-opt is only the JS hook peakSelect()/peakEnter() select on.
    .scq-opt is pinned to 604px for the 760px --textonly layout, so widen it to fill the
@@ -3888,7 +3905,7 @@ html, body {
 .peak-options .scq-opt { width: 100%; }
 /* The closing screens (.peak-end, its title/text/sprite box) were removed with parts 06/07's end
    screens on 2026-10-15. -score stays: .section-result--peak below still styles it. */
-.peak-end-score { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 22px; font-weight: 700; color: var(--subject-700); }
+.peak-end-score { font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 22px; font-weight: 700; color: var(--subject-700); }
 
 /* ═══════════════════════════════════════════════════════
    STORYBOARD IMAGE LAYOUTS + COMPANION CHARACTER
@@ -3934,7 +3951,7 @@ html, body {
    alongside the storyboard breaks rather than after them. */
 .scq-question--withimage .scq-qtext {
   display: block;
-  width: 100%; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 400;
+  width: 100%; font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 400;
   color: #303030; text-align: right; direction: rtl; line-height: 1.4;
 }
 /* Content-sized, same as --textonly above — see that block for the reasoning. The containing block
@@ -4014,7 +4031,7 @@ html, body {
   position: absolute; top: 10px; left: 50%; transform: translateX(-50%);
   min-width: 96px; padding: 3px 14px; border-radius: 999px;
   background: var(--subject-800); color: #fff;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 17px; font-weight: 700;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 17px; font-weight: 700;
   text-align: center; white-space: nowrap; pointer-events: none; z-index: 2;
 }
 
@@ -4216,7 +4233,7 @@ html, body {
 .steps-list {
   margin: 0; padding-inline-start: 26px; max-width: 520px;
   direction: rtl; text-align: right;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 400;   /* 24, Body / B-4 (QA 2026-10-12) */
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 24px; font-weight: 400;   /* 24, Body / B-4 (QA 2026-10-12) */
   color: #303030; line-height: 1.5;
 }
 .steps-list li { margin-bottom: 10px; }
@@ -4224,7 +4241,7 @@ html, body {
 
 /* Secondary line under a transition sub-heading (02 S0 practice rules; 01 S32 originally) */
 .transition-note {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 18px; font-weight: 400;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 18px; font-weight: 400;
   color: #6a7683; line-height: 1.5;
 }
 
@@ -4307,7 +4324,7 @@ html, body {
   background: #f4f9fd;
   padding: 22px 28px;
   direction: rtl; text-align: right;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   /* QA 2026-08-29: 24px, matching the title above it — one size for the whole verdict card.
      Part 05's card only. The peak cards are 24px too now, but they get there through --peak
      below, which has to buy the height back from its width and leading — see the note there. */
@@ -4341,7 +4358,7 @@ html, body {
   margin-inline-start: 12px; padding: 0 14px; vertical-align: 2px;
   border: 1.5px solid var(--subject-500); border-radius: 1000px;
   background: #fff; color: var(--subject-500);
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 18px; line-height: 1.4;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 18px; line-height: 1.4;
   cursor: pointer; white-space: nowrap;
 }
 .section-result-review:hover { background: var(--subject-500); color: #fff; }
@@ -4417,7 +4434,7 @@ html, body {
   border: 3px solid var(--subject-500);
   border-radius: 18px;
   padding: 14px 20px;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 20px;   /* Body / B-7, the character-bubble size (QA 2026-10-12) */ font-weight: 400; color: #303030;
   text-align: right; direction: rtl; line-height: 1.35;
 }
@@ -4515,7 +4532,7 @@ html, body {
   border: 3px solid var(--subject-500);
   border-radius: 18px;
   padding: 14px 20px;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Calibri', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   /* 20px, Body / B-7 — the size of every other speech bubble in the unit (QA 2026-10-12). The
      comic route's guess bubbles on 01 s10/s12 keep 21px; see part 01's sheet. */
   font-size: 20px; font-weight: 400; color: #303030;
